@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "jsx": "react",
+        "target": "es6",
+        "module": "commonjs",
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "pretty": true,
+        "outDir": "dist",
+        "baseUrl": "./src",
+        "lib": [
+            "es5",
+            "es6",
+            "es2015",
+            "dom"
+        ],
+        "paths": {
+            "*": [
+                "node_modules/*"
+            ]
+        },
+        "typeRoots": [
+            "src/Definitions",
+            "node_modules/@types"
+        ]
+    }
+}

@@ -1,0 +1,93 @@
+@import '../vars.scss';
+
+@mixin from-width($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+@mixin to-width($width) {
+    @media screen and (max-width: $width - 1px) {
+        @content;
+    }
+}
+@mixin only-width($from, $to) {
+    @media screen and (min-width: $from) and (max-width: $to - 1px) {
+        @content;
+    }
+}
+
+// from width
+@mixin from-xxl-width() {
+    @include from-width($xxl-width) {
+        @content;
+    }
+}
+@mixin from-xl-width() {
+    @include from-width($xl-width) {
+        @content;
+    }
+}
+@mixin from-lg-width() {
+    @include from-width($lg-width) {
+        @content;
+    }
+}
+@mixin from-md-width() {
+    @include from-width($md-width) {
+        @content;
+    }
+}
+@mixin from-sm-width() {
+    @include from-width($sm-width) {
+        @content;
+    }
+}
+
+// to width
+@mixin to-xl-width() {
+    @include to-width($xl-width) {
+        @content;
+    }
+}
+@mixin to-lg-width() {
+    @include to-width($lg-width) {
+        @content;
+    }
+}
+@mixin to-md-width() {
+    @include to-width($md-width) {
+        @content;
+    }
+}
+@mixin to-sm-width() {
+    @include to-width($sm-width) {
+        @content;
+    }
+}
+
+// only width
+@mixin only-xl-width() {
+    @include from-width($xl-width) {
+        @content;
+    }
+}
+@mixin only-lg-width() {
+    @include only-width($lg-width, $xl-width) {
+        @content;
+    }
+}
+@mixin only-md-width() {
+    @include only-width($md-width, $lg-width) {
+        @content;
+    }
+}
+@mixin only-sm-width() {
+    @include only-width($ms-width, $md-width) {
+        @content;
+    }
+}
+@mixin only-xs-width() {
+    @include to-width($sm-width) {
+        @content;
+    }
+}

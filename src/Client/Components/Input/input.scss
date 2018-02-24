@@ -1,0 +1,56 @@
+@import '../../css/vars';
+@import '../../css/colors';
+
+.input {
+    position: relative;
+
+    &__element {
+        z-index: 0;
+        position: relative;
+
+        width: 503px;
+        height: 60px;
+        border-radius: 3px;
+        border: 1px solid $color-reriwinkle-gray;
+        background-color: $color-white-lilac;
+        outline: none;
+        padding: 20px;
+
+        color: $color-text-dark;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    &__placeholder {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+
+        color: $color-santas-gray;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 20px;
+        text-transform: uppercase;
+
+        pointer-events: none;
+        user-select: none;
+
+        opacity: 0;
+        transition: opacity ease $dur-fast;
+
+        &.i-visible {
+            opacity: 1;
+            transition-duration: $dur;
+        }
+    }
+
+    &__element:focus + &__placeholder {
+        opacity: 0;
+        transition-duration: $dur-fast;
+    }
+}

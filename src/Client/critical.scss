@@ -1,0 +1,16 @@
+@import 'css/vars';
+@import 'css/colors';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    background-color: $color-main;
+    min-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}

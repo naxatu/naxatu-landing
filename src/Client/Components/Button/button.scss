@@ -1,0 +1,31 @@
+@import '../../css/vars';
+@import '../../css/colors';
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 55px;
+    height: 60px;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+    background-color: $color-primary;
+    box-shadow: 0 10px 20px rgba($color-primary, 0.4);
+
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    user-select: none;
+
+    transition: background-color ease $dur;
+
+    &:hover,
+    &:active,
+    &:focus {
+        cursor: pointer;
+        background-color: darken($color-primary, 10%);
+        transition-duration: $dur-fast;
+    }
+}

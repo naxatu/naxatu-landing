@@ -1,0 +1,7 @@
+{
+    "username": "postgres",
+    "password": "mysecretpassword",
+    "database": "naxatu",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+}

@@ -1,0 +1,15 @@
+@import '../../css/vars';
+@import '../../css/colors';
+
+.link {
+    color: $color-white;
+    transition: color ease $dur;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-primary;
+        transition-duration: $dur-fast;
+    }
+}

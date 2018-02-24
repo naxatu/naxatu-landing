@@ -1,0 +1,35 @@
+@import '../colors';
+@import './media';
+
+@mixin header {
+    color: $color-white;
+    font-weight: 700;
+    text-align: center;
+
+    font-size: 24px;
+    @include from-sm-width {
+        font-size: 32px;
+    }
+    @include from-md-width {
+        font-size: 42px;
+    }
+    @include from-lg-width() {
+        font-size: 48px;
+    }
+    @include from-xl-width() {
+        font-size: 56px;
+    }
+}
+
+@mixin sub-header {
+    color: $color-white;
+    font-family: 'Barlow Semi Condensed';
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+
+    font-size: 16px;
+    @include from-md-width {
+        font-size: 18px;
+    }
+}
