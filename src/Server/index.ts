@@ -1,5 +1,5 @@
 import * as errorHandler from 'errorhandler';
-import {expressApp} from './application';
+import {expressApp} from './Application';
 import {sequelize} from './Sequelize';
 
 /**

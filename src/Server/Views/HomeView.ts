@@ -1,5 +1,5 @@
 import {BaseView, IInitState} from '../Utils/BaseView';
-import {HomeView as HomeViewComponent, IHomeViewProps} from '../../client/Views/HomeView';
+import {HomeView as HomeViewComponent, IHomeViewProps} from '../../Client/Views/HomeView';
 
 export interface IHomeViewInitState extends IInitState<IHomeViewProps> {
 }

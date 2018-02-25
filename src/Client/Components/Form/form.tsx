@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import * as classnames from 'classnames';
 
 import {Input, IInputProps} from '../Input/Input';
@@ -20,7 +20,7 @@ export class Form extends React.PureComponent<IFormProps, IFormState> {
         isPending: false,
     };
 
-    private readonly _changeHandlers: Record<string, (event: React.FormEvent<HTMLInputElement>) => void> = {};
+    private readonly changeHandlers: Record<string, (event: React.FormEvent<HTMLInputElement>) => void> = {};
 
     public constructor(props: IFormProps) {
         super(props);
@@ -61,7 +61,7 @@ export class Form extends React.PureComponent<IFormProps, IFormState> {
         }
 
         const fieldName = child.props.name;
-        this._changeHandlers[fieldName] = (event: React.FormEvent<HTMLInputElement>) => {
+        this.changeHandlers[fieldName] = (event: React.FormEvent<HTMLInputElement>) => {
             this.setState({
                 fromData: {
                     ...this.state.fromData,
@@ -84,7 +84,7 @@ export class Form extends React.PureComponent<IFormProps, IFormState> {
         const fieldName = child.props.name;
         const childProps: IInputProps = {
             ...child.props,
-            onChange: this._changeHandlers[fieldName],
+            onChange: this.changeHandlers[fieldName],
             value: this.state.fromData[fieldName],
         };
 

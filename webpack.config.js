@@ -92,6 +92,7 @@ function getCSSLoader() {
 
 function getFontCSSLoader() {
     const loaders = getBaseCssLoadersList();
+
     return {
         test: /fonts\.scss$/,
         use: extractFontsCSS.extract(loaders)
@@ -215,7 +216,7 @@ module.exports = {
         !isDev
             ? new SWPrecacheWebpackPlugin({
                 minify: true,
-                cacheId: 'berry-wallet',
+                cacheId: 'naxatu',
                 filename: 'service-worker.js',
                 navigateFallback: '/',
             })
@@ -224,7 +225,7 @@ module.exports = {
 
     devServer: {
         proxy: {
-            '/': 'http://localhost:3000'
+            '/': 'http://localhost:3020'
         },
         compress: true,
         historyApiFallback: true,

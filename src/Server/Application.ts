@@ -6,7 +6,7 @@ import * as dotenv from 'dotenv';
 import * as path from 'path';
 import * as expressValidator from 'express-validator';
 
-dotenv.config({path: '.env.example'});
+dotenv.config({path: '.env'});
 
 import * as Controllers from './Controllers';
 

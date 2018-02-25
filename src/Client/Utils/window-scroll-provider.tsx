@@ -20,16 +20,16 @@ export class WindowScrollProvider extends React.Component<IWindowScrollProviderP
         windowScrollService: PropTypes.object.isRequired,
     };
 
-    private readonly _windowScrollService: WindowScrollService;
+    private readonly windowScrollService: WindowScrollService;
 
     public constructor(props: IWindowScrollProviderProps) {
         super(props);
-        this._windowScrollService = props.windowScrollService;
+        this.windowScrollService = props.windowScrollService;
     }
 
     public getChildContext(): IWindowScrollProviderChildContext {
         return {
-            windowScrollService: this._windowScrollService,
+            windowScrollService: this.windowScrollService,
         };
     }
 

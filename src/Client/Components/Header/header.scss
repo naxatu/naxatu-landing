@@ -35,7 +35,6 @@ body.header--fixed {
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: $color-header-bg;
         opacity: 0;
         will-change: opacity;
         transition: opacity ease $dur;

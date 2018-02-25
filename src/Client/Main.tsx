@@ -47,7 +47,7 @@ require.ensure(
             ), rootEl
         );
 
-        render(initProps);
+        // render(initProps);
 
         render({
             ...initProps,

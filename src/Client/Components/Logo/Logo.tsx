@@ -7,10 +7,12 @@ export interface ILogoProps {
 }
 
 export function Logo(props: ILogoProps): JSX.Element {
+    // width: 754px
+    // height: 512px
     return (
         <div className={ classnames('logo', props.className) }>
             { /* tslint:disable-next-line:no-http-string */ }
-            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="754px" height="512px" version="1.1" viewBox="0 0 754 512">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" viewBox="0 0 754 512">
                 <defs>
                     <linearGradient x1="7.62318468%" y1="92.3737776%" x2="92.3507071%" y2="7.77277239%" id="linearGradient-1">
                         <stop stopColor="#FAD961" offset="0%"/>

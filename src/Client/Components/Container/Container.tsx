@@ -7,14 +7,11 @@ export interface IContainerProps {
 }
 
 export function Container(props: IContainerProps): JSX.Element {
-    const {
-        className,
-        children,
-    } = props;
+    const {className, children} = props;
 
     return (
-        <div className={ classnames('container', className) }>
-            { children }
+        <div className={classnames('container', className)}>
+            {children}
         </div>
     );
 }

@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import * as PropTypes from 'prop-types';
-import * as classnames from 'classnames';
+import classnames from 'classnames';
 import {throttle} from 'lodash';
 
 import {Logo} from '../Logo/Logo';
@@ -27,7 +27,7 @@ export interface IHeaderContext {
     windowScrollService: WindowScrollService;
 }
 
-export class Header extends React.PureComponent<IHeaderProps, IHeaderState> {
+export class Header extends React.Component<IHeaderProps, IHeaderState> {
     public static readonly contextTypes: PropTypes.ValidationMap<IHeaderContext> = {
         windowScrollService: PropTypes.object,
     };
@@ -45,7 +45,7 @@ export class Header extends React.PureComponent<IHeaderProps, IHeaderState> {
     }
 
     public componentDidMount(): void {
-        document.body.classList.add('Header--fixed');
+        document.body.classList.add('header--fixed');
         this.windowScrollService.subscribe(this.throttledScrollHandler);
     }
 

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import {Container} from '../Components/Container/Container';
 import {Header, HeaderMenuLink} from '../Components/Header/Header';
@@ -15,7 +15,7 @@ const headerMenuLinks: HeaderMenuLink[] = [
     {text: 'News'},
 ];
 
-export class HomeView extends React.PureComponent<IHomeViewProps, object> {
+export class HomeView extends React.Component<IHomeViewProps, any> {
     public render(): JSX.Element {
         return (
             <div>

@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 
-import { Logo } from '../Logo/Logo';
-import { HorizontalMenu } from '../HorizontalMenu/HorizontalMenu';
-import { Link } from '../Link/Link';
-import { Container } from '../Container/Container';
+import {Logo} from '../Logo/Logo';
+import {HorizontalMenu} from '../HorizontalMenu/HorizontalMenu';
+import {Link} from '../Link/Link';
+import {Container} from '../Container/Container';
 
 export interface FooterLink {
     text: string;
@@ -15,7 +15,7 @@ export interface IFooterProps {
     links?: FooterLink[];
 }
 
-export class Footer extends React.PureComponent<IFooterProps, object> {
+export class Footer extends React.Component<IFooterProps, any> {
     public render(): JSX.Element {
         const horizontalMenu = this._renderFooterMenu();
 
@@ -23,7 +23,7 @@ export class Footer extends React.PureComponent<IFooterProps, object> {
             <footer className="footer">
                 <Container className="footer__menu">
                     <Logo className="footer__logo"/>
-                    { horizontalMenu }
+                    {horizontalMenu}
                 </Container>
                 <Container className="footer__copyright">
                     <span>NAXATU, Inc. is a registered money service business (NMLS ID: 1574869).</span>
@@ -34,7 +34,7 @@ export class Footer extends React.PureComponent<IFooterProps, object> {
     }
 
     private _renderFooterMenu(): null | JSX.Element {
-        const { links = [] } = this.props;
+        const {links = []} = this.props;
         if (links.length === 0) {
             return null;
         }
@@ -44,10 +44,7 @@ export class Footer extends React.PureComponent<IFooterProps, object> {
                 {
                     links.map((link: FooterLink, i: number) => (
                         <span key={ String(i) }>
-                            <Link
-                                className="footer__link"
-                                title={ link.title || link.text }
-                            >
+                            <Link className="footer__link" title={ link.title || link.text }>
                                 { link.text }
                             </Link>
                         </span>

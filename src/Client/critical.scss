@@ -2,7 +2,7 @@
 @import 'css/colors';
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    @include font;
     font-size: $base-font-size;
     line-height: $base-line-height;
     background-color: $color-main;
