@@ -1,3 +1,22 @@
+$dur: 300ms;
+$dur-half: $dur / 2;
+$dur-fast: 60ms;
+
+$base-font-size: 16px;
+$base-line-height: 1.41;
+
+$xxl-width: 1440px;
+$xl-width: 1200px;
+$lg-width: 992px;
+$md-width: 768px;
+$sm-width: 576px;
+
+$header-height: 100px;
+$footer-menu-height: 100px;
+$footer-height-xl: 132px;
+
+
+
 $color-white: #fff;
 $color-white-lilac: #f7f8fc;
 $color-reriwinkle-gray: #d8ddef;
@@ -10,7 +29,7 @@ $color-primary: #FFC137;
 $color-shadow: #2a2a2a;
 $color-shadow-blue: #2e3273;
 
-$color-text-dark: #262739;
+$color-text-dark: #1F2125;
 $color-text-light: #9c9ca5;
 
 $color-link-blue: #4042ff;

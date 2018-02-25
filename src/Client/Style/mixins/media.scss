@@ -1,4 +1,4 @@
-@import '../vars.scss';
+@import '../vendor/vars';
 
 @mixin from-width($width) {
     @media screen and (min-width: $width) {

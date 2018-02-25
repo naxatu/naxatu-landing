@@ -11,10 +11,9 @@ dotenv.config({path: '.env'});
 import * as Controllers from './Controllers';
 
 const expressApp = express();
-expressApp.set('port', process.env.PORT || 3000);
+expressApp.set('port', process.env['PORT'] || 3000);
 
 expressApp.use(compression());
-expressApp.use(logger('dev'));
 expressApp.use(bodyParser.json());
 expressApp.use(bodyParser.urlencoded({extended: true}));
 expressApp.use(expressValidator());
@@ -29,7 +28,6 @@ expressApp.use(express.static(path.join(__dirname, '../public'), {maxAge: 315576
  * Primary app routes.
  */
 expressApp.get('/', Controllers.Home.index);
-expressApp.post('/subscribe', Controllers.Home.subscribe);
 
 export {
     expressApp

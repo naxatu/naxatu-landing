@@ -10,7 +10,7 @@ expressApp.use(errorHandler());
 /**
  * Start DB and Express server.
  */
-(async () => {
+(async() => {
     // await sequelize.sync();
 
     expressApp.listen(expressApp.get('port'), () => {
