@@ -13,8 +13,8 @@ RUN npm install
 COPY . .
 
 RUN npm run build:static
-RUN npm run build:front:prod
 RUN npm run build:server
+RUN npm run build:front:prod
 
 RUN envsubst < /var/www/build/.env.template.yml > /var/www/.env.yml
 

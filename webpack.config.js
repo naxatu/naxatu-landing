@@ -99,16 +99,6 @@ module.exports = {
 
         isDev ? noop : new webpack.optimize.ModuleConcatenationPlugin(),
 
-        isDev ? noop
-            : new webpack.optimize.UglifyJsPlugin({
-                comments: false,
-                dropDebugger: true,
-                dropConsole: true,
-                compressor: {
-                    warnings: false,
-                },
-            }),
-
         extractSass
     ],
 

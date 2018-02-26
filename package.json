@@ -6,9 +6,8 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/Server/index.js",
-    "build": "npm run build:server",
+    "build": "npm run clean && npm run build:static && npm run build:server && npm run build:front:prod",
     "clean": "rm -rf dist/",
-    "build:prod": "npm run clean && npm run build:server && npm run build:front:prod",
     "build:static": "$(npm bin)/gulp build",
     "build:server": "$(npm bin)/tsc",
     "build:front:prod": "NODE_ENV=production $(npm bin)/webpack --progress -p",
