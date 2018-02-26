@@ -10,11 +10,16 @@ expressApp.use(errorHandler());
 /**
  * Start DB and Express server.
  */
-(async() => {
+(async () => {
     // await sequelize.sync();
 
     expressApp.listen(expressApp.get('port'), () => {
-        console.log('  App is running at http://localhost:%d in %s mode', expressApp.get('port'), expressApp.get('env'));
-        console.log('  Press CTRL-C to stop\n');
+        console.log(' ');
+        console.log(
+            '  App is running at http://%s:%d in %s mode',
+            expressApp.get('hostname'),
+            expressApp.get('port'),
+            expressApp.get('env')
+        );
     });
 })();
