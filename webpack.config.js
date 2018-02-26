@@ -4,7 +4,7 @@ const noop = function () {
 };
 
 // env
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV !== 'production';
 const isBuild = process.env.BUILD === 'true';
 
 // loaders

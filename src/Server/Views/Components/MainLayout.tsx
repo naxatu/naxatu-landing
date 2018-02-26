@@ -1,7 +1,8 @@
 import * as path from 'path';
 import * as fs from 'fs';
 import * as React from 'react';
-import {GTM} from '../../Utils/GTM'
+import {GTM} from '../../Utils/GTM';
+import {Emojify, emojifyText} from '../../Utils/Emojify'
 
 export interface IMainLayoutProps {
     title?: string;
@@ -34,24 +35,24 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
 
         return (
             <html lang="ru">
-                <head>
-                    <meta httpEquiv="Content-type" content="text/html; charset=utf-8"/>
-                    <meta name="Content-language" content="ru"/>
-                    <meta name="viewport"
-                          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-                    <meta name="format-detection" content="telephone=no"/>
-                    <title>{title}</title>
-                    <meta name="keywords" content={keywords.join(', ')}/>
-                    <meta name="description" content={description}/>
-                    <style dangerouslySetInnerHTML={{__html: criticalCSS}}/>
-                    <link {...mainCssAttribute} />
-                    {gtm.renderHead()}
-                </head>
-                <body>
-                    {gtm.renderBody()}
-                    {children}
-                    <script src="/js/main.js"/>
-                </body>
+            <head>
+                <meta httpEquiv="Content-type" content="text/html; charset=utf-8"/>
+                <meta name="Content-language" content="ru"/>
+                <meta name="viewport"
+                      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+                <meta name="format-detection" content="telephone=no"/>
+                <title>{emojifyText(title)}</title>
+                <meta name="keywords" content={emojifyText(keywords.join(', '))}/>
+                <meta name="description" content={emojifyText(description)}/>
+                <style dangerouslySetInnerHTML={{__html: criticalCSS}}/>
+                <link {...mainCssAttribute} />
+                {gtm.renderHead()}
+            </head>
+            <body>
+            {gtm.renderBody()}
+            {children}
+            <script src="/js/main.js"/>
+            </body>
             </html>
         )
     }
