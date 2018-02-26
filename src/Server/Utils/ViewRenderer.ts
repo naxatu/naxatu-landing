@@ -6,6 +6,6 @@ export class ViewRenderer {
     }
 
     render(): string {
-        return renderToString(this.component);
+        return "<!DOCTYPE html>" + renderToString(this.component);
     }
 }
