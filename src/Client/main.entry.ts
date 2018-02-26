@@ -1,5 +1,7 @@
 console.log('Yeeee!');
 
+import './Style/main.scss';
+
 let elements = document.getElementsByClassName("anchor");
 console.log(elements);
 

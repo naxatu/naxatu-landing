@@ -1,11 +1,19 @@
 const path = require('path');
 const webpack = require('webpack');
+
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 const noop = function () {
 };
 
 // env
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV !== 'production';
 const isBuild = process.env.BUILD === 'true';
+
+const extractSass = new ExtractTextPlugin({
+    filename: "css/[name].css",
+    disable: isBuild
+});
 
 // loaders
 function getCacheLoader() {
@@ -50,18 +58,31 @@ module.exports = {
     context: path.resolve(__dirname, 'src/Client'),
 
     entry: {
-        main: 'main'
+        main: 'main.entry',
+        critical: 'critical.entry'
     },
 
     output: {
-        filename: 'js/[name].js',
+        filename: 'js/[name].bundle.js',
         path: path.resolve(__dirname, 'dist/public'),
         publicPath: '/'
     },
 
     module: {
         rules: [
-            getTSLoader()
+            getTSLoader(),
+            {
+                test: /\.scss$/,
+                use: extractSass.extract({
+                    use: [{
+                        loader: "css-loader"
+                    }, {
+                        loader: "sass-loader"
+                    }],
+                    // use style-loader in development
+                    fallback: "style-loader"
+                })
+            }
         ],
     },
 
@@ -76,7 +97,19 @@ module.exports = {
 
         new webpack.NamedModulesPlugin(),
 
-        isDev ? noop : new webpack.optimize.ModuleConcatenationPlugin()
+        isDev ? noop : new webpack.optimize.ModuleConcatenationPlugin(),
+
+        isDev ? noop
+            : new webpack.optimize.UglifyJsPlugin({
+                comments: false,
+                dropDebugger: true,
+                dropConsole: true,
+                compressor: {
+                    warnings: false,
+                },
+            }),
+
+        extractSass
     ],
 
     devServer: {

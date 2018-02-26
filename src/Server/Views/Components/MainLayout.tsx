@@ -2,7 +2,10 @@ import * as path from 'path';
 import * as fs from 'fs';
 import * as React from 'react';
 import {GTM} from '../../Utils/GTM';
-import {Emojify, emojifyText} from '../../Utils/Emojify'
+import {Emojify, emojifyText} from '../../Utils/Emojify';
+import {config} from '../../Config';
+
+const version = config.get('app.version') || '0.0.0';
 
 export interface IMainLayoutProps {
     title?: string;
@@ -27,7 +30,7 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
         } = this.props;
 
         const mainCssAttribute = {
-            href: "/css/main.css",
+            href: "/css/main.css?v=" + version,
             async: true,
             rel: "stylesheet",
             type: "text/css"
@@ -51,7 +54,7 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             <body>
             {gtm.renderBody()}
             {children}
-            <script src="/js/main.js"/>
+            <script src={`/js/main.bundle.js?v=${version}`}/>
             </body>
             </html>
         )

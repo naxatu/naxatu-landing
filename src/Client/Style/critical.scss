@@ -2,11 +2,15 @@
 @import "vendor/fonts";
 @import 'vendor/vars';
 
+html {
+
+}
+
 body {
     @include font;
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: $color-text-dark;
-    background-color: $color-white-lilac;
+    background-color: $color-white;
     min-height: 100vh;
 }

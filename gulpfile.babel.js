@@ -8,27 +8,13 @@ const PATH = {
     PUBLIC: Path.join(__dirname, './public')
 };
 
-
-gulp.task('css', () => {
-    return gulp
-        .src([
-            './src/Client/Style/main.scss',
-            './src/Client/Style/critical.scss'
-        ])
-        .pipe(sass({
-            outputStyle: 'compressed'
-        }).on('error', sass.logError))
-        .pipe(gulp.dest('./dist/public/css'));
-});
-
-
 gulp.task('copy', copyTask({
     source: './public/',
     destinations: ['./dist/public'],
     // pattern: '/*',
 }));
 
-gulp.task('build', ['copy', 'css']);
+gulp.task('build', ['copy']);
 
 
 function copyTask(opts) {

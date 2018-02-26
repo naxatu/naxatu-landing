@@ -1,0 +1,1 @@
+import './Style/critical.scss';
