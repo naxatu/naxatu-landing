@@ -4,7 +4,7 @@ const noop = function () {
 };
 
 // env
-const isDev = process.env.NODE_ENV !== 'production';
+const isDev = process.env.NODE_ENV === 'development';
 const isBuild = process.env.BUILD === 'true';
 
 // loaders
@@ -76,17 +76,7 @@ module.exports = {
 
         new webpack.NamedModulesPlugin(),
 
-        isDev ? noop : new webpack.optimize.ModuleConcatenationPlugin(),
-
-        isDev ? noop
-            : new webpack.optimize.UglifyJsPlugin({
-                comments: false,
-                dropDebugger: true,
-                dropConsole: true,
-                compressor: {
-                    warnings: false,
-                },
-            })
+        isDev ? noop : new webpack.optimize.ModuleConcatenationPlugin()
     ],
 
     devServer: {
