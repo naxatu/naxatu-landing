@@ -28,6 +28,8 @@ gulp.task('copy', copyTask({
     // pattern: '/*',
 }));
 
+gulp.task('build', ['copy', 'css']);
+
 
 function copyTask(opts) {
     const {
