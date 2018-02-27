@@ -1,11 +1,15 @@
-console.log('Yeeee!');
+import {each} from 'lodash';
 
 import './Style/main.scss';
 
 let elements = document.getElementsByClassName("anchor");
 console.log(elements);
 
-elements.item(0).addEventListener('click', (event: Event) => {
-    console.log(event);
-    console.log(event.target);
+const onClickAnchorLink = (event: UIEvent) => {
+    const btn = event.currentTarget as any;
+    console.log(btn.getAttribute('href'));
+};
+
+each(elements, (elem, indx) => {
+    elem.addEventListener('click', onClickAnchorLink);
 });

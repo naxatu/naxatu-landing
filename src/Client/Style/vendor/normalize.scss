@@ -1,6 +1,8 @@
 html, body,
 div,
-p, span, label {
+p, span, label,
+section, footer, header, article,
+h1, h2, h3, h4, h5, h6 {
     position: relative;
     box-sizing: border-box;
     margin: 0;

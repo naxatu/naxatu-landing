@@ -1,0 +1,22 @@
+.section {
+    padding: 120px 0;
+    &.-intro {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background: $color-text-dark;
+        min-height: 100vh;
+        height: 420px;
+    }
+
+    &-content {
+        max-width: 1060px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include only-width(320px, 1060px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}

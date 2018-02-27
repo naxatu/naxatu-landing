@@ -2,6 +2,8 @@
 @import "vendor/fonts";
 @import 'vendor/vars';
 
+@import "mixins/media";
+
 html {
 
 }
@@ -14,3 +16,6 @@ body {
     background-color: $color-white;
     min-height: 100vh;
 }
+
+@import "components/section";
+@import "components/topic";
