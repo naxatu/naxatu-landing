@@ -5,12 +5,16 @@ import {GTM} from '../../Utils/GTM';
 import {Emojify, emojifyText} from '../../Utils/Emojify';
 import {config} from '../../Config';
 
+import {OpenGraph} from './OpenGraph';
+
 const version = config.get('app.version') || '0.0.0';
 
 export interface IMainLayoutProps {
     title?: string;
     description?: string;
     keywords?: string[];
+    url: string;
+    baseHost: string;
 }
 
 const criticalCSS = fs.readFileSync(
@@ -26,7 +30,9 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             title = 'Title',
             description = '',
             keywords = [],
-            children
+            children,
+            url = '',
+            baseHost = ''
         } = this.props;
 
         const mainCssAttribute = {
@@ -34,6 +40,12 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             async: true,
             rel: "stylesheet",
             type: "text/css"
+        };
+
+        const openGraphProps = {
+            title: title,
+            url: url,
+            baseHost: baseHost
         };
 
         return (
@@ -47,14 +59,18 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
                 <title>{emojifyText(title)}</title>
                 <meta name="keywords" content={emojifyText(keywords.join(', '))}/>
                 <meta name="description" content={emojifyText(description)}/>
+                <OpenGraph {...openGraphProps}/>
                 <style dangerouslySetInnerHTML={{__html: criticalCSS}}/>
-                <link {...mainCssAttribute} />
+                <link {...mainCssAttribute}/>
+                <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+
                 {gtm.renderHead()}
             </head>
             <body>
             {gtm.renderBody()}
             {children}
             <script src={`/js/main.bundle.js?v=${version}`}/>
+            <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"/>
             </body>
             </html>
         )

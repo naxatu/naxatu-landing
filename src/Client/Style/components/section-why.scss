@@ -1,0 +1,48 @@
+.why {
+    &-article {
+
+        max-width: 680px;
+        width: 100%;
+        margin: 0 auto 48px auto;
+        padding: 0 20px 0 64px;
+
+        &-title {
+            margin-bottom: 24px;
+        }
+
+        &-text {
+            margin-bottom: 24px;
+
+            &.-about {
+                a {
+                    color: $color-text-light;
+                }
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            left: 0;
+            top: -8px;
+            width: 48px;
+            height: 48px;
+            background: $color-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 48px;
+            & > svg.svg-inline--fa {
+                height: 24px;
+                width: 24px;
+                color: $color-white-lilac;
+            }
+        }
+    }
+
+    &-quite {
+        display: inline-block;
+        font-size: 40px;
+        position: absolute;
+        margin: -6px 0 0 5px;
+    }
+}

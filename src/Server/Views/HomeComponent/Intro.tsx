@@ -9,10 +9,27 @@ export class Intro extends React.Component {
                          title="Собираю вот на такую хату"/>
                 </div>
                 <div className="section-content intro-content">
-                    <img src="/image/logo-white.svg" title="XATA" className="intro-logo"/>
-                    <div className="topic">
-                        <h1 className="topic-title">Собираю на Хату</h1>
+                    <div className="intro-logo__container">
+                        <img src="/image/logo-white.svg" title="XATA" className="intro-logo"/>
                     </div>
+
+                    <div className="topic intro-topic">
+                        <h1 className="topic-title">Собираю на Хату</h1>
+                        <h2 className="intro-subtopic">
+                            <p>Каждый мечтает о прекрасном.</p>
+                            <p>Я же мечтаю о прекрасной Хате в Киеве на которую можно собрать с помощью ICO.</p>
+                        </h2>
+                    </div>
+
+                    <div className="intro-buttons">
+                        <a href="#ico" className="button intro-btn -ico anchor">Подкинуть на Хату</a>
+                        <a href="#about" className="button intro-btn -about anchor">О том как на Хату собирать</a>
+                    </div>
+                </div>
+
+                <div className="intro-disclaimer">
+                    Серьезно, краудсел на квартиру фиг знает кому, через эмисию ERC20 токенов.<br/>
+                    Я предупреждал!
                 </div>
             </section>
         )

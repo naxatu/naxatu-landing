@@ -1,7 +1,6 @@
 @import "vendor/normalize";
 @import "vendor/fonts";
 @import 'vendor/vars';
-
 @import "mixins/media";
 
 html {
@@ -15,6 +14,23 @@ body {
     color: $color-text-dark;
     background-color: $color-white;
     min-height: 100vh;
+
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+.link {
+    color: $color-main;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 @import "components/section";

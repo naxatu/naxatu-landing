@@ -5,7 +5,11 @@
         padding-bottom: 60px;
         background: $color-text-dark;
         min-height: 100vh;
-        height: 420px;
+        height: 560px;
+
+        @include only-width(320px, 600px) {
+            height: auto;
+        }
     }
 
     &-content {
