@@ -28,7 +28,7 @@ export class Intro extends React.Component {
                 </div>
 
                 <div className="intro-disclaimer">
-                    Серьезно, краудсел на квартиру фиг знает кому, через эмисию ERC20 токенов.<br/>
+                    Серьезно, краудсел на квартиру фиг знает кому, через продажу ERC20 токенов.<br/>
                     Я предупреждал!
                 </div>
             </section>

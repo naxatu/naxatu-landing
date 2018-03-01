@@ -1,10 +1,9 @@
 import * as React from 'react';
 import {MainLayout, IMainLayoutProps} from './Components/MainLayout';
 import {Button} from './Components/Button';
-import {Why} from './HomeComponent/Why'
-
-
-import {Intro} from './HomeComponent/Intro'
+import {Intro} from './HomeComponent/Intro';
+import {Why} from './HomeComponent/Why';
+import {Citation} from './HomeComponent/Citation';
 
 export interface IHomeViewProps {
     url: string;
@@ -31,6 +30,7 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
             <MainLayout {...layoutProps}>
                 <Intro />
                 <Why />
+                <Citation />
             </MainLayout>
         );
     }

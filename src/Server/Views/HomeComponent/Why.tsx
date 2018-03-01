@@ -51,7 +51,7 @@ export class Why extends React.Component {
                         </p>
                         <p className="why-article-text">
                             Все события будут транслироваться в канале
-                            в телеграмме <a href="https://t.me/@naxatu" target="_blank" className="link">@naxatu</a>.
+                            в телеграмме <a href="https://t.me/naxatu" target="_blank" className="link">t.me/naxatu</a>.
                         </p>
                     </article>
 

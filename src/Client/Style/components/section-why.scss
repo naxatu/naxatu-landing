@@ -4,7 +4,7 @@
         max-width: 680px;
         width: 100%;
         margin: 0 auto 48px auto;
-        padding: 0 20px 0 64px;
+        padding: 0 0 0 64px;
 
         &-title {
             margin-bottom: 24px;
@@ -35,6 +35,13 @@
                 height: 24px;
                 width: 24px;
                 color: $color-white-lilac;
+            }
+        }
+
+        @include to-sm-width {
+            padding: 0;
+            &-icon {
+                display: none;
             }
         }
     }
