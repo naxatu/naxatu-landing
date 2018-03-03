@@ -15,7 +15,7 @@ const houseIcons = [
     <i className="fas fa-warehouse"/>
 ];
 
-export class Why extends React.Component {
+export class About extends React.Component<any, any> {
     renderQuiteEmoji() {
         return <span className="why-quite">🤫</span>;
     }
@@ -23,11 +23,34 @@ export class Why extends React.Component {
     render() {
 
         return (
-            <section className="section -why why" id="why">
+            <section className="section -why why" id="about">
                 <div className="section-content">
                     <div className="topic">
-                        <h2 className="topic-title">Почему краутфандинг на Хату в блокчейне имеет смысл?</h2>
+                        <h2 className="topic-title">Это краутфандинг на Хату в блокчейне, а не то что вы подумали</h2>
                     </div>
+
+                    <article className="why-article">
+                        <label className="why-article-icon">{sample(blockchainIcons)}</label>
+
+                        <h3 className="why-article-title">Блокчейн это круто</h3>
+                        <p className="why-article-text"><Emojify>
+                            Но хочу, что бы не как у всех!
+                            Так что, новых блокчейн технологий тут не будет :smiling_imp:
+                        </Emojify></p>
+                        <p className="why-article-text">
+                            <Emojify>
+                                Будут токены ХАТА. Они на блокчейне и ими можно будет что-то платить или куда-то
+                                продать :moneybag: (но это не точно).
+                            </Emojify>
+                        </p>
+                        <p className="why-article-text">
+                            Если достигну цели, то напичкаю Хату всякими приблудами от "умного дома" и заставлю
+                            работать робота-пылесоса. Но не факт что и там где-нибудь будет блокчейн.
+                        </p>
+                        <p className="why-article-text">
+                            Так-же токены можно получить на <a href="#challenge" className="anchor link">#челендже</a>
+                        </p>
+                    </article>
 
                     <article className="why-article">
 
@@ -35,7 +58,7 @@ export class Why extends React.Component {
                             <i className="fas fa-star"/>
                         </label>
 
-                        <h3 className="why-article-title"><Emojify>Это самое честное ICO :yum:</Emojify></h3>
+                        <h3 className="why-article-title"><Emojify>Это действительно честное ICO :yum:</Emojify></h3>
                         <p className="why-article-text">
                             <Emojify>
                                 Очень многие проекты в ICO и на Kickstarter обманывают :sob:, обещают золотые горы и
@@ -47,6 +70,7 @@ export class Why extends React.Component {
                             <Emojify>
                                 Я же не хочу ни кого обманывать и покупать Ferrari :car:. Все собранные средства
                                 будут потрачены исключительно на покупку крутой Хаты в Киеве и её крутой ремонт.
+                                Возможно <a href="#rybalsky" className="anchor link">ЖК Rybalsky</a>
                             </Emojify>
                         </p>
                         <p className="why-article-text">
@@ -76,26 +100,6 @@ export class Why extends React.Component {
                         </p>
                     </article>
 
-
-                    <article className="why-article">
-                        <label className="why-article-icon">{sample(blockchainIcons)}</label>
-
-                        <h3 className="why-article-title">Блокчейн это круто</h3>
-                        <p className="why-article-text"><Emojify>Но блокчейна тут не будет :smiling_imp:</Emojify></p>
-                        <p className="why-article-text">
-                            <Emojify>
-                                Будут токены ХАТА. Они на блокчейне и ими можно будет что-то платить или куда-то
-                                продать :moneybag:. Но это не точно.
-                            </Emojify>
-                        </p>
-                        <p className="why-article-text">
-                            Если достигну цели, то напичкаю Хату всякими приблудами от "умного дома" и заставлю
-                            работать робота-пылесоса. Но не факт что и там где-нибудь будет блокчейн.
-                        </p>
-                        <p className="why-article-text">
-                            Так-же токены можно получить на <a href="#chalange" className="anchor link">#челендже</a>
-                        </p>
-                    </article>
                 </div>
             </section>
         )

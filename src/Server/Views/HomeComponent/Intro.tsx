@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export class Intro extends React.Component {
+export class Intro extends React.Component<any, any> {
     render() {
         return (
             <section className="section -intro intro" id="intro">
@@ -22,14 +22,14 @@ export class Intro extends React.Component {
                     </div>
 
                     <div className="intro-buttons">
-                        <a href="#ico" className="button intro-btn -ico anchor">Подкинуть на Хату</a>
-                        <a href="#about" className="button intro-btn -about anchor">О том как на Хату собирать</a>
+                        <a href="#ico" className="button btn -yellow intro-btn -ico anchor">Подкинуть на Хату</a>
+                        <a href="#about" className="button btn -inline intro-btn anchor">О том как на Хату собирать</a>
                     </div>
                 </div>
 
                 <div className="intro-disclaimer">
-                    Серьезно, краудсел на квартиру фиг знает кому, через продажу ERC20 токенов.<br/>
-                    Я предупреждал!
+                    Серьезно, краудсел на квартиру фиг знает кому, через продажу ERC20 токенов в Ethereum.<br/>
+                    Я предупреждал! <a href="#ico" className="anchor link">Дать ему ></a>
                 </div>
             </section>
         )

@@ -1,0 +1,34 @@
+.rybalsky {
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-content {}
+
+    &-p {
+        margin-bottom: 24px;
+        &.-disclaimer {
+            color: $color-text-light;
+            font-style: italic;
+            margin-bottom: 32px;
+        }
+    }
+
+    &-image {
+        margin-left: 32px;
+    }
+
+    @include to-md-width() {
+        &-container {
+            flex-direction: column-reverse;
+        }
+        &-image {
+            margin-bottom: 32px;
+            margin-left: 0;
+            width: 80%;
+            max-width: 400px;
+        }
+    }
+}

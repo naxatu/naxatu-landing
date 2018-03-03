@@ -1,0 +1,45 @@
+.btn {
+    transition: all 0.4s;
+    margin: 16px 0;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-main;
+    border: 1px solid $color-main;
+    background: transparent;
+    padding: 6px 16px;
+    line-height: 1.85;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+
+    &.-yellow {
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        &:hover {
+            color: $color-text-dark;
+            background: $color-primary;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        color: white;
+        background: $color-main;
+    }
+
+    &.-inline {
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+        color: transparentize($color-white-lilac, 0.15);
+        &:hover {
+            background: transparent;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+    }
+
+    & + & {
+        margin-left: 32px;
+    }
+}

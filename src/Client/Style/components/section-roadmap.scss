@@ -1,0 +1,80 @@
+.roadmap {
+    &-item {
+        display: flex;
+        align-items: stretch;
+        margin: 0 auto;
+        max-width: 680px;
+        width: 100%;
+
+        &-text {
+            &-wrapper {
+                margin-left: 24px;
+                padding-bottom: 32px;
+            }
+
+            &-title, &-p {
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
+        }
+
+        &-image {
+            &-wrapper {
+                width: 84px;
+                padding-bottom: 32px;
+            }
+
+            color: $color-primary;
+            z-index: 2;
+            width: 84px;
+            height: 84px;
+            background: white;
+            border: 2px solid currentColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 84px;
+            &-icon {
+                font-size: 32px;
+            }
+        }
+
+        @include to-sm-width {
+            &-text {
+                &-wrapper {
+                    margin-left: 16px;
+                }
+                &-title, &-p {
+                    margin-bottom: 16px;
+                }
+
+                &-title {
+                    font-size: 18px;
+                }
+
+                &-p {
+                    font-size: 14px;
+                }
+            }
+
+            &-image {
+                &-wrapper {
+                    width: 64px;
+                }
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+
+    &-line {
+        position: absolute;
+        width: 2px;
+        background: $color-santas-gray;
+        z-index: 1;
+        left: 50%;
+        transition: translateX(-50%);
+        top: 0;
+        bottom: 0;
+    }
+}

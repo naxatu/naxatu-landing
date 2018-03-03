@@ -1,9 +1,17 @@
 import * as React from 'react';
 import {MainLayout, IMainLayoutProps} from './Components/MainLayout';
-import {Button} from './Components/Button';
 import {Intro} from './HomeComponent/Intro';
-import {Why} from './HomeComponent/Why';
+import {About} from './HomeComponent/About';
 import {Citation} from './HomeComponent/Citation';
+import {IcoStatus} from './HomeComponent/IcoStatus';
+import {XataToken} from './HomeComponent/XataToken';
+import {Roadmap} from './HomeComponent/Roadmap';
+import {Team} from './HomeComponent/Team';
+import {WhereHouse} from './HomeComponent/WhereHouse';
+import {Challenge} from './HomeComponent/Challenge';
+import {Partners} from './HomeComponent/Partners';
+import {FAQ} from './HomeComponent/FAQ';
+import {Contacts} from './HomeComponent/Contacts';
 
 export interface IHomeViewProps {
     url: string;
@@ -29,8 +37,17 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
         return (
             <MainLayout {...layoutProps}>
                 <Intro />
-                <Why />
+                <About />
+                <IcoStatus />
                 <Citation />
+                <WhereHouse />
+                <XataToken />
+                <Roadmap />
+                <Team />
+                <Challenge />
+                <Partners />
+                <FAQ />
+                <Contacts />
             </MainLayout>
         );
     }

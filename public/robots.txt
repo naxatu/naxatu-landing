@@ -1,0 +1,5 @@
+User-agent: *
+Allow: *
+
+Host: http://naxatu.com/
+Sitemap: http://naxatu.com/sitemap.xml

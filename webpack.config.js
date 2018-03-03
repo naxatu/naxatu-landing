@@ -15,18 +15,10 @@ const extractSass = new ExtractTextPlugin({
     disable: isBuild
 });
 
-// loaders
-function getCacheLoader() {
-    return {
-        loader: 'cache-loader'
-    };
-}
-
 function getTSLoader() {
     return {
         test: /(\.tsx?)$/,
         use: [
-            getCacheLoader(),
             {
                 loader: 'awesome-typescript-loader',
                 options: {
@@ -41,6 +33,17 @@ function getTSLoader() {
                 }
             },
         ],
+    };
+}
+
+function getJSLoader() {
+    return {
+        test: /(\.jsx?)$/,
+        loader: 'babel-loader',
+        exclude: /(node_modules)/,
+        query: {
+            presets: ['es2015', 'stage-0', 'react']
+        }
     };
 }
 
@@ -71,6 +74,7 @@ module.exports = {
     module: {
         rules: [
             getTSLoader(),
+            getJSLoader(),
             {
                 test: /\.scss$/,
                 use: extractSass.extract({

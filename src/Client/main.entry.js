@@ -1,5 +1,6 @@
 import {each} from 'lodash';
-import {extractValue} from './Main/TokenStats'
+import animateScrollTo from 'animated-scroll-to';
+import * as IcoStatusController from './Main/IcoStatusController';
 
 import './Style/main.scss';
 
@@ -8,7 +9,10 @@ console.log("Чего? Тут ничего нет. Кышь-кышь от сюд
 let elements = document.getElementsByClassName("anchor");
 const onClickAnchorLink = (event) => {
     const btn = event.currentTarget;
-    console.log(btn.getAttribute('href'));
+    animateScrollTo(document.querySelector(btn.getAttribute('href')));
+    event.preventDefault();
+
+    return false;
 };
 
 each(elements, (elem, indx) => {
@@ -16,6 +20,4 @@ each(elements, (elem, indx) => {
 });
 
 
-extractValue().then(result => {
-    console.log(result);
-});
+IcoStatusController.init();

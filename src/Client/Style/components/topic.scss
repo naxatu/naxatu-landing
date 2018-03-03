@@ -1,21 +1,41 @@
 .topic {
+    margin-bottom: 64px;
     &-title {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 40px;
 
         max-width: 600px;
         width: 100%;
 
-        font-size: 32px;
+        font-size: 42px;
         font-weight: 600;
 
         .-intro & {
-            font-size: 48px;
+            font-size: 52px;
             color: $color-primary;
+        }
+    }
 
-            @include only-width(320px, 500px) {
+    &.-left &-title {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    &.-small {
+        margin-bottom: 32px;
+    }
+    &.-small &-title {
+        font-size: 36px;
+    }
+
+    @include only-width(320px, 500px) {
+        margin-bottom: 40px;
+        &-title {
+            font-size: 28px;
+        }
+        .-intro {
+            &-title {
                 font-size: 32px;
             }
         }

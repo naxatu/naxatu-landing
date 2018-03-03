@@ -1,0 +1,41 @@
+import * as React from 'react';
+import {Emojify} from '../../Utils/Emojify';
+
+export class WhereHouse extends React.Component<any, any> {
+    render() {
+        return (
+            <section className="section -rybalsky rybalsky" id="rybalsky">
+                <article className="section-content rybalsky-container">
+                    <div className="rybalsky-content">
+                        <div className="topic -left -small">
+                            <h2 className="topic-title">ЖК RYBALSKY - Вон там хочу Хату</h2>
+                        </div>
+                        <div>
+                            <p className="rybalsky-p -disclaimer">
+                                О нет! Не подумайте что это реклама {' '}
+                                <a href="https://rybalsky.com.ua?rel=дайте+мне+скидку"
+                                   target="_blank" className="link"
+                                   title="ЖК Rybalsky - Я хочу от вас скидку ^_^"
+                                >ЖК Rybalsky</a>!
+                            </p>
+
+                            <p className="rybalsky-p">
+                                Пожалуй, это дом мечты - квадратное здание и 9 этажей.
+                                Расположенный на промышленном, полузаброшенном полуострове.
+                                Вокруг недостроенные мосты, железная дорога и прекрасный вид на Днепр.
+                            </p>
+
+                            <p className="rybalsky-p"><Emojify>Романтика :heart_eyes:</Emojify></p>
+
+                            <a href="#ico" className="btn anchor">Подкинуть на RYBALSKY</a>
+                        </div>
+                    </div>
+                    <img src="/image/zk-rybalsky.png" className="rybalsky-image"
+                         title="ЖК Rybalsky - дай мне скидку!"
+                         alt="ЖК Rybalsky"
+                    />
+                </article>
+            </section>
+        )
+    }
+}

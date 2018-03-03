@@ -1,0 +1,22 @@
+.ico {
+
+}
+
+.ico-status {
+    transition: all 0.4s;
+    opacity: 0;
+
+    &.-loaded {
+        opacity: 1;
+    }
+
+    &-loading {
+        font-size: 20px;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        height: 100px;
+    }
+}

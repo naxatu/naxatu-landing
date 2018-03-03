@@ -5,6 +5,8 @@ const target = 150000;
 const etherscanUrl = "https://api.etherscan.io/api";
 let weiPerEther = new BigNumber("1000000000000000000", 10);
 
+const contract = "0x27f706edde3aD952EF647Dd67E24e38CD0803DD6";
+
 export function getPrice() {
     const requestParams = {
         module: 'stats',
@@ -26,7 +28,7 @@ export function extractValue() {
     const requestParams = {
         module: "proxy",
         action: "eth_call",
-        to: "0x27f706edde3aD952EF647Dd67E24e38CD0803DD6",
+        to: contract,
         data: "0xc59d48470000000000000000000000000000000000000000000000000000000000000000",
         tag: "latest"
     };
@@ -43,10 +45,11 @@ export function extractValue() {
             let totalContributionUSDExact = totalContributionExact.multipliedBy(price);
 
             return {
+                contract: contract,
                 price: price,
                 totalContribution: totalContributionExact.toNumber(),
                 totalContributionUSD: totalContributionUSDExact.toNumber(),
-                targetPercent: totalContributionUSDExact.div(target).times(100).toNumber(),
+                targetPercent: totalContributionUSDExact.div(target).toNumber(),
                 totalSupply: new BigNumber(result.substr(66, 64), 16).div(weiPerEther).toNumber(),
                 totalBonusTokensIssued: new BigNumber(result.substr(130, 64), 16).div(weiPerEther).toNumber(),
                 purchasingAllowed: new BigNumber(result.substr(194, 64), 16).isZero() == false
