@@ -7,7 +7,7 @@ export class Partners extends React.Component<any, any> {
             <section className="section -partners partners" id="partners">
                 <div className="section-content">
                     <div className="topic">
-                        <h2 className="topic-title">Те кто не равнодушен к проблеме</h2>
+                        <h2 className="topic-title">Вот они няши и все такие ми-ми-ми</h2>
                     </div>
                 </div>
             </section>
