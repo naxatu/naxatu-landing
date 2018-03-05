@@ -19,11 +19,11 @@ export class Roadmap extends React.Component<any, any> {
                         </div>
                         <div className="roadmap-item-text-wrapper">
                             <h3 className="roadmap-item-text-title">Март-Май 2018 - Собираю на Хату</h3>
-                            <p className="roadmap-item-text-p">
+                            <p className="paragraph roadmap-item-text-p">
                                 Этап разработки и запуска вебсайта и смарт-токена {' '}
                                 <a href="#xata" className="link anchor">XATA</a>.
                             </p>
-                            <p className="roadmap-item-text-p">
+                            <p className="paragraph roadmap-item-text-p">
                                 Этап подвигов и свершений, ведь написание и публикация токена по стандарту ERC20
                                 (на Ethereum, конечно же) требует стальных яиц и выносливой психики.
                                 Малейшая ошибка или баг опубликованного контракта приводит
@@ -42,11 +42,15 @@ export class Roadmap extends React.Component<any, any> {
                         </div>
                         <div className="roadmap-item-text-wrapper">
                             <h3 className="roadmap-item-text-title">Июнь 2018 - Покупаю Хату</h3>
-                            <p className="roadmap-item-text-p">
-                                Иду, такой, в отдел продаж ЖК и говорю, мол:<br/>
-                                Дайте хату. Которую? А вон ту, наx.<br/>
-                                Побыстрей. Ethereum сойдет? Заебца, держи, братуха.<br/>
-                                Где ключи, с*ка? И мобилу тож давай.
+                            <p className="paragraph roadmap-item-text-p">
+                                Иду, такой, в отдел продаж ЖК и покупать начинаю:
+                            </p>
+                            <p className="paragraph roadmap-item-text-p">
+                                - Дайте хату. <br/>
+                                - Которую? <br/>
+                                - А вон ту, наx. И побыстрей. Ethereum сойдет? Иль вам лаве в кубриках? <br/>
+                                - Давай Ethereum, а лучше в Bitcoin. <br/>
+                                - Держи, братуха. И да, где ключи, с*ка? И мобилу тож давай.
                             </p>
                         </div>
                     </div>
@@ -59,20 +63,20 @@ export class Roadmap extends React.Component<any, any> {
                         </div>
                         <div className="roadmap-item-text-wrapper">
                             <h3 className="roadmap-item-text-title">2-й квартал 2019 - Ремонтирую Хату</h3>
-                            <p className="roadmap-item-text-p">
+                            <p className="paragraph roadmap-item-text-p">
                                 Это этап важных решений, когда нужно сделать выбор между
-                                установкой золотого унитаза в сунузел или дивана в гостинную.
+                                установкой золотого унитаза или дивана в гостинную.
                             </p>
-                            <p className="roadmap-item-text-p">
+                            <p className="paragraph roadmap-item-text-p">
                                 Определяемся с интерьером с помощью наших
                                 друзей по <a href="#challenge" className="link anchor">челенджу</a>.
                                 Выбираем материалы, делаем перепланировку (да-да, нужно что бы не как у всех!).
-                                Сделать большую и <s>пиздатую</s> классную кухню.
                             </p>
-                            <p className="roadmap-item-text-p">
-                                И самое важное - выбрать место для бара. Хобби должно развиваться
+                            <p className="paragraph roadmap-item-text-p">
+                                Сделать <s>пиздатую</s> большую кухню и самое важное - выбрать место для бара. Хобби должно развиваться
                                 и для этого нужны все условия.
                             </p>
+                            <p className="paragraph roadmap-item-text-p"><Emojify>Бар + кухня = :heart:</Emojify></p>
                         </div>
                     </div>
 

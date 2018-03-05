@@ -33,21 +33,21 @@ export class About extends React.Component<any, any> {
                         <label className="why-article-icon">{sample(blockchainIcons)}</label>
 
                         <h3 className="why-article-title">Блокчейн это круто</h3>
-                        <p className="why-article-text"><Emojify>
+                        <p className="why-article-text paragraph"><Emojify>
                             Но хочу, что бы не как у всех!
                             Так что, новых блокчейн технологий тут не будет :smiling_imp:
                         </Emojify></p>
-                        <p className="why-article-text">
+                        <p className="why-article-text paragraph">
                             <Emojify>
                                 Будут токены ХАТА. Они на блокчейне и ими можно будет что-то платить или куда-то
                                 продать :moneybag: (но это не точно).
                             </Emojify>
                         </p>
-                        <p className="why-article-text">
+                        <p className="why-article-text paragraph">
                             Если достигну цели, то напичкаю Хату всякими приблудами от "умного дома" и заставлю
                             работать робота-пылесоса. Но не факт что и там где-нибудь будет блокчейн.
                         </p>
-                        <p className="why-article-text">
+                        <p className="why-article-text paragraph">
                             Так-же токены можно получить на <a href="#challenge" className="anchor link">#челендже</a>
                         </p>
                     </article>
@@ -58,22 +58,22 @@ export class About extends React.Component<any, any> {
                             <i className="fas fa-star"/>
                         </label>
 
-                        <h3 className="why-article-title"><Emojify>Это действительно честное ICO :yum:</Emojify></h3>
-                        <p className="why-article-text">
+                        <h3 className="why-article-title">Это действительно честное ICO</h3>
+                        <p className="paragraph why-article-text">
                             <Emojify>
                                 Очень многие проекты в ICO и на Kickstarter обманывают :sob:, обещают золотые горы и
                                 очень крутой продукт :scream:, а как соберут средства - исчезнут и накупят
                                 Ferrari :car: или еще чего бесполезного.
                             </Emojify>
                         </p>
-                        <p className="why-article-text">
+                        <p className="paragraph why-article-text">
                             <Emojify>
                                 Я же не хочу ни кого обманывать и покупать Ferrari :car:. Все собранные средства
                                 будут потрачены исключительно на покупку крутой Хаты в Киеве и её крутой ремонт.
-                                Возможно <a href="#rybalsky" className="anchor link">ЖК Rybalsky</a>
-                            </Emojify>
+                            </Emojify>{' '}
+                            <span>Возможно в <a href="#rybalsky" className="anchor link">ЖК Rybalsky</a>.</span>
                         </p>
-                        <p className="why-article-text">
+                        <p className="paragraph why-article-text">
                             Все события будут транслироваться в канале
                             в телеграмме <a href="https://t.me/naxatu" target="_blank" className="link">t.me/naxatu</a>.
                         </p>
@@ -85,14 +85,14 @@ export class About extends React.Component<any, any> {
                         </label>
 
                         <h3 className="why-article-title">Вы получаете токены XATA</h3>
-                        <p className="why-article-text">
+                        <p className="paragraph why-article-text">
                             <Emojify>
                                 Возможно, с первого взгляда, токены XATA покажутся бесполезными. Но уверяю, если дело
                                 выгорит - после окончания "Собираю на Хату", будет запущен другой краудсел в реальном
                                 секторе :circus_tent: в Киеве. Там можно будет оплачивать ХАТА-й.
                             </Emojify>
                         </p>
-                        <p className="why-article-text">
+                        <p className="paragraph why-article-text">
                             Но пока это секрет, никому не говори. Тссс… {this.renderQuiteEmoji()}
                         </p>
                         <p className="why-article-text -about">
