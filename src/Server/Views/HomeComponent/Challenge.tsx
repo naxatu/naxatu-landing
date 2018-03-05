@@ -2,30 +2,42 @@ import * as React from 'react';
 import {Emojify} from '../../Utils/Emojify';
 
 const challengeLink = "https://www.instagram.com/explore/tags/собираюнахату/";
-const instagramLinkComponent = <a href={challengeLink} className="link" target="_blank">#собираюнахату</a>;
+const hashTag = '#собираюнахату';
+const instagramLinkComponent = <a href={challengeLink} className="link" target="_blank">{hashTag}</a>;
 
 export class Challenge extends React.Component<any, any> {
     render() {
         return (
             <section className="section -challenge challenge" id="challenge">
                 <div className="section-content">
-                    <div className="topic">
+                    <div className="topic -left -small">
                         <h2 className="topic-title">{instagramLinkComponent} челендж</h2>
                     </div>
-                    <p>Помогите мне выбрать интерьер квартиры!</p>
-                    <p>
-                        Бьюсь в догадках, какого же цвета паркет положить, или как выбрать
-                        рисунок настенного ковра.
+                    <p className="paragraph">Помогите мне выбрать интерьер квартиры!</p>
+                    <p className="paragraph">
+                        Бьюсь в догадках, какого же цвета положить паркет? <br/>
+                        Как выбрать рисунок настенного ковра? <br/>
+                        Чем закрасить окна?
                     </p>
-                    <p>
-                        Публикуй в инстаграме свои фотографии с крутым интерьером
-                        с хештегом {instagramLinkComponent}. Каждую неделю буду репостить 3 самые
-                        понравившиеся фотографии, а счастливчики получат по 10 XATA.
+                    <p className="paragraph">
+                        Подскажи с помощью инстаграмчика! <br/>
+                        Публикуй свой фейсик с крутым интерьером
+                        и хештегом <u>{hashTag}</u>. Каждую неделю буду репостить 3 симпатяшные
+                        фотографии, а удачливые получат по 10 XATA<span className="text-red">*</span>
                     </p>
-                    <p>
+                    <p className="paragraph">
                         <b>Помни, интерьер найденный в гугле - это не прикольно.</b> Важно то что
                         видел своими глазами, то что прочувствовал!
                     </p>
+
+                    <div className="paragraph-special">
+                        <div className="paragraph-special__item">
+                            <Emojify>
+                                * только если укажут кошелек Ethereum :smiling_imp:
+                                или хотя бы ответят в личку, ведь это целых 2000грн!
+                            </Emojify>
+                        </div>
+                    </div>
                 </div>
             </section>
         )

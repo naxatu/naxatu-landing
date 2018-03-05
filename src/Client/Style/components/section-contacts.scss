@@ -1,0 +1,22 @@
+.contacts {
+    &-block {
+        max-width: 680px;
+        margin: 0 auto;
+        border: 1px solid $color-reriwinkle-gray;
+        padding: 16px 32px;
+    }
+
+    &__item {
+        margin: 16px 0;
+        & > b {
+            display: block;
+        }
+    }
+
+    @include only-width(320px, 500px) {
+        &-block {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}

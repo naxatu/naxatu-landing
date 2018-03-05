@@ -1,3 +1,18 @@
 .paragraph {
     margin-bottom: 24px;
+
+    &-special {
+        font-size: 12px;
+        color: $color-text-light;
+
+        &__item {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.text {
+    &-red {
+        color: $color-red;
+    }
 }

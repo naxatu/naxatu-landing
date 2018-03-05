@@ -1,13 +1,21 @@
 .topic {
     margin-bottom: 64px;
-    &-title {
+
+    &-title,
+    &-desc {
         text-align: center;
+
         margin-left: auto;
         margin-right: auto;
-
-        max-width: 680px;
         width: 100%;
+    }
 
+    &-title + &-desc {
+        margin-top: 24px;
+    }
+
+    &-title {
+        max-width: 720px;
         font-size: 42px;
         font-weight: 600;
 
@@ -15,6 +23,11 @@
             font-size: 52px;
             color: $color-primary;
         }
+    }
+
+    &-desc {
+        max-width: 680px;
+        font-size: 24px;
     }
 
     &.-left &-title {
@@ -33,6 +46,9 @@
         margin-bottom: 40px;
         &-title {
             font-size: 28px;
+        }
+        &-desc {
+            font-size: 18px;
         }
         .-intro {
             &-title {

@@ -7,10 +7,8 @@ export class IcoStatus extends React.Component<any, any> {
             <section className="section -ico ico" id="ico">
                 <div className="section-content">
                     <div className="topic">
-                        <h2 className="topic-title">
-                            Подкидывай за XATA токены.
-                            <br/>Пока горячее. Пока можно.
-                        </h2>
+                        <h2 className="topic-title">Подкидывай на Хату</h2>
+                        <p className="topic-desc">Пока горячее. Пока можно.</p>
                     </div>
 
                     <div id="IcoReactComponent" className="ico-status-container">
