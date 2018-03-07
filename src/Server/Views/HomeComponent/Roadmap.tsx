@@ -48,7 +48,7 @@ export class Roadmap extends React.Component<any, any> {
                             <p className="paragraph roadmap-item-text-p">
                                 - Дайте хату. <br/>
                                 - Которую? <br/>
-                                - А вон ту, наx. И побыстрей. Ethereum сойдет? Иль вам лаве в кубриках? <br/>
+                                - А вон ту, наx. И побыстрей. Ethereum сойдет? Иль вам лаве в заморских? <br/>
                                 - Давай Ethereum, а лучше в Bitcoin. <br/>
                                 - Держи, братуха. И да, где ключи, с*ка? И мобилу тож давай.
                             </p>
@@ -73,7 +73,8 @@ export class Roadmap extends React.Component<any, any> {
                                 Выбираем материалы, делаем перепланировку (да-да, нужно что бы не как у всех!).
                             </p>
                             <p className="paragraph roadmap-item-text-p">
-                                Сделать <s>пиздатую</s> большую кухню и самое важное - выбрать место для бара. Хобби должно развиваться
+                                Еще необходимо сделать большую кухню и очень
+                                важно выбрать место для бара. <s>Алкоголизм</s> хобби должно развиваться
                                 и для этого нужны все условия.
                             </p>
                             <p className="paragraph roadmap-item-text-p"><Emojify>Бар + кухня = :heart:</Emojify></p>

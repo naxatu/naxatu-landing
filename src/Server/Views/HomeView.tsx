@@ -37,8 +37,8 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
         return (
             <MainLayout {...layoutProps}>
                 <Intro />
-                <About />
                 <IcoStatus />
+                <About />
                 <Citation />
                 <WhereHouse />
                 <XataToken />

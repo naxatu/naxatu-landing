@@ -1,0 +1,34 @@
+.challenge {
+
+    &-content {
+        display: flex;
+    }
+
+    &-square {
+        width: 50%;
+        padding: 20px;
+        background: $color-white-lilac;
+
+        &.-image {
+            padding: 0;
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+
+    @include to-md-width {
+        &-square {
+            width: 100%;
+        }
+
+        &-content {
+            flex-direction: column;
+        }
+
+    }
+
+}

@@ -50,10 +50,8 @@
         &-desc {
             font-size: 18px;
         }
-        .-intro {
-            &-title {
-                font-size: 32px;
-            }
+        .-intro &-title {
+            font-size: 32px;
         }
     }
 }

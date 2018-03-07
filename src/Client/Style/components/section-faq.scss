@@ -12,6 +12,9 @@
         margin-bottom: 20px;
         margin-right: auto;
         margin-left: auto;
+
+        border-left: 4px solid $color-primary;
+
         &__title {
             margin-bottom: 24px;
         }

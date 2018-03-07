@@ -15,9 +15,9 @@ export class Intro extends React.Component<any, any> {
 
                     <div className="topic intro-topic">
                         <h1 className="topic-title">Собираю на Хату</h1>
-                        <h2 className="intro-subtopic">
-                            <p>Каждый мечтает о прекрасном.</p>
-                            <p>Я же мечтаю о прекрасной Хате в Киеве на которую можно собрать с помощью ICO.</p>
+                        <h2 className="topic-desc intro-topic-desc">
+                            Каждый мечтает о прекрасном.<br/>
+                            Я же мечтаю о прекрасной Хате в Киеве на которую можно собрать с помощью ICO.
                         </h2>
                     </div>
 
