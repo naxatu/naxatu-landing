@@ -1,0 +1,27 @@
+.faq {
+    &-block {
+
+    }
+
+    &-item {
+        max-width: 680px;
+        width: 100%;
+        border: 1px solid $color-reriwinkle-gray;
+        padding: 40px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        &__title {
+            margin-bottom: 24px;
+        }
+        &__answer {
+        }
+    }
+
+    @include only-width(320px, 500px) {
+        &-item {
+            padding: 24px 16px;
+        }
+    }
+}

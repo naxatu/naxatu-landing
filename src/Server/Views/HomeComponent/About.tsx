@@ -93,7 +93,7 @@ export class About extends React.Component<any, any> {
                             </Emojify>
                         </p>
                         <p className="paragraph why-article-text">
-                            Но пока это секрет, никому не говори. Тссс… {this.renderQuiteEmoji()}
+                            Но пока это секрет… {this.renderQuiteEmoji()}
                         </p>
                         <p className="why-article-text -about">
                             <a href="#xata" className="anchor link">Подробнее о ХАТА токенах</a>

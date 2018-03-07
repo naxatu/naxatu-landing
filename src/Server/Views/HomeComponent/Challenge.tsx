@@ -13,19 +13,24 @@ export class Challenge extends React.Component<any, any> {
                     <div className="topic -left -small">
                         <h2 className="topic-title">{instagramLinkComponent} челендж</h2>
                     </div>
-                    <p className="paragraph">Помогите мне выбрать интерьер квартиры!</p>
                     <p className="paragraph">
+                        Помогите мне выбрать интерьер квартиры!
+                        <br/>
+                        <br/>
+
                         Бьюсь в догадках, какого же цвета положить паркет? <br/>
                         Как выбрать рисунок настенного ковра? <br/>
                         Чем закрасить окна?
-                    </p>
-                    <p className="paragraph">
+                        <br/>
+                        <br/>
+
                         Подскажи с помощью инстаграмчика! <br/>
                         Публикуй свой фейсик с крутым интерьером
                         и хештегом <u>{hashTag}</u>. Каждую неделю буду репостить 3 симпатяшные
                         фотографии, а удачливые получат по 10 XATA<span className="text-red">*</span>
-                    </p>
-                    <p className="paragraph">
+                        <br/>
+                        <br/>
+
                         <b>Помни, интерьер найденный в гугле - это не прикольно.</b> Важно то что
                         видел своими глазами, то что прочувствовал!
                     </p>

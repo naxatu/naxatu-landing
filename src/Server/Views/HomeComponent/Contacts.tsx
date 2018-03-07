@@ -24,14 +24,27 @@ export class Contacts extends React.Component<any, any> {
                             </div>
 
                             <div className="contacts__item">
-                                <b><i className="far fa-envelope"/> Email:</b>
-                                <a target="_blank" href="mailto:maksym.tymchyk@gmail.com" className="link">maksym.tymchyk@gmail.com</a>
+                                <b><i className="fab fa-telegram-plane"/> Telegram канал:</b>
+                                <a target="_blank" href="https://t.me/naxatu"
+                                   className="link">t.me/naxatu</a>
                             </div>
 
                             <div className="contacts__item">
                                 <b><i className="fab fa-facebook"/> Facebook:</b>
                                 <a target="_blank" href="https://fb.com/maksym.tymchyk"
                                    className="link">maksym.tymchyk</a>
+                            </div>
+
+                            <div className="contacts__item">
+                                <b><i className="fab fa-slack"/> Slack:</b>
+                                <a target="_blank"
+                                   href="https://join.slack.com/t/naxatu/shared_invite/enQtMzI1MjgxNTQ5MzMzLTE1ZTBlOWZjYTdhMDY4NWM4ZTkxOWM0ODU4NjdlMzFhNmRiZThiYjRlZmQwZGE0YjgxNjYxMmY0OTZlMjZmMTU"
+                                   className="link">Naxatu</a>
+                            </div>
+
+                            <div className="contacts__item">
+                                <b><i className="far fa-envelope"/> Email:</b>
+                                <a target="_blank" href="mailto:maksym.tymchyk@gmail.com" className="link">maksym.tymchyk@gmail.com</a>
                             </div>
                         </div>
 
