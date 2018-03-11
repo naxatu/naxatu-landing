@@ -1,5 +1,5 @@
 .section {
-    padding: 80px 0;
+    padding: 100px 0;
     &.-intro {
         padding-top: 60px;
         padding-bottom: 60px;
@@ -9,7 +9,7 @@
     }
 
     @include only-width(320px, 600px) {
-        padding: 50px 0;
+        padding: 60px 0;
         &.-intro {
             height: auto;
         }

@@ -25,7 +25,7 @@ export class NavigationMenu extends React.Component<IProps, any> {
 
                 <div className="navigation-content">
                     <ul className="navigation-menu">
-                        <li className="navigation-item">
+                        <li className="navigation-item -main-action">
                             <a className="anchor" href="#ico">Подкинуть на Хату</a>
                         </li>
 
@@ -71,10 +71,19 @@ export class NavigationMenu extends React.Component<IProps, any> {
                     </ul>
 
                     <div className="navigation-footer">
-                        <p>
+                        <p className="navigation-footer__desc">
                             Я готов потратить все ваши деньги себе на Хату.
                             А вы готовы мне их дать?
                         </p>
+                        <div className="navigation-footer__links">
+                            <a href="https://github.com/naxatu" target="_blank"
+                               title="Ты всю жизнь ждал, что бы с умным видом смотреть в чужой код и критиковать. Сделай это прямо сейчас!"
+                            ><i className="fab fa-github"/></a>
+
+                            <a href="https://t.me/naxatu" target="_blank"
+                               title="Следи за всем что проиходит, ведь нужно быть в курсе событий."
+                            ><i className="fab fa-telegram"/></a>
+                        </div>
                     </div>
                 </div>
             </nav>

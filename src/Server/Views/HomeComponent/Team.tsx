@@ -37,13 +37,18 @@ export class Team extends React.Component<any, any> {
                                 <div className="team-person__social">
                                     <a href="https://fb.com/maksym.tymchyk"
                                        className="team-person__social-item"
-                                       title="Facebook"
+                                       title="Лицокнига"
                                        target="_blank"><i className="fab fa-facebook-square"/></a>
 
                                     <a href="https://www.linkedin.com/in/maksym-tymchyk-66081152/"
                                        className="team-person__social-item"
-                                       title="LinkedIn"
+                                       title="Социальная сеть для офисного планктона О_о"
                                        target="_blank"><i className="fab fa-linkedin"/></a>
+
+                                    <a href="https://github.com/m-tymchyk"
+                                       className="team-person__social-item"
+                                       title="Место, где творю, где воплощается моя фантазия"
+                                       target="_blank"><i className="fab fa-github"/></a>
                                 </div>
                             </div>
                         </article>

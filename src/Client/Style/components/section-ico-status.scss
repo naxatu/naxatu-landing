@@ -22,20 +22,58 @@
         height: 100px;
     }
 
-    &__contract-address {
-        display: block;
-        width: 100%;
-        max-width: 680px;
-        border: none;
-        border-radius: 3px;
-        background: $color-white-lilac;
-        margin: 16px auto;
-        padding: 8px 8px;
-        line-height: 1.41;
-        text-align: center;
+    &-contract {
+        &__desc {
+            text-align: center;
+        }
 
-        @include to-sm-width {
-            font-size: 14px;
+        &__address {
+            display: block;
+            width: 100%;
+            max-width: 680px;
+            border: none;
+            border-radius: 3px;
+            background: $color-white-lilac;
+            margin: 16px auto;
+            padding: 8px 8px;
+            line-height: 1.41;
+            text-align: center;
+
+            @include to-sm-width {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &-progress {
+        margin: 16px 0;
+        width: 100%;
+        height: 20px;
+        background: $color-white-lilac;
+        padding: 2px;
+        border-radius: 3px;
+        &__line {
+            max-width: 100%;
+            height: 16px;
+            background: $color-primary;
+            border-radius: 3px 0 0 3px;
+        }
+
+        &__result {
+            position: absolute;
+            right: -42px;
+            top: -6px;
+            font-size: 12px;
+            padding: 28px 0 0 8px;
+            border-left: 1px solid $color-text-light;
+            display: block;
+        }
+
+        &__target {
+            position: absolute;
+            right: 4px;
+            top: 24px;
+            font-size: 16px;
         }
     }
 }

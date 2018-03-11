@@ -6,6 +6,10 @@
         margin: 0 auto 48px auto;
         padding: 0 0 0 64px;
 
+        &:last-child {
+            margin-bottom: 0;
+        }
+
         &-title {
             margin-bottom: 24px;
         }
