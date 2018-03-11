@@ -7,7 +7,7 @@ export class Team extends React.Component<any, any> {
             <section className="section -team team" id="team">
                 <div className="section-content">
                     <div className="topic">
-                        <h2 className="topic-title">Наша команда</h2>
+                        <h2 className="topic-title">Команда мечты</h2>
                         <p className="topic-desc">
                             Сбор средств на Хату - это трудоемкий процесс, требующий
                             тщательной подготовки и слаженности всей команды
