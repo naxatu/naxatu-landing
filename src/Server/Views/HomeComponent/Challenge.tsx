@@ -46,7 +46,7 @@ export class Challenge extends React.Component<any, any> {
 
                     <div className="challenge-square -image">
                         <img src="/image/insta-image.png"
-                             title="Настенный ковер, это лучшее что может быть в квартире. Но не бойся, рн не будет закрытьва тове имя на колаже."
+                             title="Настенный ковер, это лучшее что может быть в квартире. Но не бойся, ковер не будет закрывать твое имя на коллаже."
                              alt="Настенный ковер в Хате"
                         />
                     </div>
