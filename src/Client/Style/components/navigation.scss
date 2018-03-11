@@ -1,0 +1,135 @@
+.navigation {
+    z-index: 999;
+
+    &-open, &-close {
+        border: none;
+        cursor: pointer;
+    }
+
+    &-open {
+        width: 48px;
+        height: 48px;
+        right: 20px;
+        top: 20px;
+        background: transparentize($color-text-dark, 0.5);
+        padding: 0 12px;
+        border-radius: 40px;
+
+        &__line {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: $color-white-lilac;
+            margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-close {
+        background: transparent;
+        position: absolute;
+        right: 16px;
+        top: 8px;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        z-index: 3;
+
+        &__line {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 24px;
+            background: $color-white-lilac;
+            left: 8px;
+
+            &:nth-child(1) {
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &-open, &-overlay, &-wrapper {
+        transition: all 0.4s;
+        position: fixed;
+    }
+
+    &-overlay {
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        background: transparentize($color-text-dark, 0.3);
+
+        .-open & {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &-logo {
+        position: absolute;
+        left: 24px;
+        top: 12px;
+        width: 54px;
+    }
+
+    &-content {
+        padding: 72px 24px 100px 24px;
+        overflow-x: hidden;
+        min-height: 100vh;
+    }
+
+    &-wrapper {
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        width: 260px;
+        background: $color-text-dark;
+        color: $color-white-lilac;
+        max-height: 100vh;
+        overflow-y: auto;
+        right: -260px;
+        .-open & {
+            right: 0;
+        }
+    }
+
+    &-item {
+        display: block;
+        & > a {
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            margin-bottom: 16px;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &-overlay {
+        position: fixed;
+    }
+
+    &-footer {
+        position: absolute;
+        bottom: 20px;
+        left: 24px;
+        right: 24px;
+        & > p {
+            font-size: 12px;
+            color: $color-text-light;
+        }
+    }
+}

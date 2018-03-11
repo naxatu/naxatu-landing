@@ -5,6 +5,8 @@
 .ico-status {
     transition: all 0.4s;
     opacity: 0;
+    display: block;
+    width: 100%;
 
     &.-loaded {
         opacity: 1;
@@ -18,5 +20,22 @@
         display: flex;
         justify-content: center;
         height: 100px;
+    }
+
+    &__contract-address {
+        display: block;
+        width: 100%;
+        max-width: 680px;
+        border: none;
+        border-radius: 3px;
+        background: $color-white-lilac;
+        margin: 16px auto;
+        padding: 8px 8px;
+        line-height: 1.41;
+        text-align: center;
+
+        @include to-sm-width {
+            font-size: 14px;
+        }
     }
 }

@@ -11,6 +11,7 @@ import {WhereHouse} from './HomeComponent/WhereHouse';
 import {Challenge} from './HomeComponent/Challenge';
 import {Partners} from './HomeComponent/Partners';
 import {FAQ} from './HomeComponent/FAQ';
+import {Heroes} from './HomeComponent/Heroes';
 import {Contacts} from './HomeComponent/Contacts';
 
 export interface IHomeViewProps {
@@ -44,8 +45,9 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
                 <XataToken />
                 <Roadmap />
                 <Team />
-                <Challenge />
                 <Partners />
+                <Challenge />
+                <Heroes/>
                 <FAQ />
                 <Contacts />
             </MainLayout>

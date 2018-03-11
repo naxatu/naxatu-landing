@@ -6,8 +6,10 @@ import {Emojify, emojifyText} from '../../Utils/Emojify';
 import {config} from '../../Config';
 
 import {OpenGraph} from './OpenGraph';
+import {NavigationMenu} from './NavigationMenu';
 
 const version = config.get('app.version') || '0.0.0';
+const gtmKey = config.get('app.gtmKey') || '';
 
 export interface IMainLayoutProps {
     title?: string;
@@ -22,7 +24,7 @@ const criticalCSS = fs.readFileSync(
     'utf-8'
 );
 
-const gtm = new GTM('GTM-NWXJK3K');
+const gtm = new GTM(gtmKey);
 
 export class MainLayout extends React.Component<IMainLayoutProps, any> {
     render() {
@@ -68,6 +70,7 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             </head>
             <body>
             {gtm.renderBody()}
+            <NavigationMenu />
             {children}
             <script src={`/js/main.bundle.js?v=${version}`}/>
             <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"/>

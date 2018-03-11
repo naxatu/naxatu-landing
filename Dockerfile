@@ -1,9 +1,11 @@
-FROM node:9.6.1-alpine
+FROM node:9.7.1-alpine
 
 ENV NX_HOST=localhost
 ENV NX_PORT=80
+ENV NX_CONTRACT="0x27f706edde3aD952EF647Dd67E24e38CD0803DD6"
+ENV NX_FLAGS="[]"
 
-RUN apk add --no-cache gettext
+RUN apk add --no-cache gettext git
 
 WORKDIR /var/www/
 

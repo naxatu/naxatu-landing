@@ -1,4 +1,14 @@
 app:
   host: naxatu.com
   port: 3000
-  version: 0.0.1
+
+  gtmKey: 'GTM-NWXJK3K'
+
+  # Used contract address
+  contract: "0xf67462b1d032f51646c09196c2bd30ad0cfbad8d"
+
+  # Flags list for something possible options for landing
+  flags: []
+
+  # Application version
+  version: 0.0.2

@@ -1,6 +1,7 @@
 import {each} from 'lodash';
 import animateScrollTo from 'animated-scroll-to';
 import * as IcoStatusController from './Main/IcoStatusController';
+import './Main/Navigation';
 
 import './Style/main.scss';
 

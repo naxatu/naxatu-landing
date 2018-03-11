@@ -59,6 +59,21 @@ export class FAQ extends React.Component<any, any> {
                                 Блокчейн (Solidity), Front-End и Back-end разработка.
                             </p>
                         </article>
+
+                        <article className="faq-item">
+                            <h3 className="faq-item__title">
+                                Чего ты хочешь этим достичь?
+                            </h3>
+                            <p className="paragraph faq-item__answer">
+                                Хаты. Реально хочу купить квартиру и куплю её. За ваш Ethereum,
+                                нажитый «тяжким» трудом инвестора.
+                                <br/><br/>
+                                Но так-же, я хочу показать, что с помощью ICO и краутфандинга можно
+                                не только нагло отбирать у людей деньги, заставляя их верить в нерелизуемый проект.
+                                Криптовалютный бум привлекает все больше и больше людей
+                                в поиске наживы и с этим нужно бороться.
+                            </p>
+                        </article>
                     </div>
                 </div>
             </section>

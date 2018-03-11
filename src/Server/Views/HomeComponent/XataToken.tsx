@@ -12,7 +12,7 @@ export class XataToken extends React.Component<any, any> {
 
 
                     <div className="center">
-                        <a className="btn article" href="#ico">Все ради XATA</a>
+                        <a className="btn anchor" href="#ico">Все ради XATA</a>
                     </div>
                 </div>
             </section>

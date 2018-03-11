@@ -1,0 +1,67 @@
+.team {
+    &-list {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    &-person {
+        display: flex;
+        width: 100%;
+
+        &-image {
+            height: 200px;
+            width: 200px;
+            display: block;
+            background: rgb(245, 245, 245);
+            margin-right: 32px;
+            border-radius: 3px;
+        }
+
+        &__name {
+            margin-bottom: 16px;
+            font-size: 28px;
+        }
+
+        &__jobs {
+            font-weight: normal;
+            color: $color-santas-gray;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        &__bio {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        &__social {
+            display: block;
+            &-item {
+                margin-right: 16px;
+                font-size: 24px;
+                display: inline-block;
+                cursor: pointer;
+                color: $color-santas-gray;
+
+                &:hover {
+                    color: $color-main;
+                }
+            }
+        }
+
+        @include to-sm-width {
+            flex-direction: column;
+
+            &-desc {
+                text-align: center;
+            }
+
+            &-image {
+                margin-bottom: 32px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+}

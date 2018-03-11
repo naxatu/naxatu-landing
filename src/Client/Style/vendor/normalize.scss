@@ -1,28 +1,31 @@
 html, body,
 div,
 p, span, label,
-section, footer, header, article,
+section, footer, header, article, nav,
 h1, h2, h3, h4, h5, h6,
-ul, li, ol {
+ul, li, ol,
+input, textarea {
     position: relative;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
+
 h1 {
     font-size: 2em;
 }
+
 hr {
     box-sizing: content-box;
     height: 0;
     overflow: visible;
 }
+
 pre {
     font-family: monospace, monospace; /* 1 */
     font-size: 1em;
@@ -30,7 +33,9 @@ pre {
 
 a {
     background-color: transparent;
+    color: currentColor;
 }
+
 abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
@@ -40,15 +45,18 @@ abbr[title] {
 b, strong {
     font-weight: bolder;
 }
+
 code,
 kbd,
 samp {
     font-family: monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
 }
+
 small {
     font-size: 80%;
 }
+
 sub,
 sup {
     font-size: 75%;
@@ -64,6 +72,7 @@ sub {
 sup {
     top: -0.5em;
 }
+
 img {
     border-style: none;
 }
@@ -78,20 +87,24 @@ textarea {
     line-height: 1.15;
     margin: 0;
 }
+
 button,
 input {
     overflow: visible;
 }
+
 button,
 select { /* 1 */
     text-transform: none;
 }
+
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
     -webkit-appearance: button;
 }
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -99,15 +112,18 @@ button::-moz-focus-inner,
     border-style: none;
     padding: 0;
 }
+
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
+
 fieldset {
     padding: 0.35em 0.75em 0.625em;
 }
+
 legend {
     box-sizing: border-box; /* 1 */
     color: inherit; /* 2 */
@@ -116,9 +132,11 @@ legend {
     padding: 0; /* 3 */
     white-space: normal; /* 1 */
 }
+
 progress {
     vertical-align: baseline;
 }
+
 textarea {
     overflow: auto;
 }
@@ -133,29 +151,37 @@ textarea {
 [type="number"]::-webkit-outer-spin-button {
     height: auto;
 }
+
 [type="search"] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
+
 [type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
 ::-webkit-file-upload-button {
     -webkit-appearance: button; /* 1 */
     font: inherit; /* 2 */
 }
+
 details {
     display: block;
 }
+
 summary {
     display: list-item;
 }
+
 template {
     display: none;
 }
+
 [hidden] {
     display: none;
 }
+
 ul, ol {
     list-style: none;
 }

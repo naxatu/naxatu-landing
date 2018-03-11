@@ -27,13 +27,24 @@ export class IcoStatusComponent extends React.Component {
         }
     }
 
-    render() {
+    renderStatus() {
         const {status} = this.props;
-        const {hasWeb3js, loaded} = this.state;
+        const {hasWeb3js} = this.state;
 
         if (!status) {
             return (<div> - @ - </div>);
         }
+
+        return (<React.Fragment>
+            <div>{Numeral(status.targetPercent).format('0.0%')}</div>
+            <div>{Numeral(status.totalContribution).format('0.0000')} ETH</div>
+            <div>${Numeral(status.totalContributionUSD).format('0.00')}</div>
+            <div>{hasWeb3js ? 'Есть MetaMask' : 'неееееет...!'}</div>
+        </React.Fragment>)
+    }
+
+    render() {
+        const {contract} = this.props;
 
         const componentProps = {
             className: classNames({
@@ -44,13 +55,11 @@ export class IcoStatusComponent extends React.Component {
 
         return (
             <div {...componentProps}>
-                <input readOnly={true}
-                       value={status.contract}
-                       type="text"
-                       className="ico-status__contract-address"/>
+                <div>
+                    <input readOnly={true} value={contract} type="text" className="ico-status__contract-address"/>
+                </div>
 
-                <div>{Numeral(status.targetPercent).format('0.0%')}</div>
-                <div>{hasWeb3js ? 'Есть MetaMask' : 'неееееет...!'}</div>
+                {this.renderStatus()}
             </div>
         )
     }

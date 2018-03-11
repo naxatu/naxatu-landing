@@ -1,11 +1,7 @@
 import BigNumber from 'bignumber.js';
 import Axios from 'axios';
-
-const target = 150000;
-const etherscanUrl = "https://api.etherscan.io/api";
-let weiPerEther = new BigNumber("1000000000000000000", 10);
-
-const contract = "0x27f706edde3aD952EF647Dd67E24e38CD0803DD6";
+import * as Constants from './Contants';
+import {contract} from './ContractAddress'
 
 export function getPrice() {
     const requestParams = {
@@ -13,7 +9,7 @@ export function getPrice() {
         action: 'ethprice'
     };
 
-    return Axios.get(etherscanUrl, {params: requestParams}).then((response) => {
+    return Axios.get(Constants.ETHERSCAN_URL, {params: requestParams}).then((response) => {
         const result = response.data.result;
 
         if (!result || !result.ethusd) {
@@ -25,6 +21,10 @@ export function getPrice() {
 }
 
 export function extractValue() {
+    if (!contract) {
+        throw Error('Contract address must be set!');
+    }
+
     const requestParams = {
         module: "proxy",
         action: "eth_call",
@@ -41,23 +41,23 @@ export function extractValue() {
                 return null;
             }
 
-            let totalContributionExact = new BigNumber(result.substr(2, 64), 16).div(weiPerEther);
+            let totalContributionExact = new BigNumber(result.substr(2, 64), 16).div(Constants.WEI_PER_ETHER);
             let totalContributionUSDExact = totalContributionExact.multipliedBy(price);
 
             return {
-                contract: contract,
                 price: price,
+                contract: contract,
                 totalContribution: totalContributionExact.toNumber(),
                 totalContributionUSD: totalContributionUSDExact.toNumber(),
-                targetPercent: totalContributionUSDExact.div(target).toNumber(),
-                totalSupply: new BigNumber(result.substr(66, 64), 16).div(weiPerEther).toNumber(),
-                totalBonusTokensIssued: new BigNumber(result.substr(130, 64), 16).div(weiPerEther).toNumber(),
+                targetPercent: totalContributionUSDExact.div(Constants.TARGET).toNumber(),
+                totalSupply: new BigNumber(result.substr(66, 64), 16).div(Constants.WEI_PER_ETHER).toNumber(),
+                totalBonusTokensIssued: new BigNumber(result.substr(130, 64), 16).div(Constants.WEI_PER_ETHER).toNumber(),
                 purchasingAllowed: new BigNumber(result.substr(194, 64), 16).isZero() == false
             };
         };
 
         return Axios
-            .get(etherscanUrl, {params: requestParams})
+            .get(Constants.ETHERSCAN_URL, {params: requestParams})
             .then(resolveAxiosResponse);
     })
 }
