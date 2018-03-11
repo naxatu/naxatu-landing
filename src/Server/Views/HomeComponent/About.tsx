@@ -48,7 +48,7 @@ export class About extends React.Component<any, any> {
                             работать робота-пылесоса. Но не факт что и там где-нибудь будет блокчейн.
                         </p>
                         <p className="why-article-text paragraph">
-                            Так-же токены можно получить на <a href="#challenge" className="anchor link">#челендже</a>
+                            Также токены можно получить на <a href="#challenge" className="anchor link">#челендже</a>
                         </p>
                     </article>
 
@@ -75,7 +75,7 @@ export class About extends React.Component<any, any> {
                         </p>
                         <p className="paragraph why-article-text">
                             Все события будут транслироваться в канале
-                            в телеграмме <a href="https://t.me/naxatu" target="_blank" className="link">t.me/naxatu</a>.
+                            в Telegram <a href="https://t.me/naxatu" target="_blank" className="link">t.me/naxatu</a>.
                         </p>
                     </article>
 

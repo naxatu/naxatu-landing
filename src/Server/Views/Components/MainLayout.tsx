@@ -45,7 +45,8 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
         };
 
         const openGraphProps = {
-            title: title,
+            title: emojifyText(title),
+            description: emojifyText(description),
             url: url,
             baseHost: baseHost
         };

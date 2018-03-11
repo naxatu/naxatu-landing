@@ -36,10 +36,14 @@ export class IcoStatusComponent extends React.Component {
         }
 
         return (<React.Fragment>
-            <div>{Numeral(status.targetPercent).format('0.0%')}</div>
-            <div>{Numeral(status.totalContribution).format('0.0000')} ETH</div>
-            <div>${Numeral(status.totalContributionUSD).format('0.00')}</div>
-            <div>{hasWeb3js ? 'Есть MetaMask' : 'неееееет...!'}</div>
+            {/*<div>{Numeral(status.targetPercent).format('0.0%')}</div>*/}
+            {/*<div>{Numeral(status.totalContribution).format('0.0000')} ETH</div>*/}
+            <div style={{textAlign: 'center'}}>
+                Уже собрано: ${Numeral(status.totalContributionUSD).format('0.00')}
+                <br/>
+                Эмитировано: {Numeral(status.totalSupply).format('0.00')} XATA
+            </div>
+            {/*<div>{hasWeb3js ? 'Есть MetaMask' : 'неееееет...!'}</div>*/}
         </React.Fragment>)
     }
 

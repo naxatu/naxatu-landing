@@ -30,7 +30,8 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
 
         const layoutProps: IMainLayoutProps = {
             title: ":house: Первое в мире ICO по сбору на Хату в Киеве - Собираю на Хату",
-            description: "Время тикает :watch:. ",
+            description: "Это первое, и возможно, самое полезное ICO за все время существования Ethereum, " +
+            "где основатель собирает на полезную и нужную вещь - на собственную Хату",
             url: url,
             baseHost: baseHost
         };

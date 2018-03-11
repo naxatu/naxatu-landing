@@ -9,7 +9,7 @@ export class Team extends React.Component<any, any> {
                     <div className="topic">
                         <h2 className="topic-title">Наша команда</h2>
                         <p className="topic-desc">
-                            Сбор средств на Хату, это трудоемкий процесс, требующий
+                            Сбор средств на Хату - это трудоемкий процесс, требующий
                             тщательной подготовки и слаженности всей команды
                         </p>
                     </div>
@@ -17,7 +17,9 @@ export class Team extends React.Component<any, any> {
                     <div className="team-list">
                         <article className="team-person">
                             <img src="/image/ceo-team.png" className="team-person-image"
-                                 title="Основатель проекта «Собираю на Хату» - Maksym Tymchyk" alt="M.T."/>
+                                 title="Весь из себя такой красавчик, аж не вериться. Ух какой!"
+                                 alt="Красавчик Maksym Tymchyk"
+                            />
 
                             <div className="team-person-desc">
                                 <h3 className="team-person__name">Maksym Tymchyk</h3>
@@ -29,7 +31,7 @@ export class Team extends React.Component<any, any> {
 
                                 <p className="team-person__bio">
                                     Идеолог блокчейна и технологий на его базе.<br/>
-                                    Full-stack душей и делом.
+                                    Full-stack душой и делом.
                                 </p>
 
                                 <div className="team-person__social">

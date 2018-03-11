@@ -31,8 +31,8 @@ export class Challenge extends React.Component<any, any> {
                         </p>
 
                         <p className="paragraph">
-                            <b>Помни, интерьер найденный в гугле - это не прикольно.</b> Важно то что
-                        видел своими глазами, то от чего волосы на ногах стали дыбом!
+                            <b>Помни, интерьер найденный в гугле - это не прикольно.</b> Важно то что видел
+                            своими глазами, то от чего волосы на ногах стали дыбом!
                         </p>
                         <div className="paragraph-special">
                             <div className="paragraph-special__item">
@@ -45,7 +45,10 @@ export class Challenge extends React.Component<any, any> {
                     </div>
 
                     <div className="challenge-square -image">
-                        <img src="/image/insta-image.png"/>
+                        <img src="/image/insta-image.png"
+                             title="Настенный ковер, это лучшее что может быть в квартире. Но не бойся, рн не будет закрытьва тове имя на колаже."
+                             alt="Настенный ковер в Хате"
+                        />
                     </div>
 
                 </div>

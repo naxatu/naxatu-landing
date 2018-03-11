@@ -43,14 +43,12 @@ export class Roadmap extends React.Component<any, any> {
                         <div className="roadmap-item-text-wrapper">
                             <h3 className="roadmap-item-text-title">Июнь 2018 - Покупаю Хату</h3>
                             <p className="paragraph roadmap-item-text-p">
-                                Иду, такой, в отдел продаж ЖК и покупать начинаю:
-                            </p>
-                            <p className="paragraph roadmap-item-text-p">
-                                - Дайте хату. <br/>
-                                - Которую? <br/>
-                                - А вон ту, наx. И побыстрей. Ethereum сойдет? Иль вам лаве в заморских? <br/>
-                                - Давай Ethereum, а лучше в Bitcoin. <br/>
-                                - Держи, братуха. И да, где ключи, с*ка? И мобилу тож давай.
+                                Это будет самая занимательная из историй. Придеться идти в отдел продаж ЖК Rybalsky
+                                со счасливым лицом. Ведь закончить начатое и выполнить обещание - это самое приятное,
+                                что можно испытать.
+                                <br/><br/>
+                                <i>Перед самой покупкой, нужно будет найти способ конвертировать сумму в национальные
+                                "тугрики", избавившись от удобного Ethereum</i> <Emojify>:cry:</Emojify>
                             </p>
                         </div>
                     </div>
@@ -65,7 +63,8 @@ export class Roadmap extends React.Component<any, any> {
                             <h3 className="roadmap-item-text-title">2-й квартал 2019 - Ремонтирую Хату</h3>
                             <p className="paragraph roadmap-item-text-p">
                                 Это этап важных решений, когда нужно сделать выбор между
-                                установкой золотого унитаза или дивана в гостинную.
+                                установкой золотого унитаза или дивана в гостинную. А также найти крутого художника,
+                                который на стене <a href="#heroes" className="link anchor">измалюет маслом все ваши имена</a>.
                             </p>
                             <p className="paragraph roadmap-item-text-p">
                                 Определяемся с интерьером с помощью наших

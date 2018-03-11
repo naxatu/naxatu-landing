@@ -5,12 +5,12 @@ export class Intro extends React.Component<any, any> {
         return (
             <section className="section -intro intro" id="intro">
                 <div className="intro-background">
-                    <img src="/image/bg-intro.jpg" className="intro-background__image" alt=""
+                    <img src="/image/bg-intro.jpg" className="intro-background__image" alt="Хата"
                          title="Собираю вот на такую хату"/>
                 </div>
                 <div className="section-content intro-content">
                     <div className="intro-logo__container">
-                        <img src="/image/logo-white.svg" title="XATA" className="intro-logo"/>
+                        <img src="/image/logo-white.svg" title="Лебедев обзавидуется от такого лого" alt="Логотип XATA" className="intro-logo"/>
                     </div>
 
                     <div className="topic intro-topic">
@@ -22,14 +22,14 @@ export class Intro extends React.Component<any, any> {
                     </div>
 
                     <div className="intro-buttons">
-                        <a href="#ico" className="button btn -yellow intro-btn -ico anchor">Подкинуть на Хату</a>
+                        <a href="#ico" className="button btn -yellow intro-btn -ico anchor" title="Вот нажми и узри как надо делать ICO!">Подкинуть на Хату</a>
                         <a href="#about" className="button btn -inline intro-btn anchor">О том как на Хату собирать</a>
                     </div>
                 </div>
 
                 <div className="intro-disclaimer">
                     Серьезно, краудсел на квартиру фиг знает кому, через продажу ERC20 токенов в Ethereum.<br/>
-                    Я предупреждал! <a href="#ico" className="anchor link">Дать ему →</a>
+                    Я предупреждал! <a href="#ico" className="anchor link" title="Нажми на эту кнопку и у тебя появиться шанс">Дать ему →</a>
                 </div>
             </section>
         )

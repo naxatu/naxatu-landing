@@ -31,7 +31,7 @@ export class WhereHouse extends React.Component<any, any> {
                         </div>
                     </div>
                     <img src="/image/zk-rybalsky.png" className="rybalsky-image"
-                         title="ЖК Rybalsky - дай мне скидку!"
+                         title="ЖК Rybalsky, если ты слышишь или видишь это - дай мне скидку!"
                          alt="ЖК Rybalsky"
                     />
                 </article>
