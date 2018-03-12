@@ -47,6 +47,7 @@ export function extractValue() {
             return {
                 price: price,
                 contract: contract,
+                sqrM: totalContributionUSDExact.div(Constants.sqrMPrice).toNumber(),
                 totalContribution: totalContributionExact.toNumber(),
                 totalContributionUSD: totalContributionUSDExact.toNumber(),
                 targetPercent: totalContributionUSDExact.div(Constants.TARGET).toNumber(),

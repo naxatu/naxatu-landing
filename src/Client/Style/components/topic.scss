@@ -30,7 +30,8 @@
         font-size: 24px;
     }
 
-    &.-left &-title {
+    &.-left &-title,
+    &.-left &-desc {
         text-align: left;
         margin-left: 0;
     }
