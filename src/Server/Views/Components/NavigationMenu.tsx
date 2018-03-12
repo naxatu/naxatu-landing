@@ -66,13 +66,13 @@ export class NavigationMenu extends React.Component<IProps, any> {
                         </li>
 
                         <li className="navigation-item">
-                            <a className="anchor" href="#contacts">Контактики</a>
+                            <a className="anchor" href="#contacts">Как связаться</a>
                         </li>
                     </ul>
 
                     <div className="navigation-footer">
                         <p className="navigation-footer__desc">
-                            Я готов потратить все ваши деньги себе на Хату.
+                            Я готов потратить все ваши деньги себе на хату.
                             А вы готовы мне их дать?
                         </p>
                         <div className="navigation-footer__links">

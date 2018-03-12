@@ -1,0 +1,16 @@
+.footer {
+
+    font-size: 12px;
+    padding: 24px 0;
+
+    &-section {
+
+    }
+
+    &-paragraph {
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

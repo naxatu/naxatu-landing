@@ -6,25 +6,16 @@
     &-item {
         max-width: 680px;
         width: 100%;
-        border: 1px solid $color-reriwinkle-gray;
-        padding: 40px;
-        border-radius: 3px;
-        margin-bottom: 20px;
+        padding: 0 0 0 24px;
+        margin-bottom: 48px;
         margin-right: auto;
         margin-left: auto;
-
         border-left: 4px solid $color-primary;
 
         &__title {
             margin-bottom: 24px;
         }
         &__answer {
-        }
-    }
-
-    @include only-width(320px, 500px) {
-        &-item {
-            padding: 24px 16px;
         }
     }
 }

@@ -7,6 +7,7 @@ import {config} from '../../Config';
 
 import {OpenGraph} from './OpenGraph';
 import {NavigationMenu} from './NavigationMenu';
+import {Footer} from './Footer';
 
 const version = config.get('app.version') || '0.0.0';
 const gtmKey = config.get('app.gtmKey') || '';
@@ -73,6 +74,7 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             {gtm.renderBody()}
             <NavigationMenu />
             {children}
+            <Footer version={version}/>
             <script src={`/js/main.bundle.js?v=${version}`}/>
             <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"/>
             </body>

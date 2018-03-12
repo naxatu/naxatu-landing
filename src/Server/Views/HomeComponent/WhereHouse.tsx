@@ -8,20 +8,20 @@ export class WhereHouse extends React.Component<any, any> {
                 <article className="section-content rybalsky-container">
                     <div className="rybalsky-content">
                         <div className="topic -left -small">
-                            <h2 className="topic-title">ЖК RYBALSKY - Вон там хочу Хату</h2>
+                            <h2 className="topic-title">ЖК RYBALSKY &mdash; Вон там хочу хату</h2>
                         </div>
                         <div>
                             <p className="paragraph rybalsky-p -disclaimer">
                                 О нет! Не подумайте что это реклама {' '}
                                 <a href="https://rybalsky.com.ua?rel=дайте+мне+скидку"
                                    target="_blank" className="link"
-                                   title="ЖК Rybalsky - Я хочу от вас скидку ^_^"
+                                   title="ЖК Rybalsky &mdash; Я хочу от вас скидку ^_^"
                                 >ЖК Rybalsky</a>!
                             </p>
 
                             <p className="paragraph rybalsky-p">
-                                Пожалуй, это дом мечты - квадратное здание и 9 этажей.
-                                Расположенный на промышленном, полузаброшенном полуострове.
+                                Пожалуй, это дом мечты &mdash; квадратное здание и 9 этажей.
+                                Расположенный на промышленном, полу заброшенном полуострове.
                                 Вокруг недостроенные мосты, железная дорога и прекрасный вид на Днепр.
                             </p>
 
@@ -31,7 +31,7 @@ export class WhereHouse extends React.Component<any, any> {
                         </div>
                     </div>
                     <img src="/image/zk-rybalsky.png" className="rybalsky-image"
-                         title="ЖК Rybalsky, если ты слышишь или видишь это - дай мне скидку!"
+                         title="ЖК Rybalsky, если ты слышишь или видишь это &mdash; дай мне скидку!"
                          alt="ЖК Rybalsky"
                     />
                 </article>

@@ -7,10 +7,10 @@ export class Contacts extends React.Component<any, any> {
             <section className="section -contacts contacts" id="contacts">
                 <div className="section-content">
                     <div className="topic">
-                        <h2 className="topic-title">Контактики</h2>
+                        <h2 className="topic-title">Как связаться</h2>
                         <p className="topic-desc">
                             Ведь куда в ICO без возможности связаться?<br/>
-                            Я хочу Хату. Значит, должен быть готов принимать грудью ваши вопросы
+                            Я хочу хату. Значит, должен быть готов принимать грудью ваши вопросы
                             и всякие предложения. Давайте, дерзайте!
                         </p>
                     </div>
@@ -33,13 +33,6 @@ export class Contacts extends React.Component<any, any> {
                                 <b><i className="fab fa-facebook"/> Facebook:</b>
                                 <a target="_blank" href="https://fb.com/maksym.tymchyk"
                                    className="link">maksym.tymchyk</a>
-                            </div>
-
-                            <div className="contacts__item">
-                                <b><i className="fab fa-slack"/> Slack:</b>
-                                <a target="_blank"
-                                   href="https://join.slack.com/t/naxatu/shared_invite/enQtMzI1MjgxNTQ5MzMzLTE1ZTBlOWZjYTdhMDY4NWM4ZTkxOWM0ODU4NjdlMzFhNmRiZThiYjRlZmQwZGE0YjgxNjYxMmY0OTZlMjZmMTU"
-                                   className="link">Naxatu</a>
                             </div>
 
                             <div className="contacts__item">

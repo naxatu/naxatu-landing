@@ -4,18 +4,20 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        margin-bottom: 32px;
+        margin-bottom: 64px;
     }
 
     &-item {
         transition: all 0.4s;
         width: 33.3333%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 20px;
         opacity: 0.4;
         &__image {
             width: 100%;
             max-width: 160px;
-            margin: 0 auto;
             display: block;
         }
 
