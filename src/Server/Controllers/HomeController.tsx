@@ -14,7 +14,8 @@ export function index(req: Request, res: Response): void {
     const url = req.protocol + '://' + req.get('Host') + req.url;
     const homeViewProps = {
         url: url,
-        baseHost: `${req.protocol}://${req.get('Host')}`
+        baseHost: `${req.protocol}://${req.get('Host')}`,
+        language: res.get('language')
     };
 
     const viewRenderer = new ViewRenderer(<HomeView {...homeViewProps}/>);

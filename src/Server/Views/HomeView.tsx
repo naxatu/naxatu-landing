@@ -17,6 +17,7 @@ import {Contacts} from './HomeComponent/Contacts';
 export interface IHomeViewProps {
     url: string;
     baseHost: string;
+    language: string;
 }
 
 export interface IHomeViewState {
@@ -26,14 +27,15 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
 
     render() {
 
-        const {url, baseHost} = this.props;
+        const {url, baseHost, language} = this.props;
 
         const layoutProps: IMainLayoutProps = {
             title: ":house: Первое в мире ICO по сбору средств на хату в Киеве",
             description: "Это первое, и возможно, самое полезное ICO за все время существования Ethereum, " +
             "где основатель собирает на полезную и нужную вещь &mdash; на собственную хату",
             url: url,
-            baseHost: baseHost
+            baseHost: baseHost,
+            language: language
         };
 
         return (

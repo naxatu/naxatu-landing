@@ -18,6 +18,7 @@ export interface IMainLayoutProps {
     keywords?: string[];
     url: string;
     baseHost: string;
+    language: string;
 }
 
 const criticalCSS = fs.readFileSync(
@@ -35,7 +36,8 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             keywords = [],
             children,
             url = '',
-            baseHost = ''
+            baseHost = '',
+            language
         } = this.props;
 
         const mainCssAttribute = {
@@ -53,7 +55,7 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
         };
 
         return (
-            <html lang="ru">
+            <html lang={language}>
             <head>
                 <meta httpEquiv="Content-type" content="text/html; charset=utf-8"/>
                 <meta name="Content-language" content="ru"/>

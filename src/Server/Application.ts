@@ -23,6 +23,26 @@ expressApp.use(bodyParser.json());
 expressApp.use(bodyParser.urlencoded({extended: true}));
 expressApp.use(expressValidator());
 
+const languages = {
+    en: 'en',
+    ua: 'ua'
+};
+
+const defaultLanguage = 'ru';
+
+expressApp.use((req: express.Request, res: express.Response, next) => {
+    let hostSegments = (req.hostname as string).split('.'),
+        language = defaultLanguage;
+
+    if (hostSegments[0] in languages) {
+        language = hostSegments[0];
+    }
+
+    res.set('language', language);
+
+    next();
+});
+
 /**
  * Set configuration for static content
  */

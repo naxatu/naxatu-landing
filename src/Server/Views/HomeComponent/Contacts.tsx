@@ -19,8 +19,8 @@ export class Contacts extends React.Component<any, any> {
                         <div>
                             <div className="contacts__item">
                                 <b><i className="fab fa-telegram-plane"/> Telegram:</b>
-                                <a target="_blank" href="https://t.me/@MaksymTymchyk"
-                                   className="link">@MaksymTymchyk</a>
+                                <a target="_blank" href="https://t.me/MaksymTymchyk"
+                                   className="link">t.me/MaksymTymchyk</a>
                             </div>
 
                             <div className="contacts__item">

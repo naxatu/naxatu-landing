@@ -62,16 +62,17 @@ export class About extends React.Component<any, any> {
                         <h3 className="why-article-title">Это действительно честное ICO</h3>
                         <p className="paragraph why-article-text">
                             <Emojify>
-                                Очень многие проекты в ICO и на Kickstarter обманывают :sob:,
-                                обещают золотые горы :moneybag: и очень крутой продукт :sunglasses:, а как соберут
-                                средства &mdash; исчезнут и накупят Ferrari :car: или еще чего бесполезного.
+                                Очень многие проекты в ICO и на Kickstarter обманывают :sob:, обещают золотые
+                                горы :moneybag: и очень крутой продукт :sunglasses:, а как соберут средства &mdash;
+                                исчезнут и накупят <s>Ferrari</s> Lamborghini :car: или еще чего бесполезного.
                             </Emojify>
                         </p>
                         <p className="paragraph why-article-text">
                             <Emojify>
-                                Я же не хочу ни кого обманывать и покупать Ferrari :car:. Все собранные средства
-                                будут потрачены мне на покупку крутой хаты в Киеве и её ремонт.
-                            </Emojify>{' '}
+                                Я же не хочу ни кого обманывать и покупать <s>Ferrari</s> Lamborghini :car:.
+                                Все собранные средства будут потрачены мне на покупку крутой хаты в Киеве и её ремонт.
+                            </Emojify>
+                            {' '}
                             <span>Возможно в ЖК Rybalsky.</span>
                         </p>
                         <p className="paragraph why-article-text">
