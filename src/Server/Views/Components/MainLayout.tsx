@@ -7,6 +7,7 @@ import {config} from '../../Config';
 
 import {OpenGraph} from './OpenGraph';
 import {NavigationMenu} from './NavigationMenu';
+import {TelegramBox} from './TelegramBox';
 import {Footer} from './Footer';
 
 const version = config.get('app.version') || '0.0.0';
@@ -75,6 +76,7 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             <body>
             {gtm.renderBody()}
             <NavigationMenu />
+            <TelegramBox />
             {children}
             <Footer version={version}/>
             <script src={`/js/main.bundle.js?v=${version}`}/>

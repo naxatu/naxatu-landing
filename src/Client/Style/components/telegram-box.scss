@@ -1,0 +1,62 @@
+.telegram-box {
+    position: fixed;
+    z-index: 100;
+    left: 20px;
+    bottom: 20px;
+    height: 40px;
+    cursor: pointer;
+
+    &__icon {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        border-radius: 32px;
+
+        color: $color-primary;
+        background: $color-bg-dark;
+        top: 50%;
+        transform: translateY(-50%) translateZ(0);
+        z-index: 10;
+        box-shadow: 0 2px 4px transparentize($color-bg-dark, 0.3);
+    }
+
+    &-content {
+        margin-top: 6px;
+        margin-left: -4px;
+        line-height: 28px;
+        padding: 0 12px 0 54px;
+        border-radius: 4px;
+        background-color: $color-bg-dark;
+        transition: transform 0.6s cubic-bezier(0, 0, 0.01, 0.85);
+        transform: scaleX(0);
+        transform-origin: 10px center;
+    }
+
+    &-link {
+        font-size: 12px;
+        text-decoration: none;
+        color: $color-primary;
+        display: block;
+        opacity: 0;
+        transition: color 0.4s, opacity 0.35s ease 0.9s;
+        &:hover {
+            color: $color-main;
+        }
+    }
+
+    &.-open &-link {
+        opacity: 1;
+    }
+
+    &.-open {
+        cursor: default;
+    }
+
+    &.-open &-content {
+        transform: scaleX(1);
+    }
+}
