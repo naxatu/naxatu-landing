@@ -11,8 +11,7 @@ export class Footer extends React.Component<IFooterProps, any> {
             <footer className="footer section">
                 <section className="section-content">
                     <p className="footer-paragraph">
-                        Данный проект был разработан в целях шутки. Приношу извинения всем, чьи
-                        чувства задел этот текст.<br/>
+                        Приношу извинения всем, чьи чувства задел этот текст.<br/>
                         Если есть какие-либо замечения - пожалуйста, сообщите мне.
                     </p>
                     <p className="footer-paragraph">
