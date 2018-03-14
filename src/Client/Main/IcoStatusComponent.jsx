@@ -111,6 +111,9 @@ export class IcoStatusComponent extends React.Component {
                         <br/>
                         Советую использовать MyEtherWallet или MetaMask. Не переводите Ether с бирж или сервисов,
                         где не имеете полный доступ к кошельку, а иначе не будет доступа к XATA.
+                        <br/>
+
+                        <b>GasLimit = 80 000</b>
                     </p>
 
                     <div className="contract-wrapper">

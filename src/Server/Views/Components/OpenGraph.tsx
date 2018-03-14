@@ -5,6 +5,7 @@ export interface IOpenGraphProps {
     description?: string;
     url: string;
     baseHost: string;
+    language: string;
 }
 
 export class OpenGraph extends React.Component<IOpenGraphProps, any> {
@@ -14,7 +15,8 @@ export class OpenGraph extends React.Component<IOpenGraphProps, any> {
             title,
             description,
             url,
-            baseHost
+            baseHost,
+            language
         } = this.props;
 
         return (
@@ -24,6 +26,7 @@ export class OpenGraph extends React.Component<IOpenGraphProps, any> {
                 <meta name="geo.region" content="UA-30"/>
                 <meta name="geo.placename" content="Киев"/>
                 <meta name="geo.position" content="50.440878;30.437546"/>
+
                 <meta name="twitter:site" content="@MaksymTymchyk"/>
                 <meta name="twitter:creator" content="@MaksymTymchyk"/>
                 <meta name="twitter:card" content="summary_large_image"/>
@@ -33,7 +36,7 @@ export class OpenGraph extends React.Component<IOpenGraphProps, any> {
                 <meta property="og:description" content={description}/>
                 <meta property="og:site_name" content="Собираю на Хату"/>
                 <meta property="og:type" content="website"/>
-                <meta property="og:image" content={`${baseHost}/image/social.png`}/>
+                <meta property="og:image" content={`${baseHost}/image/${language}/social.png`}/>
                 <meta property="og:image:width" content="1200"/>
                 <meta property="og:image:height" content="630"/>
             </React.Fragment>

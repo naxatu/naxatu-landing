@@ -52,7 +52,8 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             title: emojifyText(title),
             description: emojifyText(description),
             url: url,
-            baseHost: baseHost
+            baseHost: baseHost,
+            language: language
         };
 
         return (
