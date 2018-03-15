@@ -4,6 +4,7 @@ import * as bodyParser from 'body-parser';
 import * as logger from 'morgan';
 import * as dotenv from 'dotenv';
 import * as path from 'path';
+import * as DomainManager  from './Utils/DomainManager';
 import {config} from './Config';
 import * as expressValidator from 'express-validator';
 import {applicationMapUtils} from './Utils/ApplicationUtils';
@@ -23,22 +24,16 @@ expressApp.use(bodyParser.json());
 expressApp.use(bodyParser.urlencoded({extended: true}));
 expressApp.use(expressValidator());
 
-const languages = {
-    en: 'en',
-    ua: 'ua'
-};
-
-const defaultLanguage = 'ru';
-
 expressApp.use((req: express.Request, res: express.Response, next) => {
-    let hostSegments = (req.hostname as string).split('.'),
-        language = defaultLanguage;
 
-    if (hostSegments[0] in languages) {
-        language = hostSegments[0];
+    const domain = DomainManager.findDomain(req.hostname);
+
+    if (!domain) {
+        res.status(404).send("Invalid domain..!");
+        return;
     }
 
-    res.set('language', language);
+    res.set('language', domain.language);
 
     next();
 });

@@ -14,7 +14,8 @@ export class WhereHouse extends React.Component<any, any> {
                             <p className="paragraph rybalsky-p -disclaimer">
                                 О нет! Не подумайте что это реклама {' '}
                                 <a href="https://rybalsky.com.ua?rel=дайте+мне+скидку"
-                                   target="_blank" className="link"
+                                   target="_blank" className="link __js-partner"
+                                   partner-event-key="rybalsky"
                                    title="ЖК Rybalsky &mdash; Я хочу от вас скидку ^_^"
                                 >ЖК Rybalsky</a>!
                             </p>

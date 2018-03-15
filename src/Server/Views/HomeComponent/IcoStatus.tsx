@@ -20,6 +20,33 @@ export class IcoStatus extends React.Component<any, any> {
                         так что сумма может превысить изначальную. Чем больше соберу &mdash; тем круче хата.
                     </p>
 
+                    <div className="contract">
+                        <p className="contract__desc">
+                            Это адрес контракта, на который нужно перевести Ethereum для получения
+                            XATA-токенов. Он же является адресом XATA-токенов.
+                            <br/>
+                            Советую использовать MyEtherWallet или MetaMask. Не переводите Ether с бирж или сервисов,
+                            где не имеете полный доступ к кошельку, а иначе не будет доступа к XATA.
+                            <br/>
+
+                            <b>GasLimit = 80 000</b>
+                        </p>
+
+                        <div className="contract-wrapper">
+                            <input readOnly={true} value={contract} type="text" className="contract__address"
+                                   id="contract-address"
+                            />
+                            <button className="contract-copy __js-copy-contract">
+                                <i className="far fa-copy"/>
+                            </button>
+                        </div>
+
+                        <div className="contract-links">
+                            <a href={`http://etherscan.com/token/${contract}`}
+                               target="_blank">Адрес XATA на Etherscan</a>
+                        </div>
+                    </div>
+
                     <div id="IcoReactComponent" className="ico-status-container">
                         <div className="ico-status-loading">Loading...</div>
                     </div>

@@ -2,10 +2,11 @@ import {each} from 'lodash';
 import animateScrollTo from 'animated-scroll-to';
 import * as IcoStatusController from './Main/IcoStatusController';
 import './Main/Navigation';
-
+import {sendGAEvent} from './Main/AnalyticsHelper';
+import './Main/PartnersAndAdvisers';
 import './Style/main.scss';
 
-console.log("Чего? Тут ничего нет. Кышь-кышь от сюда..!");
+console.log("What do you want? There is nothing interesting! Get out of here...");
 
 let elements = document.getElementsByClassName("anchor");
 const onClickAnchorLink = (event) => {
@@ -13,7 +14,7 @@ const onClickAnchorLink = (event) => {
     const scrollToId = btn.getAttribute('href');
     animateScrollTo(document.querySelector(scrollToId));
 
-    dataLayer && dataLayer.push({'event': 'click-' + scrollToId});
+    sendGAEvent('anchor', 'click', scrollToId);
 };
 
 each(elements, (elem, indx) => {
@@ -28,7 +29,7 @@ if (telegramBox) {
         }
 
         telegramBox.classList.add('-open');
-        dataLayer && dataLayer.push({'event': 'show_telegram'});
+        sendGAEvent('telegram', 'show');
     });
 }
 

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Partner} from './SmallElements/Partner';
 import {Emojify} from '../../Utils/Emojify';
 
 export class Partners extends React.Component<any, any> {
@@ -16,19 +17,40 @@ export class Partners extends React.Component<any, any> {
                     </div>
 
                     <div className="partners-list">
-                        <a href="https://coinwizard.me" className="partners-item" target="_blank"
-                           title="Портфельный менеджер, который хочет выжить без ICO. Тчетно. CoinWizard">
-                            <img src="/image/partners/coinwizard.png" alt="CoinWizard" className="partners-item__image"
-                                 title="Какже убого смотрится этот логотип.."/>
-                        </a>
 
-                        <a href="https://ewf.in.ua" className="partners-item" target="_blank"
-                           title="Что бы ремонтировать хату &mdash; нужен подрядчик. Eco Wooden Frame справиться с этим лучше чем кто либо">
-                            <img src="/image/partners/eco-wooden-frame.png"
-                                 alt="Eco Wooden Frame"
-                                 className="partners-item__image"
-                                 title="Что бы ремонтировать хату &mdash; нужен подрядчик. Eco Wooden Frame справиться с этим лучше чем кто либо"/>
-                        </a>
+                        <Partner
+                            href="https://coinwizard.me"
+                            partnerEventKey="coinwizard"
+                            title="Портфельный менеджер, который хочет выжить без ICO. Тчетно. CoinWizard"
+                            imageSrc="coinwizard.png"
+                            imageAlt="CoinWizard"
+                            imageTitle="Какже убого смотрится этот логотип.."
+                        />
+
+                        <Partner
+                            href="https://ewf.in.ua"
+                            partnerEventKey="ewf"
+                            title="Что бы ремонтировать хату &mdash; нужен подрядчик. Eco Wooden Frame справиться с этим лучше чем кто либо"
+                            imageSrc="eco-wooden-frame.png"
+                            imageAlt="Eco Wooden Frame"
+                        />
+
+                        <Partner
+                            href="https://cubits.com"
+                            partnerEventKey="cubits"
+                            title="Crypto Exchange, что так-же запускали свое ICO. Или еще не запускали..? Что-то запутался."
+                            imageSrc="cubits.svg"
+                            imageAlt="Cubits"
+                        />
+
+                        <Partner
+                            href="https://incrypted.net"
+                            partnerEventKey="incrypted_net"
+                            title="Надо ведь от куда-то брать свежие новости о крипте?"
+                            imageSrc="incrypted.svg"
+                            imageAlt="Incrypted"
+                            imageTitle="Если вдруг, это лого для светлого фона не очень &mdash; я не виноват."
+                        />
                     </div>
 
                     <p className="partners-about">

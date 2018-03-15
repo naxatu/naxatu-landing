@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Numeral from 'numeral';
+import {sendGAEvent} from './AnalyticsHelper';
 import {IcoStatusComponent} from './IcoStatusComponent';
 import {contract} from './ContractAddress';
 
@@ -15,4 +15,12 @@ export function init() {
         }
     });
 
+    let onCopyContractAddress = () => {
+        document.getElementById('contract-address').select();
+        document.execCommand("Copy");
+        
+        sendGAEvent('contract', 'copy');
+    };
+
+    document.getElementsByClassName('__js-copy-contract')[0].addEventListener('click', onCopyContractAddress);
 }
