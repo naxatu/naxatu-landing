@@ -54,6 +54,10 @@ export class NavigationMenu extends React.Component<IProps, any> {
                         </li>
 
                         <li className="navigation-item">
+                            <a className="anchor" href="#advisers">Advisers</a>
+                        </li>
+
+                        <li className="navigation-item">
                             <a className="anchor" href="#challenge">#собираюнахату</a>
                         </li>
 

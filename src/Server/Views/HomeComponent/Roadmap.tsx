@@ -24,7 +24,7 @@ export class Roadmap extends React.Component<any, any> {
                         <div className="roadmap-item-text-wrapper">
                             <h3 className="roadmap-item-text-title">Март-Май 2018 &mdash; Собираю на хату</h3>
                             <p className="paragraph roadmap-item-text-p">
-                                На этом этапе я разрабатываю и запускаю вебсайта и смарт-токен XATA.
+                                На этом этапе я разрабатываю и запускаю вебсайт и смарт-токен XATA.
                             </p>
                             <p className="paragraph roadmap-item-text-p">
                                 На сайт, смарт токен, на тексты, на дизайн, ушло чуть больше месяца.

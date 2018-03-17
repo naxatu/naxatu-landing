@@ -18,15 +18,15 @@ export class Team extends React.Component<any, any> {
                         <article className="team-person">
                             <img src="/image/ceo-team.png" className="team-person-image"
                                  title="Весь из себя такой красавчик, аж не вериться. Ух какой!"
-                                 alt="Красавчик Maksym Tymchyk"
+                                 alt="Handsome Maksym Tymchyk"
                             />
 
                             <div className="team-person-desc">
                                 <h3 className="team-person__name">Maksym Tymchyk</h3>
                                 <h4 className="team-person__jobs">
                                     Founder, Co-founder, CEO, CTO, CFO, COO, Designer, Tech lead, DevOps,
-                                    Blockchain developer, Front-end engineer, Nodejs engineer,
-                                    Content Manager, Researcher, Office manager, Cooker, Bartender
+                                    Blockchain developer, Front-end engineer, NodeJS engineer,
+                                    Content Manager, <s>Copyright</s>, Researcher, Office manager, Cooker, Bartender
                                 </h4>
 
                                 <p className="team-person__bio">

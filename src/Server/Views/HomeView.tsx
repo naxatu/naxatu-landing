@@ -13,6 +13,7 @@ import {Partners} from './HomeComponent/Partners';
 import {FAQ} from './HomeComponent/FAQ';
 import {Heroes} from './HomeComponent/Heroes';
 import {Contacts} from './HomeComponent/Contacts';
+import {Advisers} from './HomeComponent/Advisers';
 
 export interface IHomeViewProps {
     url: string;
@@ -32,7 +33,7 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
         const layoutProps: IMainLayoutProps = {
             title: ":house: Первое в мире ICO по сбору средств на хату в Киеве",
             description: "Это первое, и возможно, самое полезное ICO за все время существования Ethereum, " +
-            "где основатель собирает на полезную и нужную вещь &mdash; на собственную хату",
+            "где основатель собирает на полезную и нужную вещь - на собственную хату",
             url: url,
             baseHost: baseHost,
             language: language
@@ -48,6 +49,7 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
                 <XataToken />
                 <Roadmap />
                 <Team />
+                <Advisers />
                 <Partners />
                 <Challenge />
                 <Heroes/>

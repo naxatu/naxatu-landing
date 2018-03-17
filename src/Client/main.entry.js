@@ -24,12 +24,7 @@ each(elements, (elem, indx) => {
 let telegramBox = document.getElementsByClassName("telegram-box")[0] || null;
 if (telegramBox) {
     telegramBox.addEventListener('click', () => {
-        if (telegramBox.classList.contains('-open')) {
-            return;
-        }
-
-        telegramBox.classList.add('-open');
-        sendGAEvent('telegram', 'show');
+        sendGAEvent('telegram', 'click');
     });
 }
 

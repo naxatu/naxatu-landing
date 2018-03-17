@@ -19,11 +19,27 @@
 @import "components/section-challenge";
 @import "components/section-team";
 @import "components/section-partners";
+@import "components/section-advisers";
 @import "components/telegram-box";
 
 .xata-article {
     margin-bottom: 40px;
     h3 {
         margin-bottom: 16px;
+    }
+}
+
+.ico-share {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &-item {
+        display: inline-block;
+        margin: 0 8px;
     }
 }
