@@ -23,8 +23,8 @@ domainList[currentHost] = {
 /**
  * Configuration for English Domain
  */
-domainList['en.' + currentHost] = {
-    domain: 'en.' + currentHost,
+domainList['ru.' + currentHost] = {
+    domain: 'ru.' + currentHost,
     language: 'en',
     isDefault: false
 };

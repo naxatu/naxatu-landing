@@ -1,5 +1,7 @@
 import * as React from 'react';
+import * as i18n from "i18n";
 import {MainLayout, IMainLayoutProps} from './Components/MainLayout';
+import {TokenStatsInterface} from '../Utils/TokenStats'
 import {Intro} from './HomeComponent/Intro';
 import {About} from './HomeComponent/About';
 import {Citation} from './HomeComponent/Citation';
@@ -19,6 +21,7 @@ export interface IHomeViewProps {
     url: string;
     baseHost: string;
     language: string;
+    token: TokenStatsInterface | null
 }
 
 export interface IHomeViewState {
@@ -28,12 +31,11 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
 
     render() {
 
-        const {url, baseHost, language} = this.props;
+        const {url, baseHost, language, token = null} = this.props;
 
         const layoutProps: IMainLayoutProps = {
-            title: ":house: Первое в мире ICO по сбору средств на хату в Киеве",
-            description: "Это первое, и возможно, самое полезное ICO за все время существования Ethereum, " +
-            "где основатель собирает на полезную и нужную вещь - на собственную хату",
+            title: ":house: " + i18n.__("Первое в мире ICO по сбору средств на хату в Киеве"),
+            description: i18n.__("Это первое, и возможно, самое полезное ICO за все время существования Ethereum, где основатель собирает на полезную и нужную вещь - на собственную хату"),
             url: url,
             baseHost: baseHost,
             language: language
@@ -42,7 +44,7 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
         return (
             <MainLayout {...layoutProps}>
                 <Intro />
-                <IcoStatus />
+                <IcoStatus token={token}/>
                 <About />
                 <Citation />
                 <WhereHouse />
