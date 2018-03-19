@@ -43,7 +43,111 @@
     }
 
     &-item {
+        transition: all 0.4s;
         display: inline-block;
         margin: 0 8px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.ico-contribute {
+    margin: 32px 0;
+
+    &-wrapper {
+        transition: all 0.4s;
+        opacity: 0;
+        &.-active {
+            opacity: 1;
+        }
+    }
+
+    &-message {
+        color: $color-red;
+        font-size: 14px;
+        line-height: 1.41;
+        margin: 24px 0 16px 0;
+
+        &.-success {
+            color: $color-green;
+        }
+    }
+
+    &__button-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &-input {
+        transition: all 0.4s;
+        outline: none;
+        text-rendering: auto;
+        padding: 10px 8px;
+        font-size: 18px;
+        font-weight: bold;
+        width: 100%;
+        margin: 0;
+        line-height: 1.41;
+        border-radius: 3px;
+        border: 2px solid $color-reriwinkle-gray;
+        background: $color-white-lilac;
+
+        &__wrapper {
+            display: inline-block;
+            width: 140px;
+            position: relative;
+        }
+
+        &__label {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 2;
+            font-size: 14px;
+            color: $color-text-light;
+        }
+
+        &:focus {
+            border-color: $color-main;
+        }
+    }
+
+    &-button {
+        transition: all 0.4s;
+        border: 2px solid $color-main;
+        color: $color-main;
+        background: transparent;
+        font-weight: bold;
+        border-radius: 3px;
+        display: inline-block;
+        font-size: 18px;
+        text-align: center;
+        line-height: 1.41;
+        padding: 12px 24px;
+        cursor: pointer;
+
+        &.-metamask {
+            padding-left: 58px;
+            margin-left: 40px;
+        }
+
+        &.-metamask &__icon {
+            transition: all 0.4s;
+            position: absolute;
+            height: 72px;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-54%);
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            color: white;
+            background: $color-main;
+        }
     }
 }

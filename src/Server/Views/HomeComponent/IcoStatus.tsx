@@ -69,8 +69,8 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                         <h4 className="ico-status-item__name">
                             {i18n.__("Эмитировано XATA")}<br/>
                             (<span
-                            dangerouslySetInnerHTML={{__html: i18n.__("в том числе <b>%s XATA</b> бонусов", Numeral(token.totalBonusTokensIssued).format('0,0.00'))}}
-                        />)
+                                dangerouslySetInnerHTML={{__html: i18n.__("в том числе <b>%s XATA</b> бонусов", Numeral(token.totalBonusTokensIssued).format('0,0.00'))}}
+                            />)
                         </h4>
                     </div>
                 </div>
@@ -119,7 +119,7 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                     </div>
 
                     <div className="ico-contribute">
-
+                        <div id="ContributeMetamask" className="ico-contribute-wrapper"></div>
                     </div>
 
                     <div className="ico-status-container">

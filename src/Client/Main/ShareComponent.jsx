@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as qs from 'querystring';
 import {sendGAEvent} from './AnalyticsHelper'
 
 import {
@@ -24,58 +25,62 @@ export class ShareComponent extends React.Component {
         };
     };
 
-    render() {
-        const shareUrl = window.location.href;
+    generateShareProps = (alias) => {
         const title = document.title;
+        const shareUrl = window.location.href;
 
-        const baseProps = {
-            url: shareUrl,
+        const utm = qs.stringify({
+            utm_campaign: 'social',
+            utm_medium: 'sharing',
+            utm_source: alias
+        });
+
+        return {
+            url: shareUrl + '?' + utm,
             className: "ico-share-item",
-            title: title
+            title: title,
+            beforeOnClick: this.onShareClickEvent(alias)
         };
+    };
+
+    render() {
+        const title = document.title;
 
         return (
             <React.Fragment>
 
                 {/* Facebook */}
-                <FacebookShareButton {...baseProps}
-                                     beforeOnClick={this.onShareClickEvent('facebook')}
+                <FacebookShareButton {...this.generateShareProps('facebook')}
                                      hashtag="#collectingforhut"
+                                     quote={title}
                 >
                     <FacebookIcon size={32} round={true}/>
                 </FacebookShareButton>
 
                 {/* GooglePlus */}
-                <GooglePlusShareButton {...baseProps}
-                                       beforeOnClick={this.onShareClickEvent('google-plus')}>
+                <GooglePlusShareButton {...this.generateShareProps('google-plus')}>
                     <GooglePlusIcon size={32} round={true}/>
                 </GooglePlusShareButton>
 
                 {/* Linkedin */}
-                <LinkedinShareButton {...baseProps}
-                                     beforeOnClick={this.onShareClickEvent('linkedin')}
-                >
+                <LinkedinShareButton {...this.generateShareProps('linkedin')}>
                     <LinkedinIcon size={32} round={true}/>
                 </LinkedinShareButton>
 
                 {/* Twitter */}
-                <TwitterShareButton {...baseProps}
-                                    beforeOnClick={this.onShareClickEvent('twitter')}
-                                    hashtags={["#collectionforhut", "#ethereum", "#rybalsky"]}
+                <TwitterShareButton {...this.generateShareProps('twitter')}
+                                    hashtags={["collectionforhut", "ethereum", "rybalsky", "ico"]}
                 >
                     <TwitterIcon size={32} round={true}/>
                 </TwitterShareButton>
 
                 {/* Telegram */}
-                <TelegramShareButton {...baseProps}
-                                     beforeOnClick={this.onShareClickEvent('telegram')}>
+                <TelegramShareButton {...this.generateShareProps('telegram')}>
                     <TelegramIcon size={32} round={true}/>
                 </TelegramShareButton>
 
                 {/* Reddit */}
-                <RedditShareButton {...baseProps}
-                                   beforeOnClick={this.onShareClickEvent('reddit')}
-                >
+                <RedditShareButton {...this.generateShareProps('reddit')}>
                     <RedditIcon size={32} round={true}/>
                 </RedditShareButton>
             </React.Fragment>

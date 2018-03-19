@@ -1,6 +1,15 @@
 import * as React from 'react';
 import * as i18n from 'i18n';
+import * as qs from 'querystring';
 import {Emojify} from '../../Utils/Emojify';
+
+const utm = qs.stringify({
+    utm_campaign: 'give_me_discount',
+    utm_source: 'naxatu',
+    utm_medium: 'percent_per_view'
+});
+
+const rybalskyUrl = `https://rybalsky.com.ua?${utm}`;
 
 export class WhereHouse extends React.Component<any, any> {
     render() {
@@ -14,7 +23,7 @@ export class WhereHouse extends React.Component<any, any> {
                         <div>
                             <p className="paragraph rybalsky-p -disclaimer">
                                 {i18n.__("О нет! Не подумайте что это реклама")} {' '}
-                                <a href={`https://rybalsky.com.ua?rel=${i18n.__("дайте+мне+скидку")}`}
+                                <a href={rybalskyUrl}
                                    target="_blank" className="link __js-partner"
                                    partner-event-key="rybalsky"
                                    title={i18n.__("ЖК Rybalsky — Я хочу от вас скидку") + " ^_^"}

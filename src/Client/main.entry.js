@@ -4,6 +4,8 @@ import * as ShareController from './Main/ShareController';
 import './Main/Navigation';
 import {sendGAEvent} from './Main/AnalyticsHelper';
 import './Main/PartnersAndAdvisers';
+import * as Metamask from './Main/Metamask';
+
 import './Style/main.scss';
 
 console.log("What do you want? There is nothing interesting! Get out of here...");
@@ -40,18 +42,4 @@ let onCopyContractAddress = () => {
 
 document.getElementsByClassName('__js-copy-contract')[0].addEventListener('click', onCopyContractAddress);
 
-
-if (typeof web3 !== 'undefined') {
-    let web3js = new Web3(web3.currentProvider);
-    web3js.version.getNetwork((err, netId) => {
-        if (err) return;
-        sendGAEvent('metamask', 'exists', netId);
-        switch (netId) {
-            case "1":
-                break;
-
-            default:
-                console.log("Metamask ID:", netId);
-        }
-    });
-}
+Metamask.init();
