@@ -40,6 +40,13 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                     </div>
                 </div>
 
+                <div className="ico-share">
+                    <h3 className="ico-share__title">
+                        {i18n.__("Помогите мне собрать на хату. Ваш репост «Собираю на Хату» очень поможет.")}
+                    </h3>
+                    <div id="ShareComponent" className="ico-share__buttons"></div>
+                </div>
+
                 <div className="ico-status-items">
                     <div className="ico-status-item">
                         <div className="ico-status-item__value">
@@ -62,8 +69,8 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                         <h4 className="ico-status-item__name">
                             {i18n.__("Эмитировано XATA")}<br/>
                             (<span
-                                dangerouslySetInnerHTML={{__html: i18n.__("в том числе <b>%s XATA</b> бонусов", Numeral(token.totalBonusTokensIssued).format('0,0.00'))}}
-                            />)
+                            dangerouslySetInnerHTML={{__html: i18n.__("в том числе <b>%s XATA</b> бонусов", Numeral(token.totalBonusTokensIssued).format('0,0.00'))}}
+                        />)
                         </h4>
                     </div>
                 </div>

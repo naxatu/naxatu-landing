@@ -31,7 +31,11 @@ export class StatusObserver {
 
     fetchValueExtracting = (): void => {
         this.extractValue()
-            .then((result: TokenStatsInterface) => {
+            .then((result: TokenStatsInterface|null) => {
+                if (!result) {
+                    return;
+                }
+                
                 this.state = result;
             });
     };

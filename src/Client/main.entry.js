@@ -1,6 +1,6 @@
 import {each} from 'lodash';
 import animateScrollTo from 'animated-scroll-to';
-import * as IcoStatusController from './Main/IcoStatusController';
+import * as ShareController from './Main/ShareController';
 import './Main/Navigation';
 import {sendGAEvent} from './Main/AnalyticsHelper';
 import './Main/PartnersAndAdvisers';
@@ -28,4 +28,30 @@ if (telegramBox) {
     });
 }
 
-IcoStatusController.init();
+ShareController.init();
+
+
+let onCopyContractAddress = () => {
+    document.getElementById('contract-address').select();
+    document.execCommand("Copy");
+
+    sendGAEvent('contract', 'copy');
+};
+
+document.getElementsByClassName('__js-copy-contract')[0].addEventListener('click', onCopyContractAddress);
+
+
+if (typeof web3 !== 'undefined') {
+    let web3js = new Web3(web3.currentProvider);
+    web3js.version.getNetwork((err, netId) => {
+        if (err) return;
+        sendGAEvent('metamask', 'exists', netId);
+        switch (netId) {
+            case "1":
+                break;
+
+            default:
+                console.log("Metamask ID:", netId);
+        }
+    });
+}
