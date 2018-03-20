@@ -25,9 +25,8 @@ export class FAQ extends React.Component<any, any> {
                         <article className="faq-item">
                             <h3 className="faq-item__title">{i18n.__("Будут ли XATA-токены торговаться?")}</h3>
                             <p className="paragraph faq-item__answer">
-                                {i18n.__("Я надеюсь на это, очень надеюсь. Возможно в будущем вы сможете использовать XATA-токены для кое-чего интересного")}{' '}
-                                ({i18n.__("только для взрослых")}
-                                <Emojify>:beer:</Emojify>, {i18n.__("но это не точно")}).
+                                {i18n.__("Я надеюсь на это, очень надеюсь. В любом случае, я постараюсь их пропихнуть на всякие биржи с прикольными названиями (Yobit, Huobi)")}{' '}
+                                ({i18n.__("но это не точно")}).
                             </p>
                         </article>
 
