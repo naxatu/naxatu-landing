@@ -64,7 +64,7 @@ export class About extends React.Component<any, any> {
                             <span
                                 dangerouslySetInnerHTML={{__html: emojifyText(i18n.__("Я же не хочу ни кого обманывать и покупать <s>Ferrari</s> Lamborghini :car:. Все собранные средства будут потрачены мне на покупку крутой хаты в Киеве и её ремонт."))}}
                             />{' '}
-                            <span>{i18n.__("Возможно в ЖК Rybalsky.")}</span>
+                            {/*<span>{i18n.__("Возможно в ЖК Rybalsky.")}</span>*/}
                         </p>
                         <p className="paragraph why-article-text">
                             {i18n.__("Все события будут транслироваться в канале в Telegram")}

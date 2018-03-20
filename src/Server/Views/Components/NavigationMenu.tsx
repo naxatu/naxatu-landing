@@ -34,9 +34,9 @@ export class NavigationMenu extends React.Component<IProps, any> {
                             <a className="anchor" href="#about">{i18n.__("О проекте")}</a>
                         </li>
 
-                        <li className="navigation-item">
-                            <a className="anchor" href="#rybalsky">Rybalsky</a>
-                        </li>
+                        {/*<li className="navigation-item">*/}
+                            {/*<a className="anchor" href="#rybalsky">Rybalsky</a>*/}
+                        {/*</li>*/}
 
                         <li className="navigation-item">
                             <a className="anchor" href="#xata">{i18n.__("О токенах XATA")}</a>
