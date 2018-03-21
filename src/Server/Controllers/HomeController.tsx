@@ -3,7 +3,8 @@ import * as i18n from "i18n";
 import {Request, Response} from 'express';
 import {ViewRenderer} from '../Utils/ViewRenderer';
 import {HomeView} from '../Views/HomeView';
-import {StatusObserver, TokenStatsInterface} from '../Utils/TokenStats';
+import {StatusObserver} from '../Utils/TokenStats';
+import {findDomainByLang} from '../Utils/DomainManager';
 
 /**
  * Да простят меня боги за такое убожество..
@@ -20,11 +21,20 @@ const statusObserver = new StatusObserver();
  */
 export function index(req: Request, res: Response): void {
     const url = req.protocol + '://' + req.get('Host') + req.url;
+    const domain = findDomainByLang(i18n.getLocale());
+
+    if (!domain) {
+        res.status(500);
+        res.send("Something wrong!");
+        return;
+    }
+
+
     const homeViewProps = {
         url: url,
         token: statusObserver.getState(),
-        baseHost: `${req.protocol}://${req.get('Host')}`,
-        language: i18n.getLocale()
+        domain: domain,
+        lang: i18n.getLocale()
     };
 
     const viewRenderer = new ViewRenderer(<HomeView {...homeViewProps}/>);

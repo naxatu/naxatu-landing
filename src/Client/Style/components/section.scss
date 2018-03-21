@@ -6,12 +6,16 @@
         background: $color-text-dark;
         min-height: 100vh;
         height: 560px;
+
+
     }
 
     @include only-width(320px, 600px) {
         padding: 60px 0;
         &.-intro {
             height: auto;
+            display: flex;
+            align-items: center;
         }
     }
 

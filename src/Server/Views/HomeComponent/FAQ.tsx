@@ -1,9 +1,19 @@
 import * as React from 'react';
 import * as i18n from "i18n";
+import {IDomainProps}  from '../../Utils/DomainManager';
 import {Emojify} from '../../Utils/Emojify';
 
-export class FAQ extends React.Component<any, any> {
+export interface IFAQProps {
+    domain: IDomainProps
+}
+
+export class FAQ extends React.Component<IFAQProps, any> {
     render() {
+
+        const {
+            domain
+        } = this.props;
+
         return (
             <section className="section -faq faq" id="faq">
                 <div className="section-content">
@@ -18,7 +28,9 @@ export class FAQ extends React.Component<any, any> {
                                 {i18n.__("Ни в коем случае. Все по-настоящему и на 100% прозрачно. Никто никого не обманывает — все собранные деньги будут потрачены мне на квартиру в ЖК Rybalsky.")}
                                 <br/><br/>
                                 {i18n.__("Есть даже трансляция происходящего в Telegram —")} {' '}
-                                <a href="https://t.me/naxatu" className="link" target="_blank">t.me/naxatu</a>.
+                                <a href={`https://t.me/${domain.social.telegram}`} className="link" target="_blank">
+                                    t.me/{domain.social.telegram}
+                                </a>.
                             </p>
                         </article>
 

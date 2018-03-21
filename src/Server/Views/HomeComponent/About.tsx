@@ -23,6 +23,9 @@ export class About extends React.Component<any, any> {
 
     render() {
 
+        const {domain} = this.props;
+        const telegram = domain.social.telegram;
+
         return (
             <section className="section -why why" id="about">
                 <div className="section-content">
@@ -37,7 +40,7 @@ export class About extends React.Component<any, any> {
 
                         <h3 className="why-article-title">{i18n.__("Блокчейн — это круто")}</h3>
                         <p className="why-article-text paragraph">
-                            {i18n.__("Но хочу, чтобы не так, как у всех! Так что новых блокчейн технологий тут не будет")}
+                            {i18n.__("Но хочу, чтобы не так, как у всех! Так что новых блокчейн технологий тут не будет")}{' '}
                             <Emojify>:smiling_imp:</Emojify>
                         </p>
                         <p className="why-article-text paragraph">
@@ -67,8 +70,8 @@ export class About extends React.Component<any, any> {
                             {/*<span>{i18n.__("Возможно в ЖК Rybalsky.")}</span>*/}
                         </p>
                         <p className="paragraph why-article-text">
-                            {i18n.__("Все события будут транслироваться в канале в Telegram")}
-                            {' '}<a href="https://t.me/naxatu" target="_blank" className="link">t.me/naxatu</a>.
+                            {i18n.__("Все события будут транслироваться в канале в Telegram")} {' '}
+                            <a href={`https://t.me/${telegram}`} target="_blank" className="link">t.me/{telegram}</a>.
                         </p>
                     </article>
 

@@ -4,6 +4,7 @@ import * as React from 'react';
 import {GTM} from '../../Utils/GTM';
 import {Emojify, emojifyText} from '../../Utils/Emojify';
 import {config} from '../../Config';
+import {IDomainProps, domainList}  from '../../Utils/DomainManager';
 
 import {OpenGraph} from './OpenGraph';
 import {NavigationMenu} from './NavigationMenu';
@@ -18,8 +19,8 @@ export interface IMainLayoutProps {
     description?: string;
     keywords?: string[];
     url: string;
-    baseHost: string;
-    language: string;
+    lang: string;
+    domain: IDomainProps
 }
 
 const criticalCSS = fs.readFileSync(
@@ -37,8 +38,8 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             keywords = [],
             children,
             url = '',
-            baseHost = '',
-            language
+            domain,
+            lang
         } = this.props;
 
         const mainCssAttribute = {
@@ -52,15 +53,15 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             title: emojifyText(title),
             description: emojifyText(description),
             url: url,
-            baseHost: baseHost,
-            language: language
+            baseHost: domain.url,
+            lang: lang
         };
 
         return (
-            <html lang={language}>
+            <html lang={lang}>
             <head>
                 <meta httpEquiv="Content-type" content="text/html; charset=utf-8"/>
-                <meta name="Content-language" content="ru"/>
+                <meta name="Content-language" content={lang}/>
                 <meta name="viewport"
                       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
                 <meta name="format-detection" content="telephone=no"/>
@@ -76,8 +77,8 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             </head>
             <body>
             {gtm.renderBody()}
-            <NavigationMenu />
-            <TelegramBox />
+            <NavigationMenu lang={lang} domain={domain}/>
+            <TelegramBox telegram={domain.social.telegram}/>
             {children}
             <Footer version={version}/>
             <script src={`/js/main.bundle.js?v=${version}`}/>

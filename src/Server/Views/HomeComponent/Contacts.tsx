@@ -4,6 +4,10 @@ import {Emojify} from '../../Utils/Emojify';
 
 export class Contacts extends React.Component<any, any> {
     render() {
+
+        const {domain} = this.props;
+        const telegram = domain.social.telegram;
+
         return (
             <section className="section -contacts contacts" id="contacts">
                 <div className="section-content">
@@ -25,8 +29,8 @@ export class Contacts extends React.Component<any, any> {
 
                             <div className="contacts__item">
                                 <b><i className="fab fa-telegram-plane"/> {i18n.__("Telegram канал")}:</b>
-                                <a target="_blank" href="https://t.me/naxatu"
-                                   className="link">t.me/naxatu</a>
+                                <a target="_blank" href={`https://t.me/${telegram}`}
+                                   className="link">t.me/{telegram}</a>
                             </div>
 
                             <div className="contacts__item">
