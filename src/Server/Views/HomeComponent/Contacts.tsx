@@ -45,10 +45,9 @@ export class Contacts extends React.Component<any, any> {
                             </div>
                         </div>
 
-
                         <div>
                             <p>{i18n.__("Хочешь задать вопрос или анонимно высказаться?")}</p>
-                            <a href="https://goo.gl/forms/4bbkfDyCvvVKkNY22" className="btn" target="_blank">
+                            <a href="https://goo.gl/forms/QvSaNbeCfbITSd842" className="btn" target="_blank">
                                 {i18n.__("Сделай это!")}
                             </a>
                         </div>

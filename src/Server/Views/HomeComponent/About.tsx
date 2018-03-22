@@ -65,9 +65,14 @@ export class About extends React.Component<any, any> {
 
                         <p className="paragraph why-article-text">
                             <span
-                                dangerouslySetInnerHTML={{__html: emojifyText(i18n.__("Я же не хочу ни кого обманывать и покупать <s>Ferrari</s> Lamborghini :car:. Все собранные средства будут потрачены мне на покупку крутой хаты в Киеве и её ремонт."))}}
+                                dangerouslySetInnerHTML={{__html: emojifyText(i18n.__("Я же не хочу ни кого обманывать и покупать <s>Ferrari</s> Lamborghini :car:."))}}
                             />{' '}
-                            {/*<span>{i18n.__("Возможно в ЖК RYBALSKY.")}</span>*/}
+                            <span
+                                dangerouslySetInnerHTML={{__html: i18n.__("Все собранные средства будут потрачены на покупку и ремонт крутой хаты.")}}
+                            />{' '}
+                            <span
+                                dangerouslySetInnerHTML={{__html: i18n.__("Возможно <s>на Бейкер стрит</s> в ЖК RYBALSKY.")}}
+                            />
                         </p>
                         <p className="paragraph why-article-text">
                             {i18n.__("Все события будут транслироваться в канале в Telegram")} {' '}
@@ -81,16 +86,16 @@ export class About extends React.Component<any, any> {
                         <h3 className="why-article-title">{i18n.__("Вы получаете токены XATA")}</h3>
                         <p className="paragraph why-article-text">
                             {i18n.__("Возможно, с первого взгляда XATA-токены покажутся бесполезными.")}{' '}
-                            {i18n.__("Вы можете свободно переводить и хранить XATA.")}{' '}
+                            {i18n.__("Но вы можете свободно переводить и хранить XATA.")}{' '}
                             {i18n.__("А что еще надо для токена, что бы он рос в цене?")}
+                            <br/><br/>
+                            {i18n.__("Но ценности токену придаст очень важное голосование.")} {' '}
+                            <a href="#xata" className="link anchor">{i18n.__('Подробнее')} →</a>
                         </p>
                         <p className="paragraph why-article-text">
                             {i18n.__("Самый крупный бэкер будет приглашен на прекрасный ужин с владельцами в новой Хате.")}
                             <br/><br/>
                             {i18n.__("Но, пока это секрет…")} {this.renderQuiteEmoji()}
-                        </p>
-                        <p className="why-article-text -about">
-                            <a href="#xata" className="anchor link">{i18n.__("Подробнее о ХАТА токенах")}</a>
                         </p>
                     </article>
 
