@@ -26,8 +26,8 @@ export class WhereHouse extends React.Component<any, any> {
                                 <a href={rybalskyUrl}
                                    target="_blank" className="link __js-partner"
                                    partner-event-key="rybalsky"
-                                   title={i18n.__("ЖК Rybalsky — Я хочу от вас скидку") + " ^_^"}
-                                >{i18n.__("ЖК Rybalsky")}</a>!
+                                   title={i18n.__("ЖК RYBALSKY — Я хочу от вас скидку") + " ^_^"}
+                                >{i18n.__("ЖК RYBALSKY")}</a>!
                             </p>
                             <p className="paragraph rybalsky-p">
                                 {i18n.__("Пожалуй, это дом мечты — квадратное здание и 9 этажей. Он расположен на промышленном, полузаброшенном полуострове. Вокруг недостроенные мосты, железная дорога и прекрасный вид на Днепр.")}
@@ -39,8 +39,8 @@ export class WhereHouse extends React.Component<any, any> {
                         </div>
                     </div>
                     <img src="/image/zk-rybalsky.png" className="rybalsky-image"
-                         title={i18n.__("ЖК Rybalsky, если ты слышишь или видишь это — дай мне скидку!")}
-                         alt={i18n.__("ЖК Rybalsky")}
+                         title={i18n.__("ЖК RYBALSKY, если ты слышишь или видишь это — дай мне скидку!")}
+                         alt={i18n.__("ЖК RYBALSKY")}
                     />
                 </article>
             </section>

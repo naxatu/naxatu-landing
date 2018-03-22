@@ -68,9 +68,9 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                         </div>
                         <h4 className="ico-status-item__name">
                             {i18n.__("Эмитировано XATA")}<br/>
-                            (<span
+                            <span
                                 dangerouslySetInnerHTML={{__html: i18n.__("в том числе <b>%s XATA</b> бонусов", Numeral(token.totalBonusTokensIssued).format('0,0.00'))}}
-                            />)
+                            />
                         </h4>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
 
         const text = i18n.__("Основная цель — собрать <b>$180,000</b> на квартиру.") + '<br/>'
             + i18n.__("Краудфандинг продлится до <b>13 мая 2018</b>.") + ' '
-            + i18n.__("Достижения заданной цели — это не конец, так что сумма может превысить изначальную. Чем больше соберу, тем круче хата.");
+            + i18n.__("Чем больше соберу, тем круче хата.");
 
         return (
             <section className="section -ico ico" id="ico">
@@ -113,13 +113,14 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                         </div>
 
                         <div className="contract-links">
-                            <a href={`http://etherscan.com/token/${contract}`}
-                               target="_blank">{i18n.__("Адрес XATA на Etherscan")}</a>
+                            <a href={`http://etherscan.com/token/${contract}`} target="_blank">
+                                {i18n.__("Адрес XATA на Etherscan")}
+                            </a>
                         </div>
                     </div>
 
                     <div className="ico-contribute">
-                        <div id="ContributeMetamask" className="ico-contribute-wrapper"></div>
+                        <div id="ContributeMetamask" className="ico-contribute-wrapper"/>
                     </div>
 
                     <div className="ico-status-container">

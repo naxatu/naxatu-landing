@@ -44,7 +44,7 @@ export class About extends React.Component<any, any> {
                             <Emojify>:smiling_imp:</Emojify>
                         </p>
                         <p className="why-article-text paragraph">
-                            {i18n.__("Будут токены ХАТА. Они на блокчейне и с помощью них можно будет за что-то платить или куда-то продать")}
+                            {i18n.__("Будут токены ХАТА. Они на блокчейне и их уже можно хранить, передавать и продавать друг другу")}
                             <Emojify>:moneybag:</Emojify> ({i18n.__("но это не точно")}).
                         </p>
                         <p className="why-article-text paragraph">
@@ -67,7 +67,7 @@ export class About extends React.Component<any, any> {
                             <span
                                 dangerouslySetInnerHTML={{__html: emojifyText(i18n.__("Я же не хочу ни кого обманывать и покупать <s>Ferrari</s> Lamborghini :car:. Все собранные средства будут потрачены мне на покупку крутой хаты в Киеве и её ремонт."))}}
                             />{' '}
-                            {/*<span>{i18n.__("Возможно в ЖК Rybalsky.")}</span>*/}
+                            {/*<span>{i18n.__("Возможно в ЖК RYBALSKY.")}</span>*/}
                         </p>
                         <p className="paragraph why-article-text">
                             {i18n.__("Все события будут транслироваться в канале в Telegram")} {' '}
@@ -76,17 +76,17 @@ export class About extends React.Component<any, any> {
                     </article>
 
                     <article className="why-article">
-                        <label className="why-article-icon">
-                            {sample(houseIcons)}
-                        </label>
+                        <label className="why-article-icon">{sample(houseIcons)}</label>
 
                         <h3 className="why-article-title">{i18n.__("Вы получаете токены XATA")}</h3>
                         <p className="paragraph why-article-text">
-                            {i18n.__("Возможно, с первого взгляда XATA-токены покажутся бесполезными. Ну так оно и есть.")}
-                            <br/><br/>
-                            {i18n.__("Но, самый крупный бэкер получит прекрасный ужин с владельцами в новой Хате.")}
+                            {i18n.__("Возможно, с первого взгляда XATA-токены покажутся бесполезными.")}{' '}
+                            {i18n.__("Вы можете свободно переводить и хранить XATA.")}{' '}
+                            {i18n.__("А что еще надо для токена, что бы он рос в цене?")}
                         </p>
                         <p className="paragraph why-article-text">
+                            {i18n.__("Самый крупный бэкер будет приглашен на прекрасный ужин с владельцами в новой Хате.")}
+                            <br/><br/>
                             {i18n.__("Но, пока это секрет…")} {this.renderQuiteEmoji()}
                         </p>
                         <p className="why-article-text -about">

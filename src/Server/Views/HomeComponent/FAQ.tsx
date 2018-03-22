@@ -25,7 +25,7 @@ export class FAQ extends React.Component<IFAQProps, any> {
                         <article className="faq-item">
                             <h3 className="faq-item__title">{i18n.__("Это либо тупая шутка, либо скам!")}</h3>
                             <p className="paragraph faq-item__answer">
-                                {i18n.__("Ни в коем случае. Все по-настоящему и на 100% прозрачно. Никто никого не обманывает — все собранные деньги будут потрачены мне на квартиру в ЖК Rybalsky.")}
+                                {i18n.__("Ни в коем случае. Все по-настоящему и на 100% прозрачно. Никто никого не обманывает — все собранные деньги будут потрачены мне на квартиру в ЖК RYBALSKY.")}
                                 <br/><br/>
                                 {i18n.__("Есть даже трансляция происходящего в Telegram —")} {' '}
                                 <a href={`https://t.me/${domain.social.telegram}`} className="link" target="_blank">
