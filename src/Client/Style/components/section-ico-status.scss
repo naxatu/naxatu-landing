@@ -69,6 +69,16 @@
                 font-size: 14px;
             }
         }
+
+        @include to-sm-width {
+            &__sub {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            &__target {
+                margin-bottom: 16px;
+            }
+        }
     }
 
     &-items {
