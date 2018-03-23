@@ -38,7 +38,7 @@ export class FAQ extends React.Component<IFAQProps, any> {
                             <h3 className="faq-item__title">{i18n.__("Будут ли XATA-токены торговаться?")}</h3>
                             <p className="paragraph faq-item__answer">
                                 {i18n.__("Я надеюсь на это, очень надеюсь. В любом случае, я постараюсь их пропихнуть на всякие биржи с прикольными названиями (Yobit, Huobi)")}{' '}
-                                ({i18n.__("но это не точно")}).
+                                {i18n.__("но это не точно")}.
                             </p>
                         </article>
 

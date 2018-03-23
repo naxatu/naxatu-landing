@@ -27,7 +27,7 @@ export class XataToken extends React.Component<any, any> {
 
                             {i18n.__("А также вы можете свободно переводить и хранить XATA-токены в надеждах на его рост, как это делают хомяки и трейдеры.")}
                             <br/><br/>
-                            <a href="#xata" className="link anchor">{i18n.__('Получить XATA')} →</a>
+                            <a href="#ico" className="link anchor">{i18n.__('Получить XATA')} →</a>
                         </p>
                     </article>
 
