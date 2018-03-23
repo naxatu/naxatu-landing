@@ -54,34 +54,34 @@ export class ShareComponent extends React.Component {
                                      hashtag="#collectingforhut"
                                      quote={title}
                 >
-                    <FacebookIcon size={32} round={true}/>
+                    <FacebookIcon size={24} round={true}/>
                 </FacebookShareButton>
 
                 {/* GooglePlus */}
                 <GooglePlusShareButton {...this.generateShareProps('google-plus')}>
-                    <GooglePlusIcon size={32} round={true}/>
+                    <GooglePlusIcon size={24} round={true}/>
                 </GooglePlusShareButton>
 
                 {/* Linkedin */}
                 <LinkedinShareButton {...this.generateShareProps('linkedin')}>
-                    <LinkedinIcon size={32} round={true}/>
+                    <LinkedinIcon size={24} round={true}/>
                 </LinkedinShareButton>
 
                 {/* Twitter */}
                 <TwitterShareButton {...this.generateShareProps('twitter')}
                                     hashtags={["collectionforhut", "ethereum", "rybalsky", "ico"]}
                 >
-                    <TwitterIcon size={32} round={true}/>
+                    <TwitterIcon size={24} round={true}/>
                 </TwitterShareButton>
 
                 {/* Telegram */}
                 <TelegramShareButton {...this.generateShareProps('telegram')}>
-                    <TelegramIcon size={32} round={true}/>
+                    <TelegramIcon size={24} round={true}/>
                 </TelegramShareButton>
 
                 {/* Reddit */}
                 <RedditShareButton {...this.generateShareProps('reddit')}>
-                    <RedditIcon size={32} round={true}/>
+                    <RedditIcon size={24} round={true}/>
                 </RedditShareButton>
             </React.Fragment>
         )

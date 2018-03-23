@@ -29,30 +29,6 @@
     }
 }
 
-.ico-share {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    text-align: center;
-
-    &__title {
-        margin-bottom: 16px;
-    }
-
-    &__buttons {
-        text-align: center;
-    }
-
-    &-item {
-        transition: all 0.4s;
-        display: inline-block;
-        margin: 0 8px;
-        cursor: pointer;
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-}
-
 .ico-contribute {
     margin: 32px 0;
 

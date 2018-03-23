@@ -48,11 +48,26 @@
             }
         }
 
+        &__sub {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         &__target {
-            position: absolute;
-            right: 4px;
-            top: 16px;
-            font-size: 18px;
+            margin-right: 24px;
+            &-value {
+                line-height: 1;
+                padding: 0;
+                margin: 0;
+                font-size: 24px;
+                color: $color-primary;
+            }
+
+            &-target {
+                font-size: 14px;
+            }
         }
     }
 
@@ -136,6 +151,37 @@
         & > a {
             font-size: 12px;
             color: $color-text-light;
+        }
+    }
+}
+
+.ico-share {
+    text-align: center;
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__buttons {
+        text-align: center;
+        display: flex;
+    }
+
+    &-item {
+        transition: all 0.4s;
+        display: inline-block;
+        margin: 0 4px;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
         }
     }
 }

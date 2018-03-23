@@ -19,6 +19,9 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
             return null;
         }
 
+        const secondsToGo = (Constants.END_DATE.getTime() - (new Date().getTime()));
+        const daysToGo = Numeral(secondsToGo).divide(24 * 60 * 60 * 1000).format("0");
+
         return (
             <div className="ico-status">
                 <p className="ico-info">
@@ -26,26 +29,39 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                 </p>
 
                 <div className="ico-status__progress-wrapper">
-                    <div className="ico-status-percentage">{Numeral(token.targetPercent).format('0.0%')}</div>
                     <div className="ico-status-progress">
                         <div className="ico-status-progress__line">
                             <div className="ico-status-progress__line-fill"
                                  style={{width: Numeral(token.targetPercent).format('0.000%')}}
                             />
                         </div>
-                        <div className="ico-status-progress__target">
-                            <b>${Numeral(token.totalContributionUSD).format('0,0')}</b> {i18n.__("из")} {' '}
-                            <b>${Numeral(Constants.TARGET).format('0,0')}</b>
+
+                        <div className="ico-status-progress__sub">
+                            <div className="ico-status-progress__target">
+                                <h3 className="ico-status-progress__target-value">
+                                    ${Numeral(token.totalContributionUSD).format('0,0')}
+                                </h3>
+                                <span className="ico-status-progress__target-target">
+                                    {i18n.__("собрано от цели в $%s", Numeral(Constants.TARGET).format('0,0'))}
+                                </span>
+                            </div>
+
+                            <div className="ico-status-progress__target">
+                                <h3 className="ico-status-progress__target-value">
+                                    {daysToGo}
+                                </h3>
+                                <span className="ico-status-progress__target-target">
+                                    {i18n.__("до окончания ICO, 13 Мая 2018")}
+                                </span>
+                            </div>
+
+                            <div className="ico-share">
+                                <div id="ShareComponent" className="ico-share__buttons"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="ico-share">
-                    <h3 className="ico-share__title">
-                        {i18n.__("Помогите мне собрать на хату. Ваш репост «Собираю на Хату» очень поможет.")}
-                    </h3>
-                    <div id="ShareComponent" className="ico-share__buttons"></div>
-                </div>
 
                 <div className="ico-status-items">
                     <div className="ico-status-item">

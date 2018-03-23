@@ -38,7 +38,7 @@ msgstr ""
 msgid "А что еще надо для токена, что бы он рос в цене?"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:117
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:133
 msgid "Адрес XATA на Etherscan"
 msgstr ""
 
@@ -86,7 +86,7 @@ msgstr ""
 msgid "В мире хайпа среди ICO проектов, этот является самым технологически интересным, ибо нет пустых обещаний и кучи рассказов про невозможные имплементации технологий в проект. Однозначно, мой единственный фаворит в мире ICO!"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:72
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:88
 msgid "в том числе <b>%s XATA</b> бонусов"
 msgstr ""
 
@@ -170,6 +170,10 @@ msgstr ""
 msgid "Дмитрий Дубилет"
 msgstr ""
 
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:54
+msgid "до окончания ICO, 13 Мая 2018"
+msgstr ""
+
 #: src/Server/Views/HomeComponent/Partners.tsx:50
 msgid "Если вдруг, это лого для светлого фона не очень — я не виноват."
 msgstr ""
@@ -235,10 +239,6 @@ msgstr ""
 msgid "Идеолог блокчейна и технологий на его базе."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:37
-msgid "из"
-msgstr ""
-
 #: src/Server/Views/HomeComponent/Heroes.tsx:31
 msgid "имена политиков и публичных личностей (если это не ваше собственное)."
 msgstr ""
@@ -301,7 +301,7 @@ msgstr ""
 msgid "Красное или белое?"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:85
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:101
 msgid "Краудфандинг продлится до <b>13 мая 2018</b>."
 msgstr ""
 
@@ -333,7 +333,7 @@ msgstr ""
 msgid "Место, где творю, где воплощается моя фантазия"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:62
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:78
 msgid "Можно купить"
 msgstr ""
 
@@ -426,7 +426,7 @@ msgstr ""
 msgid "Определяемся с интерьером с помощью наших друзей по челенджу. Выбираем материалы, делаем перепланировку (да-да, нужно, чтобы не как у всех!)."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:84
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:100
 msgid "Основная цель — собрать <b>$180,000</b> на квартиру."
 msgstr ""
 
@@ -456,7 +456,7 @@ msgid "Подкинуть на Бар"
 msgstr ""
 
 #: src/Server/Views/Components/NavigationMenu.tsx:57
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:93
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:109
 #: src/Server/Views/HomeComponent/Intro.tsx:37
 msgid "Подкинуть на Хату"
 msgstr ""
@@ -488,10 +488,6 @@ msgstr ""
 
 #: src/Server/Views/HomeComponent/Challenge.tsx:20
 msgid "Помогите мне выбрать интерьер квартиры!"
-msgstr ""
-
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:45
-msgid "Помогите мне собрать на хату. Ваш репост «Собираю на Хату» очень поможет."
 msgstr ""
 
 #: src/Server/Views/HomeComponent/XataToken.tsx:21
@@ -551,7 +547,7 @@ msgstr ""
 msgid "свяжитесь со мной"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Contacts.tsx:52
+#: src/Server/Views/HomeComponent/Contacts.tsx:51
 msgid "Сделай это!"
 msgstr ""
 
@@ -589,11 +585,15 @@ msgstr ""
 msgid "собираюнахату"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:55
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:71
 msgid "Собрано ETH"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:103
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:45
+msgid "собрано от цели в $%s"
+msgstr ""
+
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:119
 msgid "Советую использовать MyEtherWallet или MetaMask. Не переводите Ether с бирж или сервисов, где не имеете полный доступ к кошельку, а иначе не будет доступа к XATA."
 msgstr ""
 
@@ -637,11 +637,11 @@ msgstr ""
 msgid "Хаты. Реально хочу купить квартиру. За ваш Ethereum, нажитый «тяжким» трудом инвестора и трейдера."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Contacts.tsx:50
+#: src/Server/Views/HomeComponent/Contacts.tsx:49
 msgid "Хочешь задать вопрос или анонимно высказаться?"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:25
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:28
 msgid "Цена XATA"
 msgstr ""
 
@@ -657,7 +657,7 @@ msgstr ""
 msgid "челендж"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:86
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:102
 msgid "Чем больше соберу, тем круче хата."
 msgstr ""
 
@@ -673,11 +673,11 @@ msgstr ""
 msgid "Чтобы всегда помнить о тех, кто купил мне хату"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:70
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:86
 msgid "Эмитировано XATA"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:100
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:116
 msgid "Это адрес контракта, на который нужно перевести Ethereum для получения XATA-токенов. Он же является адресом XATA-токенов."
 msgstr ""
 
