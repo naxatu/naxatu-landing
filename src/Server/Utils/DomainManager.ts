@@ -12,6 +12,8 @@ interface IDomainProps {
     isDefault: boolean;
     social: {
         telegram: string;
+        facebook: string;
+        github: string;
     }
 }
 
@@ -26,7 +28,9 @@ domainList[currentHost] = {
     language: 'en',
     isDefault: true,
     social: {
-        telegram: 'collecting_for_hut'
+        telegram: 'collecting_for_hut',
+        facebook: 'collectingforhut',
+        github: 'naxatu'
     }
 };
 
@@ -39,7 +43,9 @@ domainList['ru.' + currentHost] = {
     language: 'ru',
     isDefault: false,
     social: {
-        telegram: 'naxatu'
+        telegram: 'naxatu',
+        facebook: 'collectingforhut',
+        github: 'naxatu'
     }
 };
 

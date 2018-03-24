@@ -6,27 +6,6 @@
         cursor: pointer;
     }
 
-    &-open {
-        width: 48px;
-        height: 48px;
-        right: 20px;
-        top: 20px;
-        background: transparentize($color-text-dark, 0.5);
-        padding: 0 12px;
-        border-radius: 40px;
-
-        &__line {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: $color-white-lilac;
-            margin-bottom: 5px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-
     &-close {
         background: transparent;
         position: absolute;
@@ -161,37 +140,6 @@
                 &:hover {
                     color: $color-primary;
                 }
-            }
-        }
-    }
-}
-
-.lang {
-    &-selector {
-
-        background: rgba(31, 33, 37, 0.5);
-        padding: 0 4px;
-        border-radius: 3px;
-
-        position: fixed;
-        left: 20px;
-        top: 24px;
-
-        &__item {
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 500;
-            text-decoration: none;
-            text-transform: uppercase;
-            display: inline-block;
-            line-height: 36px;
-            padding: 0 6px;
-            color: $color-white;
-            opacity: 0.6;
-
-            &.-active {
-                font-weight: bold;
-                opacity: 1;
             }
         }
     }

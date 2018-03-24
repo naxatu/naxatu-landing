@@ -13,7 +13,7 @@ class PageNavigation {
     constructor(pageNavigation) {
         this.pageNavigation = pageNavigation;
 
-        this.openBtn = pageNavigation.getElementsByClassName('navigation-open')[0];
+        this.openBtn = document.getElementsByClassName('__js_navigation-open')[0];
         this.closeBtn = pageNavigation.getElementsByClassName('navigation-close')[0];
         this.overlay = pageNavigation.getElementsByClassName('navigation-overlay')[0];
         this.links = this.pageNavigation.querySelectorAll('.anchor');
@@ -47,3 +47,39 @@ const pageNavigationElement = document.getElementById('page-navigation');
 if (pageNavigationElement) {
     window.pageNavigation = new PageNavigation(pageNavigationElement);
 }
+
+const introHeight = document.getElementById("intro").offsetHeight;
+document.getScroll = () => {
+    if (window.pageYOffset != undefined) {
+        return {
+            x: pageXOffset,
+            y: pageYOffset
+        };
+    }
+    else {
+        let sx, sy, d = document, r = d.documentElement, b = d.body;
+        sx = r.scrollLeft || b.scrollLeft || 0;
+        sy = r.scrollTop || b.scrollTop || 0;
+
+        return {
+            x: sx,
+            y: sy
+        };
+    }
+};
+
+const header = document.getElementsByClassName('header')[0];
+const footerBanner = document.getElementsByClassName('__js_footer-banner')[0];
+const onScrollHandler = () => {
+    const heightIndex = document.getScroll().y - introHeight + 48;
+    if (heightIndex > 0) {
+        header.classList.contains('-dark') || header.classList.add('-dark');
+        footerBanner.classList.contains('-show') || footerBanner.classList.add('-show');
+    } else {
+        header.classList.contains('-dark') && header.classList.remove('-dark');
+        footerBanner.classList.contains('-show') && footerBanner.classList.remove('-show');
+    }
+};
+
+document.addEventListener("scroll", onScrollHandler);
+onScrollHandler();

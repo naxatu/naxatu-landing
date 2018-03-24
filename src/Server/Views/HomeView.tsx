@@ -49,7 +49,7 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
                 <IcoStatus token={token}/>
                 <About domain={domain}/>
                 <Citation />
-                {/*<WhereHouse />*/}
+                <WhereHouse />
                 <XataToken />
                 <Roadmap />
                 <Team />

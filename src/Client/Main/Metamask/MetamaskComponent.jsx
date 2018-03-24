@@ -65,7 +65,7 @@ export class MetamaskComponent extends React.Component {
             web3js.eth.sendTransaction(requestParams, responseHandler);
             sendGAEvent('metamask', 'open');
         } catch (error) {
-            this.setMessage('Unblock your MetaMask extension', 'error');
+            alert('Unblock your MetaMask');
         }
     };
 

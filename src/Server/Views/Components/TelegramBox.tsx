@@ -13,7 +13,7 @@ export class TelegramBox extends React.Component<ITelegramBoxProps, any> {
                 <a href={`https://t.me/${telegram}`}
                    target="_blank"
                    className="telegram-box__icon"
-                   title="Все события проекта постятся в телеграме"
+                   title="All in Telegram channel"
                 ><i className="fab fa-telegram-plane"/></a>
             </div>
         )

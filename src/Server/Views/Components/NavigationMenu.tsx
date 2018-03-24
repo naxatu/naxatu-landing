@@ -1,8 +1,7 @@
 import * as React from 'react';
-import {map} from 'lodash';
 import * as i18n from "i18n";
-import {IDomainProps, domainList}  from '../../Utils/DomainManager';
-import * as classNames from 'classnames';
+import {IDomainProps}  from '../../Utils/DomainManager';
+
 
 export interface IProps {
     lang: string;
@@ -11,34 +10,11 @@ export interface IProps {
 
 export class NavigationMenu extends React.Component<IProps, any> {
 
-    renderLanguages() {
-        const {lang} = this.props;
-
-        return <div className="lang-selector">
-            {map(domainList, (domain: IDomainProps) => {
-                const elementProps = {
-                    href: domain.url,
-                    className: classNames("lang-selector__item", (domain.language === lang) && '-active')
-                };
-
-                return <a {...elementProps}>{domain.language}</a>
-            })}
-        </div>
-    }
-
     render() {
 
         const {domain} = this.props;
 
         return <div className="navigation" id="page-navigation">
-
-            {this.renderLanguages()}
-
-            <button className="navigation-open">
-                <span className="navigation-open__line"/>
-                <span className="navigation-open__line"/>
-                <span className="navigation-open__line"/>
-            </button>
             <div className="navigation-overlay"/>
 
             <nav className="navigation-wrapper">
@@ -61,9 +37,9 @@ export class NavigationMenu extends React.Component<IProps, any> {
                             <a className="anchor" href="#about">{i18n.__("О проекте")}</a>
                         </li>
 
-                        {/*<li className="navigation-item">*/}
-                        {/*<a className="anchor" href="#rybalsky">Rybalsky</a>*/}
-                        {/*</li>*/}
+                        <li className="navigation-item">
+                            <a className="anchor" href="#rybalsky">Rybalsky</a>
+                        </li>
 
                         <li className="navigation-item">
                             <a className="anchor" href="#xata">{i18n.__("О токенах XATA")}</a>

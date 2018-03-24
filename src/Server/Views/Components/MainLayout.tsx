@@ -9,6 +9,7 @@ import {IDomainProps, domainList}  from '../../Utils/DomainManager';
 import {OpenGraph} from './OpenGraph';
 import {NavigationMenu} from './NavigationMenu';
 import {TelegramBox} from './TelegramBox';
+import {Header} from './Header';
 import {Footer} from './Footer';
 
 const version = config.get('app.version') || '0.0.0';
@@ -76,11 +77,11 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
                 {gtm.renderHead()}
             </head>
             <body>
-            {gtm.renderBody()}
-            <NavigationMenu lang={lang} domain={domain}/>
-            <TelegramBox telegram={domain.social.telegram}/>
-            {children}
-            <Footer version={version}/>
+                <Header lang={lang} domain={domain}/>
+                {gtm.renderBody()}
+                <NavigationMenu lang={lang} domain={domain}/>
+                {children}
+                <Footer domain={domain} lang={lang} version={version}/>
             <script src={`/js/main.bundle.js?v=${version}`}/>
             <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"/>
             </body>

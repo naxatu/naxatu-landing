@@ -1,10 +1,11 @@
 import {each} from 'lodash';
 import animateScrollTo from 'animated-scroll-to';
 import * as ShareController from './Main/ShareController';
-import './Main/Navigation';
 import {sendGAEvent} from './Main/AnalyticsHelper';
-import './Main/PartnersAndAdvisers';
 import * as Metamask from './Main/Metamask';
+import './Main/Navigation';
+import './Main/PartnersAndAdvisers';
+import './Main/Contribute';
 
 import './Style/main.scss';
 
@@ -43,3 +44,4 @@ let onCopyContractAddress = () => {
 document.getElementsByClassName('__js-copy-contract')[0].addEventListener('click', onCopyContractAddress);
 
 Metamask.init();
+

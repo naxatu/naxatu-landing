@@ -1,16 +1,61 @@
 .footer {
 
     font-size: 12px;
-    padding: 24px 0;
+    padding: 24px 0 48px 0;
 
     &-section {
-
     }
 
     &-paragraph {
         margin-bottom: 16px;
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+
+    &-banner {
+        transition: all 0.4s;
+        position: fixed;
+        bottom: -33px;
+        left: 0;
+        right: 0;
+        min-width: 320px;
+        background: transparentize($color-white-lilac, 0.15);
+        height: 32px;
+        box-shadow: 0 -1px 0 0 transparentize($color-text-light, 0.75);
+        z-index: 700;
+
+        color: $color-text-light;
+
+        &.-show {
+            bottom: 0
+        }
+
+        &-content {
+            max-width: 1060px;
+            margin: 0 auto;
+            line-height: 32px;
+            display: flex;
+            justify-content: space-between;
+            @include to-width(1060px) {
+                padding: 0 20px;
+            }
+        }
+
+        &-links {
+            font-size: 16px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            & > a {
+                transition: all 0.2s;
+                display: block;
+                margin-right: 12px;
+                &:hover {
+                    color: $color-main;
+                    transform: scale(1.2);
+                }
+            }
         }
     }
 }

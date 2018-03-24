@@ -1,13 +1,19 @@
 import * as React from 'react';
 import * as i18n from "i18n";
+import {IDomainProps}  from '../../Utils/DomainManager';
 
 export interface IFooterProps {
     version: string;
+    lang: string;
+    domain: IDomainProps;
 }
 
 export class Footer extends React.Component<IFooterProps, any> {
     render() {
-        const {version} = this.props;
+        const {version, domain} = this.props;
+
+        const {telegram, facebook, github} = domain.social;
+
         return (
             <footer className="footer section">
                 <section className="section-content">
@@ -19,6 +25,30 @@ export class Footer extends React.Component<IFooterProps, any> {
                         {i18n.__("Ethereum, собранный в процессе ICO, действительно будет потрачен на покупку или аренду места жительства, и возврату не подлежит.")}
                     </p>
                     <p className="footer-paragraph">2018 - naxatu.com @ {version}</p>
+                </section>
+
+
+                <section className="footer-banner __js_footer-banner">
+                    <div className="footer-banner-content">
+                        <div className="footer-banner-links">
+                            <a href={`https://t.me/${telegram}`}
+                               target="_blank"
+                               title="All in Telegram channel"
+                            ><i className="fab fa-telegram"/></a>
+
+                            <a href={`https://fb.me/${facebook}`}
+                               target="_blank"
+                               title="All in Telegram channel"
+                            ><i className="fab fa-facebook"/></a>
+
+                            <a href={`https://github.com/${github}`}
+                               target="_blank"
+                               title="All in Telegram channel"
+                            ><i className="fab fa-github"/></a>
+                        </div>
+
+                        <a href="#ico" className="link anchor">{i18n.__('Дать ему')} →</a>
+                    </div>
                 </section>
             </footer>
         )

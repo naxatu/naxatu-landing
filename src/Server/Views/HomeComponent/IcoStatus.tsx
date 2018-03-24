@@ -1,10 +1,9 @@
 import * as React from 'react';
 import * as i18n from "i18n";
 import * as Numeral from 'numeral';
-import {Emojify} from '../../Utils/Emojify';
+import {Emojify, contractInstance, TokenStatsInterface} from '../../Utils';
 import * as Constants from '../../Contants';
-import {contractInstance} from '../../Utils/ContractObserver';
-import {TokenStatsInterface} from '../../Utils/TokenStats';
+import {ContributePopup} from './SmallElements/ContributePopup';
 
 export interface ISOStatusProps {
     token: TokenStatsInterface | null;
@@ -96,6 +95,7 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
 
     render() {
         const contract = contractInstance.contract;
+        const {token} = this.props;
 
         const text = i18n.__("Основная цель — собрать <b>$180,000</b> на квартиру.") + '<br/>'
             + i18n.__("Краудфандинг продлится до <b>13 мая 2018</b>.") + ' '
@@ -108,34 +108,16 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                     <div className="topic -left">
                         <h2 className="topic-title">{i18n.__("Подкинуть на Хату")}</h2>
                     </div>
-
                     <p className="paragraph" dangerouslySetInnerHTML={{__html: text}}/>
 
-                    <div className="contract">
-                        <p className="contract__desc">
-                            {i18n.__("Это адрес контракта, на который нужно перевести Ethereum для получения XATA-токенов. Он же является адресом XATA-токенов.")}
-                            <br/>
-
-                            {i18n.__("Советую использовать MyEtherWallet или MetaMask. Не переводите Ether с бирж или сервисов, где не имеете полный доступ к кошельку, а иначе не будет доступа к XATA.")}
-                            <br/>
-
-                            <b>GasLimit = 80 000</b>
-                        </p>
-
-                        <div className="contract-wrapper">
-                            <input readOnly={true} value={contract} type="text" className="contract__address"
-                                   id="contract-address"/>
-                            <button className="contract-copy __js-copy-contract"><i className="far fa-copy"/></button>
-                        </div>
-
-                        <div className="contract-links">
-                            <a href={`http://etherscan.com/token/${contract}`} target="_blank">
-                                {i18n.__("Адрес XATA на Etherscan")}
-                            </a>
-                        </div>
-                    </div>
-
+                    {token && <ContributePopup token={token}/>}
                     <div className="ico-contribute">
+                        <button
+                            className="ico-contribute__the-most-important-button ico-contribute-button __js_contribute"
+                            contribute-btn-key="main">
+                            {i18n.__('Подкинуть на Хату')}
+                        </button>
+
                         <div id="ContributeMetamask" className="ico-contribute-wrapper"/>
                     </div>
 
