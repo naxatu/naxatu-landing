@@ -20,8 +20,8 @@
         left: 0;
         right: 0;
         min-width: 320px;
-        background: transparentize($color-white-lilac, 0.15);
         height: 32px;
+        background: transparentize($color-white-lilac, 0.15);
         box-shadow: 0 -1px 0 0 transparentize($color-text-light, 0.75);
         z-index: 700;
 

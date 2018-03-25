@@ -55,7 +55,9 @@ export class XataToken extends React.Component<any, any> {
                     </article>
 
                     <div>
-                        <a className="btn anchor" href="#ico">{i18n.__("Получить XATA")}</a>
+                        <a className="btn anchor __js_contribute" contribute-btn-key="bonuses" href="#ico">
+                            {i18n.__("Получить XATA")}
+                        </a>
                     </div>
                 </div>
             </section>
