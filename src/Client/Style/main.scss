@@ -30,3 +30,10 @@
         margin-bottom: 16px;
     }
 }
+
+.fb-like {
+    height: 32px;
+    & > span {
+        vertical-align: middle !important;
+    }
+}

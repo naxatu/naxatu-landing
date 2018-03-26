@@ -6,7 +6,9 @@ import {Emojify, emojifyText} from '../../Utils/Emojify';
 import {config} from '../../Config';
 import {IDomainProps, domainList}  from '../../Utils/DomainManager';
 
+
 import {OpenGraph} from './OpenGraph';
+import {FacebookConnector} from './Facebook';
 import {NavigationMenu} from './NavigationMenu';
 import {TelegramBox} from './TelegramBox';
 import {Header} from './Header';
@@ -77,6 +79,7 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
                 {gtm.renderHead()}
             </head>
             <body>
+                <FacebookConnector />
                 <Header lang={lang} domain={domain}/>
                 {gtm.renderBody()}
                 <NavigationMenu lang={lang} domain={domain}/>
