@@ -39,9 +39,14 @@
         }
     }
 
-    @include from-width(440px) {
+    & + & {
+        margin-left: 32px;
+    }
+
+    @include to-width(440px) {
         & + & {
-            margin-left: 32px;
+            margin-left: 0;
+            display: block;
         }
     }
 }
