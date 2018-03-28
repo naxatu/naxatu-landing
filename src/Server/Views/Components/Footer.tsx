@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as i18n from "i18n";
 import {IDomainProps}  from '../../Utils/DomainManager';
-import {FacebookButton} from './Facebook';
 
 export interface IFooterProps {
     version: string;
@@ -46,8 +45,6 @@ export class Footer extends React.Component<IFooterProps, any> {
                                target="_blank"
                                title="All in Telegram channel"
                             ><i className="fab fa-github"/></a>
-
-                            <FacebookButton url={domain.url}/>
                         </div>
 
                         <a href="#ico" className="link anchor">{i18n.__('Дать ему')} →</a>

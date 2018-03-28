@@ -19,6 +19,8 @@ import {Heroes} from './HomeComponent/Heroes';
 import {Contacts} from './HomeComponent/Contacts';
 import {Advisers} from './HomeComponent/Advisers';
 
+import {ShareInfo} from './HomeComponent/ShareInfo'
+
 export interface IHomeViewProps {
     domain: IDomainProps;
     url: string;
@@ -47,6 +49,7 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
             <MainLayout {...layoutProps}>
                 <Intro />
                 <IcoStatus token={token}/>
+                <ShareInfo domain={domain}/>
                 <About domain={domain}/>
                 <Citation />
                 <WhereHouse />

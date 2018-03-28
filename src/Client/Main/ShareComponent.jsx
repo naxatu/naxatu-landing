@@ -37,7 +37,7 @@ export class ShareComponent extends React.Component {
 
         return {
             url: shareUrl + '?' + utm,
-            className: "ico-share-item",
+            className: "share-item",
             title: title,
             beforeOnClick: this.onShareClickEvent(alias)
         };
@@ -48,40 +48,31 @@ export class ShareComponent extends React.Component {
 
         return (
             <React.Fragment>
-
-                {/* Facebook */}
-                <FacebookShareButton {...this.generateShareProps('facebook')}
-                                     hashtag="#collectingforhut"
-                                     quote={title}
-                >
-                    <FacebookIcon size={24} round={true}/>
-                </FacebookShareButton>
-
                 {/* GooglePlus */}
                 <GooglePlusShareButton {...this.generateShareProps('google-plus')}>
-                    <GooglePlusIcon size={24} round={true}/>
+                    <GooglePlusIcon size={32} round={true}/>
                 </GooglePlusShareButton>
 
                 {/* Linkedin */}
                 <LinkedinShareButton {...this.generateShareProps('linkedin')}>
-                    <LinkedinIcon size={24} round={true}/>
+                    <LinkedinIcon size={32} round={true}/>
                 </LinkedinShareButton>
 
                 {/* Twitter */}
                 <TwitterShareButton {...this.generateShareProps('twitter')}
                                     hashtags={["collectionforhut", "ethereum", "rybalsky", "ico"]}
                 >
-                    <TwitterIcon size={24} round={true}/>
+                    <TwitterIcon size={32} round={true}/>
                 </TwitterShareButton>
 
                 {/* Telegram */}
                 <TelegramShareButton {...this.generateShareProps('telegram')}>
-                    <TelegramIcon size={24} round={true}/>
+                    <TelegramIcon size={32} round={true}/>
                 </TelegramShareButton>
 
                 {/* Reddit */}
                 <RedditShareButton {...this.generateShareProps('reddit')}>
-                    <RedditIcon size={24} round={true}/>
+                    <RedditIcon size={32} round={true}/>
                 </RedditShareButton>
             </React.Fragment>
         )

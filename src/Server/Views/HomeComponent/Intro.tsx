@@ -35,6 +35,10 @@ export class Intro extends React.Component<any, any> {
                            className="button btn -yellow intro-btn -ico anchor"
                            title={i18n.__("Вот нажми и узри, как надо делать ICO!")}
                         >{i18n.__("Подкинуть на Хату")}</a>
+
+                        <a href="#about" className="button btn -inline intro-btn -about anchor">
+                            {i18n.__("О том как на Хату собирать")}
+                        </a>
                     </div>
                 </div>
 

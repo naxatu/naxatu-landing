@@ -37,20 +37,15 @@ export class ContributePopup extends React.Component<IPopupProps, any> {
                             <b>GasLimit = 80 000</b>
                         </p>
 
-                        <div className="contract-wrapper">
-                            <textarea readOnly={true} value={contract} className="contract__address"
-                                      id="contract-address"/>
-                            <div className="contract-buttons">
-                                <button className="contract-buttons__item -copy __js-copy-contract">
-                                    <i className="far fa-copy"/>
-                                </button>
+                        <a className="link" target="_blank"
+                           href={`http://etherscan.com/token/${contract}`}
+                        >Contract address</a>
 
-                                <a className="contract-buttons__item -link"
-                                   href={`http://etherscan.com/token/${contract}`}
-                                   target="_blank">
-                                    <i className="fas fa-link"/>
-                                </a>
-                            </div>
+                        <div className="contract-wrapper">
+                            <input readOnly={true} value={contract} className="contract__address"
+                                   id="contract-address"/>
+
+                            <button className="contract-copy __js-copy-contract">Copy</button>
                         </div>
 
                         <QRCode className="contract-qr"

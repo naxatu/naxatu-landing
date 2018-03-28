@@ -53,10 +53,6 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                                     {i18n.__("до окончания ICO, 13 Мая 2018")}
                                 </span>
                             </div>
-
-                            <div className="ico-share">
-                                <div id="ShareComponent" className="ico-share__buttons"></div>
-                            </div>
                         </div>
                     </div>
                 </div>

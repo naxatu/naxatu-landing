@@ -155,11 +155,10 @@
             margin-top: 16px;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
         }
 
         &__target {
-            margin-right: 24px;
+            margin-right: 48px;
             &-value {
                 line-height: 1;
                 padding: 0;
@@ -215,16 +214,30 @@
     }
 }
 
-.ico-share {
-    text-align: center;
+.share {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+
+    padding: 24px;
+    border: 2px solid $color-primary;
 
     &__title {
         margin-bottom: 16px;
     }
 
+    &__desc {
+        margin-bottom: 24px;
+        color: $color-text-light;
+    }
+
     &__buttons {
-        text-align: center;
         display: flex;
+        align-items: center;
+        &-round {
+            margin-right: 16px;
+            display: flex;
+        }
     }
 
     &-item {

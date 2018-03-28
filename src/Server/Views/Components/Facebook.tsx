@@ -23,7 +23,6 @@ export interface FacebookButtonProps {
 
 export class FacebookButton extends React.Component<FacebookButtonProps, any> {
     render() {
-
         const {url} = this.props;
 
         const buttonProps = {

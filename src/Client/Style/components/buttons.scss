@@ -39,7 +39,9 @@
         }
     }
 
-    & + & {
-        margin-left: 32px;
+    @include from-width(440px) {
+        & + & {
+            margin-left: 32px;
+        }
     }
 }
