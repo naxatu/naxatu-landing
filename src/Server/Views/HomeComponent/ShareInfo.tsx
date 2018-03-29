@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as i18n from "i18n";
 import {IDomainProps}  from '../../Utils/DomainManager';
-import {FacebookButton} from '../Components/Facebook';
 
 export interface IShareProps {
     domain: IDomainProps;
@@ -20,8 +19,6 @@ export class ShareInfo extends React.Component<IShareProps, any> {
 
             <div className="share__buttons">
                 <div id="ShareComponent" className="share__buttons-round"></div>
-
-                <FacebookButton url={domain.url}/>
             </div>
         </section>
     }

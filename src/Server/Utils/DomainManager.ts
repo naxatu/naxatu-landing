@@ -14,6 +14,9 @@ interface IDomainProps {
         telegram: string;
         facebook: string;
         github: string;
+        reddit: string;
+
+        [key: string]: string;
     }
 }
 
@@ -30,7 +33,8 @@ domainList[currentHost] = {
     social: {
         telegram: 'collecting_for_hut',
         facebook: 'collectingforhut',
-        github: 'naxatu'
+        github: 'naxatu',
+        reddit: '/r/Buttcoin/comments/87t0oa/i_think_i_may_have_found_the_most_honest_ico/'
     }
 };
 
@@ -45,7 +49,8 @@ domainList['ru.' + currentHost] = {
     social: {
         telegram: 'naxatu',
         facebook: 'collectingforhut',
-        github: 'naxatu'
+        github: 'naxatu',
+        reddit: '/r/Buttcoin/comments/87t0oa/i_think_i_may_have_found_the_most_honest_ico/'
     }
 };
 

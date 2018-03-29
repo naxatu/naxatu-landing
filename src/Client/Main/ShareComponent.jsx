@@ -48,6 +48,13 @@ export class ShareComponent extends React.Component {
 
         return (
             <React.Fragment>
+                {/* Facebook */}
+                <FacebookShareButton {...this.generateShareProps('facebook')}
+                                     hashtag="#collectingforhut"
+                                     quote={title}>
+                    <FacebookIcon size={32} round={true}/>
+                </FacebookShareButton>
+
                 {/* GooglePlus */}
                 <GooglePlusShareButton {...this.generateShareProps('google-plus')}>
                     <GooglePlusIcon size={32} round={true}/>

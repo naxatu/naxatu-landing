@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as i18n from "i18n";
 import {IDomainProps}  from '../../Utils/DomainManager';
+import {FacebookButton} from './Facebook';
 
 export interface IFooterProps {
     version: string;
@@ -12,7 +13,7 @@ export class Footer extends React.Component<IFooterProps, any> {
     render() {
         const {version, domain} = this.props;
 
-        const {telegram, facebook, github} = domain.social;
+        const {telegram, facebook, github, reddit} = domain.social;
 
         return (
             <footer className="footer section">
@@ -38,13 +39,25 @@ export class Footer extends React.Component<IFooterProps, any> {
 
                             <a href={`https://fb.me/${facebook}`}
                                target="_blank"
-                               title="All in Telegram channel"
+                               title="Facebook"
                             ><i className="fab fa-facebook"/></a>
 
                             <a href={`https://github.com/${github}`}
                                target="_blank"
-                               title="All in Telegram channel"
+                               title="GitHub"
                             ><i className="fab fa-github"/></a>
+
+                            <a href={`https://www.reddit.com${reddit}`}
+                               target="_blank"
+                               title="Reddit conversation"
+                            ><i className="fab fa-reddit"/></a>
+
+                            <a href={`https://bitcointalk.org/index.php?topic=3180924.0`}
+                               target="_blank"
+                               title="BitcoinTalk"
+                            ><i className="fab fa-bitcoin"/></a>
+
+                            <FacebookButton url={domain.url}/>
                         </div>
 
                         <a href="#ico" className="link anchor">{i18n.__('Дать ему')} →</a>
