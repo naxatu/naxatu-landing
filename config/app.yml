@@ -1,6 +1,7 @@
 app:
   host: naxatu.com
   port: 3000
+  secure: true
 
   gtmKey: 'GTM-NWXJK3K'
 
@@ -11,4 +12,4 @@ app:
   flags: []
 
   # Application version
-  version: 0.1.7
+  version: 0.2.0

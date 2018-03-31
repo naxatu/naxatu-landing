@@ -21,11 +21,15 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
         const secondsToGo = (Constants.END_DATE.getTime() - (new Date().getTime()));
         const daysToGo = Numeral(secondsToGo).divide(24 * 60 * 60 * 1000).format("0");
 
+        const tokenJson = JSON.stringify(token);
+
         return (
             <div className="ico-status">
                 <p className="ico-info">
                     <b>{i18n.__("Цена XATA")}:</b> 1 XATA = 0.01 ETH ≈ ${Numeral(token.price / 100).format('0.00')}
                 </p>
+
+                <script dangerouslySetInnerHTML={{__html: `window.__token=${tokenJson}`}}/>
 
                 <div className="ico-status__progress-wrapper">
                     <div className="ico-status-progress">

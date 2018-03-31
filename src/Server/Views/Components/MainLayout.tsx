@@ -10,6 +10,7 @@ import {IDomainProps, domainList}  from '../../Utils/DomainManager';
 import {OpenGraph} from './OpenGraph';
 import {FacebookConnector} from './Facebook';
 import {NavigationMenu} from './NavigationMenu';
+import {Alternate} from './Alternate';
 import {TelegramBox} from './TelegramBox';
 import {Header} from './Header';
 import {Footer} from './Footer';
@@ -72,6 +73,7 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
                 <meta name="keywords" content={emojifyText(keywords.join(', '))}/>
                 <meta name="description" content={emojifyText(description)}/>
                 <OpenGraph {...openGraphProps}/>
+                <Alternate/>
                 <style dangerouslySetInnerHTML={{__html: criticalCSS}}/>
                 <link {...mainCssAttribute}/>
                 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>

@@ -17,12 +17,12 @@ export class Advisers extends React.Component<any, any> {
 
                     <div className="adviser-list">
                         <Adviser
-                            name="David Braun"
-                            role={i18n.__("Следит за ремонтом")}
-                            imageSrc="david-braun.png"
-                            description={i18n.__("У меня было много хат, и больших и маленьких. Я делал ремонты с большими и дорогими подрядчиками, пробовал работать бригадами Равшанов и Джамшутов. Сделаю все, что могу, чтобы проект НаХату реализовался максимально эффективно.")}
+                            name="Andrey Krishtal"
+                            role={i18n.__("Смотрит в код")}
+                            imageSrc="andrey-krishtal.png"
+                            description={i18n.__("В мире хайпа среди ICO проектов, этот является самым технологически интересным, ибо нет пустых обещаний и кучи рассказов про невозможные имплементации технологий в проект. Однозначно, мой единственный фаворит в мире ICO!")}
                             socialLinks={{
-                                facebook: 'https://www.facebook.com/david.braun.50951'
+                                facebook: 'https://www.facebook.com/andrew.kryshtal'
                             }}
                         />
 
@@ -57,12 +57,12 @@ export class Advisers extends React.Component<any, any> {
                         />
 
                         <Adviser
-                            name="Andrey Krishtal"
-                            role={i18n.__("Смотрит в код")}
-                            imageSrc="andrey-krishtal.png"
-                            description={i18n.__("В мире хайпа среди ICO проектов, этот является самым технологически интересным, ибо нет пустых обещаний и кучи рассказов про невозможные имплементации технологий в проект. Однозначно, мой единственный фаворит в мире ICO!")}
+                            name="David Braun"
+                            role={i18n.__("Следит за ремонтом")}
+                            imageSrc="david-braun.png"
+                            description={i18n.__("У меня было много хат, и больших и маленьких. Я делал ремонты с большими и дорогими подрядчиками, пробовал работать бригадами Равшанов и Джамшутов. Сделаю все, что могу, чтобы проект НаХату реализовался максимально эффективно.")}
                             socialLinks={{
-                                facebook: 'https://www.facebook.com/andrew.kryshtal'
+                                facebook: 'https://www.facebook.com/david.braun.50951'
                             }}
                         />
                     </div>

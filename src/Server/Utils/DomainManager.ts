@@ -1,6 +1,7 @@
 import {Dictionary, find} from 'lodash';
 import {config} from '../Config';
 const currentHost: string = config.get('app.host');
+const protocol: string = config.get('app.secure') ? 'https' : 'http';
 const currentPort: number = +config.get('app.port');
 
 const urlPort: string = [80, 443].indexOf(currentPort) == -1 ? `:${currentPort}` : '';
@@ -27,7 +28,7 @@ const domainList: Dictionary<IDomainProps> = {};
  */
 domainList[currentHost] = {
     domain: currentHost,
-    url: `http://${currentHost}${urlPort}`,
+    url: `${protocol}://${currentHost}${urlPort}`,
     language: 'en',
     isDefault: true,
     social: {
@@ -43,7 +44,7 @@ domainList[currentHost] = {
  */
 domainList['ru.' + currentHost] = {
     domain: 'ru.' + currentHost,
-    url: `http://ru.${currentHost}${urlPort}`,
+    url: `${protocol}://ru.${currentHost}${urlPort}`,
     language: 'ru',
     isDefault: false,
     social: {

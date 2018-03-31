@@ -2,10 +2,9 @@ import {each} from 'lodash';
 import animateScrollTo from 'animated-scroll-to';
 import * as ShareController from './Main/ShareController';
 import {sendGAEvent} from './Main/AnalyticsHelper';
-import * as Metamask from './Main/Metamask';
 import './Main/Navigation';
 import './Main/PartnersAndAdvisers';
-import './Main/Contribute';
+import * as Contribute from './Main/Contribute';
 
 import './Style/main.scss';
 
@@ -32,16 +31,5 @@ if (telegramBox) {
 }
 
 ShareController.init();
-
-
-let onCopyContractAddress = () => {
-    document.getElementById('contract-address').select();
-    document.execCommand("Copy");
-
-    sendGAEvent('contract', 'copy');
-};
-
-document.getElementsByClassName('__js-copy-contract')[0].addEventListener('click', onCopyContractAddress);
-
-Metamask.init();
+Contribute.init();
 

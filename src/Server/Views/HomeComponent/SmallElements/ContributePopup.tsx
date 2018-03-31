@@ -33,25 +33,9 @@ export class ContributePopup extends React.Component<IPopupProps, any> {
 
                             {i18n.__("Советую использовать MyEtherWallet или MetaMask. Не переводите Ether с бирж или сервисов, где не имеете полный доступ к кошельку, а иначе не будет доступа к XATA.")}
                             <br/>
-
-                            <b>GasLimit = 80 000</b>
                         </p>
 
-                        <a className="link" target="_blank"
-                           href={`http://etherscan.com/token/${contract}`}
-                        >Contract address</a>
-
-                        <div className="contract-wrapper">
-                            <input readOnly={true} value={contract} className="contract__address"
-                                   id="contract-address"/>
-
-                            <button className="contract-copy __js-copy-contract">Copy</button>
-                        </div>
-
-                        <QRCode className="contract-qr"
-                                value={contract}
-                                renderAs="svg"
-                        />
+                        <div id="ContributeModal" className="buy" />
                     </section>
                 </div>
             </div>
