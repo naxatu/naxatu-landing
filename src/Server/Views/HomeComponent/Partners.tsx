@@ -34,6 +34,14 @@ export class Partners extends React.Component<any, any> {
                         />
 
                         <Partner
+                            href="http://spryquest.com/"
+                            partnerEventKey="spry"
+                            title={i18n.__("SPRY Quest наполняет ваше приключение скучным общением с дикими медведями и дикобразами.")}
+                            imageSrc="spry.png"
+                            imageAlt="SPRY Quest"
+                        />
+
+                        <Partner
                             href="https://cubits.com"
                             partnerEventKey="cubits"
                             title={i18n.__("Crypto Exchange, что так-же запускали свое ICO. Или еще не запускали..? Что-то запутался.")}

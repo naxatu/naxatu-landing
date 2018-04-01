@@ -1,26 +1,40 @@
 .team {
     &-list {
         width: 100%;
-        max-width: 720px;
         margin: 0 auto;
+        background: $color-bg-grey;
     }
 
     &-person {
         display: flex;
+        align-items: center;
         width: 100%;
+        margin: 0 auto;
+        max-width: 800px;
+
+        &-desc {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 40px;
+            width: 60%;
+        }
 
         &-image {
-            height: 200px;
-            width: 200px;
+            width: 100%;
+            max-width: 300px;
             display: block;
-            background: rgb(245, 245, 245);
-            margin-right: 32px;
-            border-radius: 3px;
+            margin: 0 auto;
+
+            &__wrapper {
+                display: block;
+                width: 40%;
+                margin-top: -56px;
+            }
         }
 
         &__name {
             margin-bottom: 16px;
-            font-size: 28px;
+            font-size: 32px;
         }
 
         &__jobs {
@@ -62,13 +76,23 @@
             }
 
             &-desc {
-                text-align: center;
+                padding-left: 16px;
+                padding-right: 16px;
+                width: 100%;
             }
 
             &-image {
                 margin-bottom: 32px;
                 margin-right: auto;
                 margin-left: auto;
+                width: 80%;
+                max-width: 250px;
+
+                &__wrapper {
+                    width: 100%;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                }
             }
         }
     }

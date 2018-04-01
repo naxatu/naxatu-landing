@@ -33,7 +33,6 @@ if (contributeModal) {
 }
 
 
-
 export function init() {
     const contributeModalContainer = document.getElementById('ContributeModal');
 
@@ -53,7 +52,7 @@ export function init() {
 
 function extractWeb3Js() {
     if (typeof web3 === 'undefined') {
-        return new Promise.resolve(null);
+        return Promise.resolve(null);
     }
 
     let web3js = new Web3(web3.currentProvider);

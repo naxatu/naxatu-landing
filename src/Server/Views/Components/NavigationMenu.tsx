@@ -58,7 +58,7 @@ export class NavigationMenu extends React.Component<IProps, any> {
                         </li>
 
                         <li className="navigation-item">
-                            <a className="anchor" href="#team">{i18n.__("Партнеры")}</a>
+                            <a className="anchor" href="#partners">{i18n.__("Партнеры")}</a>
                         </li>
 
                         <li className="navigation-item">
