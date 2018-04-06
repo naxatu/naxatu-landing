@@ -6,16 +6,20 @@ msgstr ""
 msgid "2-й квартал 2019 — Ремонтирую хату"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Partners.tsx:39
+#: src/Server/Views/HomeComponent/Partners.tsx:47
 msgid "Crypto Exchange, что так-же запускали свое ICO. Или еще не запускали..? Что-то запутался."
 msgstr ""
 
-#: src/Server/Views/Components/Footer.tsx:25
+#: src/Server/Views/Components/Footer.tsx:26
 msgid "Ethereum, собранный в процессе ICO, действительно будет потрачен на покупку или аренду места жительства, и возврату не подлежит."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Team.tsx:34
+#: src/Server/Views/HomeComponent/Team.tsx:35
 msgid "Full-stack душой и делом."
+msgstr ""
+
+#: src/Server/Views/HomeComponent/Partners.tsx:39
+msgid "SPRY Quest наполняет ваше приключение скучным общением с дикими медведями и дикобразами."
 msgstr ""
 
 #: src/Server/Views/HomeComponent/Contacts.tsx:31
@@ -31,7 +35,7 @@ msgid "А вообще, его исходный код открыт, а помы
 msgstr ""
 
 #: src/Server/Views/HomeComponent/ShareInfo.tsx:19
-msgid "А представьте, как это понравиться вашим друзьям, даже если они ничего не смыслят о ICO, блокчейне или криптовалюте. Им будет интересно просто почитать о проекте."
+msgid "А представте, как это понравиться вашим друзьям, даже если они ничего не смыслят о ICO, блокчейне или криптовалюте. Им будет интересно просто почитать о проекте."
 msgstr ""
 
 #: src/Server/Views/HomeComponent/XataToken.tsx:28
@@ -82,11 +86,11 @@ msgstr ""
 msgid "В любом ICO есть адвайзеры. Он призваны торговать лицом. Но все же, встречаются специалисты, что понимают в сфере строительства и ремонта и могут дать полезные советы. Ага..."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Advisers.tsx:63
+#: src/Server/Views/HomeComponent/Advisers.tsx:23
 msgid "В мире хайпа среди ICO проектов, этот является самым технологически интересным, ибо нет пустых обещаний и кучи рассказов про невозможные имплементации технологий в проект. Однозначно, мой единственный фаворит в мире ICO!"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:83
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:87
 msgid "в том числе <b>%s XATA</b> бонусов"
 msgstr ""
 
@@ -162,7 +166,7 @@ msgstr ""
 msgid "Герои"
 msgstr ""
 
-#: src/Server/Views/Components/Footer.tsx:50
+#: src/Server/Views/Components/Footer.tsx:63
 #: src/Server/Views/HomeComponent/Intro.tsx:50
 msgid "Дать ему"
 msgstr ""
@@ -171,11 +175,11 @@ msgstr ""
 msgid "Дмитрий Дубилет"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:53
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:57
 msgid "до окончания ICO, 13 Мая 2018"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Partners.tsx:50
+#: src/Server/Views/HomeComponent/Partners.tsx:58
 msgid "Если вдруг, это лого для светлого фона не очень — я не виноват."
 msgstr ""
 
@@ -183,7 +187,7 @@ msgstr ""
 msgid "Если достигну цели, то напичкаю хату всякими приблудами, начиная от «умного дома», и заставлю работать робота-пылесоса. Но не факт, что и там где-нибудь будет блокчейн."
 msgstr ""
 
-#: src/Server/Views/Components/Footer.tsx:22
+#: src/Server/Views/Components/Footer.tsx:23
 msgid "Если есть какие-либо замечения - пожалуйста, сообщите мне."
 msgstr ""
 
@@ -191,7 +195,7 @@ msgstr ""
 msgid "Если ты живешь на съемной хате и нет возможности купить собственную, то заявляй, что собираешь на хату через ICO — и все у тебя будет хорошо."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Partners.tsx:54
+#: src/Server/Views/HomeComponent/Partners.tsx:62
 msgid "Если хотите в список партнеров, то напишите об этом проекте,"
 msgstr ""
 
@@ -232,11 +236,11 @@ msgstr ""
 msgid "ЖК RYBALSKY, если ты слышишь или видишь это — дай мне скидку!"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Partners.tsx:56
+#: src/Server/Views/HomeComponent/Partners.tsx:64
 msgid "и как-нибудь решим этот вопрос."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Team.tsx:33
+#: src/Server/Views/HomeComponent/Team.tsx:34
 msgid "Идеолог блокчейна и технологий на его базе."
 msgstr ""
 
@@ -290,7 +294,7 @@ msgid "Когда будет проводиться ремонт хаты, я в
 msgstr ""
 
 #: src/Server/Views/Components/NavigationMenu.tsx:53
-#: src/Server/Views/HomeComponent/Team.tsx:11
+#: src/Server/Views/HomeComponent/Team.tsx:10
 msgid "Команда мечты"
 msgstr ""
 
@@ -302,7 +306,7 @@ msgstr ""
 msgid "Красное или белое?"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:97
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:101
 msgid "Краудфандинг продлится до <b>13 мая 2018</b>."
 msgstr ""
 
@@ -318,7 +322,7 @@ msgstr ""
 msgid "Лебедев обзавидуется от такого лого"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Team.tsx:40
+#: src/Server/Views/HomeComponent/Team.tsx:41
 msgid "Лицокнига"
 msgstr ""
 
@@ -330,11 +334,11 @@ msgstr ""
 msgid "Март-Май 2018 — Собираю на хату"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Team.tsx:50
+#: src/Server/Views/HomeComponent/Team.tsx:51
 msgid "Место, где творю, где воплощается моя фантазия"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:73
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:77
 msgid "Можно купить"
 msgstr ""
 
@@ -350,7 +354,7 @@ msgstr ""
 msgid "На этом этапе я разрабатываю и запускаю вебсайт и смарт-токен XATA."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Partners.tsx:47
+#: src/Server/Views/HomeComponent/Partners.tsx:55
 msgid "Надо ведь от куда-то брать свежие новости о крипте?"
 msgstr ""
 
@@ -407,8 +411,8 @@ msgstr ""
 msgid "Но, пока это секрет…"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/ShareInfo.tsx:17
-msgid "Нравиться? Расшарь проект!"
+#: src/Server/Views/HomeComponent/ShareInfo.tsx:16
+msgid "Нравится?"
 msgstr ""
 
 #: src/Server/Views/HomeComponent/Roadmap.tsx:11
@@ -435,7 +439,7 @@ msgstr ""
 msgid "Определяемся с интерьером с помощью наших друзей по челенджу. Выбираем материалы, делаем перепланировку (да-да, нужно, чтобы не как у всех!)."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:96
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:100
 msgid "Основная цель — собрать <b>$180,000</b> на квартиру."
 msgstr ""
 
@@ -465,8 +469,8 @@ msgid "Подкинуть на Бар"
 msgstr ""
 
 #: src/Server/Views/Components/NavigationMenu.tsx:33
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:105
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:114
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:109
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:118
 #: src/Server/Views/HomeComponent/Intro.tsx:37
 #: src/Server/Views/HomeComponent/SmallElements/ContributePopup.tsx:24
 msgid "Подкинуть на Хату"
@@ -517,7 +521,7 @@ msgstr ""
 msgid "Почему бы просто не заработать на хату, как это делают все нормальные люди?"
 msgstr ""
 
-#: src/Server/Views/Components/Footer.tsx:21
+#: src/Server/Views/Components/Footer.tsx:22
 msgid "Приношу извинения всем, чьи чувства задел этот текст."
 msgstr ""
 
@@ -549,12 +553,12 @@ msgstr ""
 msgid "Самый крупный бэкер будет приглашен на прекрасный ужин с владельцами в новой Хате."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Team.tsx:13
+#: src/Server/Views/HomeComponent/Team.tsx:12
 msgid "Сбор средств на хату — это трудоемкий процесс, требующий тщательной подготовки и слаженной команды. Поэтому, у нас лучшая команда, о которой только можно мечтать"
 msgstr ""
 
 #: src/Server/Views/HomeComponent/Advisers.tsx:72
-#: src/Server/Views/HomeComponent/Partners.tsx:55
+#: src/Server/Views/HomeComponent/Partners.tsx:63
 msgid "свяжитесь со мной"
 msgstr ""
 
@@ -574,11 +578,11 @@ msgstr ""
 msgid "Следит за путешествиями"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Advisers.tsx:21
+#: src/Server/Views/HomeComponent/Advisers.tsx:61
 msgid "Следит за ремонтом"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Advisers.tsx:61
+#: src/Server/Views/HomeComponent/Advisers.tsx:21
 msgid "Смотрит в код"
 msgstr ""
 
@@ -596,11 +600,11 @@ msgstr ""
 msgid "собираюнахату"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:66
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:70
 msgid "Собрано ETH"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:44
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:48
 msgid "собрано от цели в $%s"
 msgstr ""
 
@@ -608,7 +612,7 @@ msgstr ""
 msgid "Советую использовать MyEtherWallet или MetaMask. Не переводите Ether с бирж или сервисов, где не имеете полный доступ к кошельку, а иначе не будет доступа к XATA."
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Team.tsx:45
+#: src/Server/Views/HomeComponent/Team.tsx:46
 msgid "Социальная сеть для офисного планктона О_о"
 msgstr ""
 
@@ -628,7 +632,7 @@ msgstr ""
 msgid "Ты всю жизнь ждал, что бы с умным видом смотреть в чужой код и критиковать. Сделай это прямо сейчас!"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/Advisers.tsx:23
+#: src/Server/Views/HomeComponent/Advisers.tsx:63
 msgid "У меня было много хат, и больших и маленьких. Я делал ремонты с большими и дорогими подрядчиками, пробовал работать бригадами Равшанов и Джамшутов. Сделаю все, что могу, чтобы проект НаХату реализовался максимально эффективно."
 msgstr ""
 
@@ -652,7 +656,7 @@ msgstr ""
 msgid "Хочешь задать вопрос или анонимно высказаться?"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:27
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:29
 msgid "Цена XATA"
 msgstr ""
 
@@ -668,7 +672,7 @@ msgstr ""
 msgid "челендж"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:98
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:102
 msgid "Чем больше соберу, тем круче хата."
 msgstr ""
 
@@ -684,7 +688,7 @@ msgstr ""
 msgid "Чтобы всегда помнить о тех, кто купил мне хату"
 msgstr ""
 
-#: src/Server/Views/HomeComponent/IcoStatus.tsx:81
+#: src/Server/Views/HomeComponent/IcoStatus.tsx:85
 msgid "Эмитировано XATA"
 msgstr ""
 

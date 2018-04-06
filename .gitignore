@@ -38,3 +38,5 @@ Temporary Items
 yarn-error.log
 dist
 .cache-loader
+yarn.lock
+package-lock.json
