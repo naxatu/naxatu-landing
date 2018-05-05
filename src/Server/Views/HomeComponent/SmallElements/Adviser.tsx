@@ -14,16 +14,14 @@ export interface IAdviserProps {
 const socialLinksPatterns: Dictionary<any> = {
     facebook: (url: string) => {
         return (
-            <a key="facebook" href={url} className="adviser-item__social-icon" target="_blank">
+            <a key="facebook" href={url} className="adviser-item__social-icon" target="_blank" rel="nofollow">
                 <i className="fab fa-facebook-square"/>
             </a>
-        )
+        );
     }
 };
 
 export class Adviser extends React.Component<IAdviserProps, any> {
-
-
     render() {
         const {
             name,
@@ -49,6 +47,6 @@ export class Adviser extends React.Component<IAdviserProps, any> {
                 </div>
                 <p className="adviser-item__description">{description}</p>
             </article>
-        )
+        );
     }
 }

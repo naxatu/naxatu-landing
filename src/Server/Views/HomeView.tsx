@@ -48,9 +48,9 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
         return (
             <MainLayout {...layoutProps}>
                 <Intro />
-                <IcoStatus token={token}/>
-                <ShareInfo domain={domain}/>
                 <About domain={domain}/>
+                <ShareInfo domain={domain}/>
+                <IcoStatus token={token}/>
                 <Citation />
                 <WhereHouse />
                 <XataToken />

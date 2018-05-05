@@ -15,9 +15,7 @@ export class Advisers extends React.Component<any, any> {
                     </div>
 
                     <div className="adviser-list">
-                        <Advisercoinwizard.png
-                            eco-wooden-frame.png
-                            spry.png
+                        <Adviser
                             name="Andrey Krishtal"
                             role={i18n.__("Смотрит в код")}
                             imageSrc="andrey-krishtal.jpg"

@@ -12,7 +12,6 @@ export interface IPartnerProps {
 
 export class Partner extends React.Component<IPartnerProps, any> {
     render() {
-
         const {
             href,
             title,
@@ -23,11 +22,12 @@ export class Partner extends React.Component<IPartnerProps, any> {
         } = this.props;
 
         return (
-            <a href={href}
+            <a href={`${href}?src=naxatu.com`}
                className="partners-item __js-partner"
                partner-event-key={partnerEventKey}
                title={title}
                target="_blank"
+               rel="nofollow"
             >
                 <img src={"/image/partners/" + imageSrc}
                      alt={imageAlt}
