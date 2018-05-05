@@ -3,8 +3,7 @@
 @import 'vendor/vars';
 @import "mixins/media";
 
-html {
-}
+html {}
 
 body {
     @include font;
@@ -35,4 +34,8 @@ body {
 @import "components/section";
 @import "components/topic";
 @import "components/footer";
+@import "components/header";
+@import "components/buttons";
+@import "components/text";
+@import "components/section-intro";
 @import "components/navigation";
