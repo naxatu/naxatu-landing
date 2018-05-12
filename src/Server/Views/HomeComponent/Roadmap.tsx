@@ -74,8 +74,6 @@ export class Roadmap extends React.Component<any, any> {
                                dangerouslySetInnerHTML={{__html: i18n.__("Еще необходимо сделать большую кухню и очень важно выбрать место для бара. <s>Алкоголизм</s> хобби должно развиваться и для этого нужны все условия.")}}
                             />
                             <p className="paragraph roadmap-item-text-p"><Emojify>{i18n.__("Бар + кухня")} = :heart:</Emojify></p>
-
-                            <a href="#ico" className="btn anchor">{i18n.__("Подкинуть на Бар")}</a>
                         </div>
                     </div>
 

@@ -26,8 +26,6 @@ export class XataToken extends React.Component<any, any> {
                             <br/><br/>
 
                             {i18n.__("А также вы можете свободно переводить и хранить XATA-токены в надеждах на его рост, как это делают хомяки и трейдеры.")}
-                            <br/><br/>
-                            <a href="#ico" className="link anchor">{i18n.__('Получить XATA')} →</a>
                         </p>
                     </article>
 
@@ -53,12 +51,6 @@ export class XataToken extends React.Component<any, any> {
                             {i18n.__("Вы также получает дополнительно 1 XATA для каждого Ether из общего вклада.")}
                         </p>
                     </article>
-
-                    <div>
-                        <a className="btn anchor __js_contribute" contribute-btn-key="bonuses" href="#ico">
-                            {i18n.__("Получить XATA")}
-                        </a>
-                    </div>
                 </div>
             </section>
         )

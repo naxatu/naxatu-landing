@@ -35,9 +35,6 @@ export class WhereHouse extends React.Component<any, any> {
                             <p className="paragraph rybalsky-p">
                                 {i18n.__("Романтика")} <Emojify>:heart_eyes:</Emojify>
                             </p>
-                            <a href="#ico"
-                               className="btn anchor __js_contribute"
-                               contribute-btn-key="rybalsky">{i18n.__("Подкинуть на RYBALSKY")}</a>
                         </div>
                     </div>
                     <img src="/image/zk-rybalsky.png" className="rybalsky-image"

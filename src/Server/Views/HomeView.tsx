@@ -58,7 +58,6 @@ export class HomeView extends React.Component<IHomeViewProps, IHomeViewState> {
                 <Team />
                 <Advisers />
                 <Partners />
-                <Challenge />
                 <Heroes />
                 <FAQ domain={domain}/>
                 <Contacts domain={domain}/>

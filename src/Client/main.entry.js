@@ -3,7 +3,6 @@ import {each} from 'lodash';
 import animateScrollTo from 'animated-scroll-to';
 import * as ShareController from './Main/ShareController';
 import {sendGAEvent} from './Main/AnalyticsHelper';
-import * as Contribute from './Main/Contribute';
 import './Main/Navigation';
 import './Main/PartnersAndAdvisers';
 
@@ -32,5 +31,4 @@ if (telegramBox) {
 }
 
 ShareController.init();
-Contribute.init();
 

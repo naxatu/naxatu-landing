@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as i18n from "i18n";
 import * as Numeral from 'numeral';
-import {Emojify, contractInstance, TokenStatsInterface} from '../../Utils';
+import {contractInstance, TokenStatsInterface} from '../../Utils';
 import * as Constants from '../../Contants';
 import {ContributePopup} from './SmallElements/ContributePopup';
 
@@ -19,8 +19,6 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
         }
 
         const secondsToGo = (Constants.END_DATE.getTime() - (new Date().getTime()));
-        const daysToGo = Numeral(secondsToGo).divide(24 * 60 * 60 * 1000).format("0");
-
         const tokenJson = JSON.stringify(token);
 
         return (
@@ -46,15 +44,6 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
                                 </h3>
                                 <span className="ico-status-progress__target-target">
                                     {i18n.__("собрано от цели в $%s", Numeral(Constants.TARGET).format('0,0'))}
-                                </span>
-                            </div>
-
-                            <div className="ico-status-progress__target">
-                                <h3 className="ico-status-progress__target-value">
-                                    {daysToGo}
-                                </h3>
-                                <span className="ico-status-progress__target-target">
-                                    {i18n.__("до окончания ICO, 13 Мая 2018")}
                                 </span>
                             </div>
                         </div>
@@ -97,30 +86,13 @@ export class IcoStatus extends React.Component<ISOStatusProps, any> {
         const contract = contractInstance.contract;
         const {token} = this.props;
 
-        const text = i18n.__("Основная цель — собрать <b>$180,000</b> на квартиру.") + '<br/>'
-            + i18n.__("Краудфандинг продлится до <b>13 мая 2018</b>.") + ' '
-            + i18n.__("Чем больше соберу, тем круче хата.");
-
         return (
             <section className="section -ico ico" id="ico">
                 <div className="section-content">
                     <input type="hidden" id="__contract-address-container" value={contract}/>
                     <div className="topic -left">
-                        <h2 className="topic-title">{i18n.__("Подкинуть на Хату")}</h2>
+                        <h2 className="topic-title">ICO Results</h2>
                     </div>
-                    <p className="paragraph" dangerouslySetInnerHTML={{__html: text}}/>
-
-                    {token && <ContributePopup token={token}/>}
-                    <div className="ico-contribute">
-                        <button
-                            className="ico-contribute__the-most-important-button ico-contribute-button __js_contribute"
-                            contribute-btn-key="main">
-                            {i18n.__('Подкинуть на Хату')}
-                        </button>
-
-                        <div id="ContributeMetamask" className="ico-contribute-wrapper"/>
-                    </div>
-
                     <div className="ico-status-container">
                         {this.renderIsoStatus()}
                     </div>

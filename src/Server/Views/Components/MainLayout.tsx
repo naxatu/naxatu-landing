@@ -53,13 +53,6 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
             type: "text/css"
         };
 
-        const fontCssAttribute = {
-            href: "https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext",
-            async: true,
-            rel: "stylesheet",
-            type: "text/css"
-        };
-
         const openGraphProps = {
             title: emojifyText(title),
             description: emojifyText(description),
@@ -83,7 +76,6 @@ export class MainLayout extends React.Component<IMainLayoutProps, any> {
                 <Alternate/>
                 <style dangerouslySetInnerHTML={{__html: criticalCSS}}/>
                 <link {...mainCssAttribute}/>
-                <link {...fontCssAttribute}/>
                 <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 
                 {gtm.renderHead()}
